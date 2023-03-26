@@ -1,0 +1,9 @@
+grammar org.xtext.example.mydsl.ConferenceProgram with org.eclipse.xtext.common.Terminals
+
+generate conferenceProgram "http://www.xtext.org/example/mydsl/ConferenceProgram"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
