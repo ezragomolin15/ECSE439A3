@@ -2,8 +2,120 @@ grammar org.xtext.example.mydsl.ConferenceProgram with org.eclipse.xtext.common.
 
 generate conferenceProgram "http://www.xtext.org/example/mydsl/ConferenceProgram"
 
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';
+ConferenceProgram:
+    'Program' name=ID 
+    date=STRING
+    researchtracks=ResearchTrack //1 research track
+    (industrytracks+=IndustryTrack)? //zero or 1 industry trakcs
+    (demosandposterstrack+=DemosAndPosterTrack)? //zero or 1 demos and poster track
+    (panelstrack+=PanelTrack)? //zero or 1 panel tracks
+    (socialEvents+=SocialEvent)* //zero or more social events
+    (keynotes+=Keynote)* //zero or more keynotes
+    (coffebreaks+=CoffeBreak)* //zeror or more coffee breaks
+    (lunches+=Lunch)* //zeror or more lunch breaks
+    ;
+    
+ResearchTrack:
+    'Track' name=ID '{'
+    (researchsession+=ResearchSession)+
+    '}';
+    
+IndustryTrack:
+    'Track' name=ID '{'
+    (indutrysession+=IndustrySession)+
+    '}';
+
+DemosAndPosterTrack:
+    'Track' name=ID '{'
+    (demosession+=DemoSession)+
+    '}';
+    
+PanelTrack:
+    'Track' name=ID '{'
+    (panelsession+=PanelSession)+
+    '}';
+    
+ResearchSession:
+    'Session' name=ID '{'
+    (researchpaper+=ResearchPaper)+
+    (location=Location)?
+    startTime=STRING
+    endTime=STRING
+    '}';
+ 
+IndustrySession:
+    'Session' name=ID '{'
+    (industrypaper+=IndustryPaper)+
+    (location=Location)?
+    startTime=STRING
+    endTime=STRING
+    '}';
+    
+DemoSession:
+    'Session' name=ID '{'
+    (demoandposter+=DemoAndPoster)+
+    (location=Location)?
+    startTime=STRING
+    endTime=STRING
+    '}';
+    
+PanelSession:
+    'Session' name=ID '{'
+    (panel+=Panel)+
+    (location=Location)?
+    startTime=STRING
+    endTime=STRING
+    '}';
+    
+ResearchPaper:
+    'Paper' name=ID;
+
+IndustryPaper:
+    'IndustryPaper' name=ID;
+
+DemoAndPoster:
+    'DemoAndPoster' name=ID;
+
+
+Panel:
+    'Panel' name=ID;
+
+Location:
+    'Location' '{'
+    room=Room
+    '}';
+
+Room:
+    'Room' name=ID;
+
+Keynote:
+    'Keynote' name=ID;
+
+CoffeBreak:
+    'Break' name=ID;
+
+Lunch:
+    'Lunch' name=ID;
+
+SocialEvent:
+    'SocialEvent' name=ID '{'
+    location=Location
+    startTime=STRING
+    endTime=STRING
+    directions=GoogleMapsDirections
+    '}';
+    
+GoogleMapsDirections:
+    'Directions' '{'
+     url=STRING
+    '}';
+
+
+
+
+
+
+
+
+
+
