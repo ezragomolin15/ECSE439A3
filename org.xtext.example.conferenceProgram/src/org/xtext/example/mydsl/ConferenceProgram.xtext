@@ -78,13 +78,3 @@ GoogleMapsDirections:
     'Directions' '{'
      url=STRING
     '}';
-
-
-
-
-
-
-
-
-
-
