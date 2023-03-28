@@ -20,24 +20,24 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.mydsl.conferenceProgram.ConferenceProgramPackage;
-import org.xtext.example.mydsl.conferenceProgram.IndustrySession;
-import org.xtext.example.mydsl.conferenceProgram.IndustryTrack;
+import org.xtext.example.mydsl.conferenceProgram.Session;
+import org.xtext.example.mydsl.conferenceProgram.Track;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Industry Track</b></em>'.
+ * An implementation of the model object '<em><b>Track</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.IndustryTrackImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.IndustryTrackImpl#getIndutrysession <em>Indutrysession</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.TrackImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.TrackImpl#getSession <em>Session</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IndustryTrackImpl extends MinimalEObjectImpl.Container implements IndustryTrack
+public class TrackImpl extends MinimalEObjectImpl.Container implements Track
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -60,21 +60,21 @@ public class IndustryTrackImpl extends MinimalEObjectImpl.Container implements I
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getIndutrysession() <em>Indutrysession</em>}' containment reference list.
+   * The cached value of the '{@link #getSession() <em>Session</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIndutrysession()
+   * @see #getSession()
    * @generated
    * @ordered
    */
-  protected EList<IndustrySession> indutrysession;
+  protected EList<Session> session;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected IndustryTrackImpl()
+  protected TrackImpl()
   {
     super();
   }
@@ -87,7 +87,7 @@ public class IndustryTrackImpl extends MinimalEObjectImpl.Container implements I
   @Override
   protected EClass eStaticClass()
   {
-    return ConferenceProgramPackage.Literals.INDUSTRY_TRACK;
+    return ConferenceProgramPackage.Literals.TRACK;
   }
 
   /**
@@ -112,7 +112,7 @@ public class IndustryTrackImpl extends MinimalEObjectImpl.Container implements I
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.INDUSTRY_TRACK__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.TRACK__NAME, oldName, name));
   }
 
   /**
@@ -121,13 +121,13 @@ public class IndustryTrackImpl extends MinimalEObjectImpl.Container implements I
    * @generated
    */
   @Override
-  public EList<IndustrySession> getIndutrysession()
+  public EList<Session> getSession()
   {
-    if (indutrysession == null)
+    if (session == null)
     {
-      indutrysession = new EObjectContainmentEList<IndustrySession>(IndustrySession.class, this, ConferenceProgramPackage.INDUSTRY_TRACK__INDUTRYSESSION);
+      session = new EObjectContainmentEList<Session>(Session.class, this, ConferenceProgramPackage.TRACK__SESSION);
     }
-    return indutrysession;
+    return session;
   }
 
   /**
@@ -140,8 +140,8 @@ public class IndustryTrackImpl extends MinimalEObjectImpl.Container implements I
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.INDUSTRY_TRACK__INDUTRYSESSION:
-        return ((InternalEList<?>)getIndutrysession()).basicRemove(otherEnd, msgs);
+      case ConferenceProgramPackage.TRACK__SESSION:
+        return ((InternalEList<?>)getSession()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -156,10 +156,10 @@ public class IndustryTrackImpl extends MinimalEObjectImpl.Container implements I
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.INDUSTRY_TRACK__NAME:
+      case ConferenceProgramPackage.TRACK__NAME:
         return getName();
-      case ConferenceProgramPackage.INDUSTRY_TRACK__INDUTRYSESSION:
-        return getIndutrysession();
+      case ConferenceProgramPackage.TRACK__SESSION:
+        return getSession();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -175,12 +175,12 @@ public class IndustryTrackImpl extends MinimalEObjectImpl.Container implements I
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.INDUSTRY_TRACK__NAME:
+      case ConferenceProgramPackage.TRACK__NAME:
         setName((String)newValue);
         return;
-      case ConferenceProgramPackage.INDUSTRY_TRACK__INDUTRYSESSION:
-        getIndutrysession().clear();
-        getIndutrysession().addAll((Collection<? extends IndustrySession>)newValue);
+      case ConferenceProgramPackage.TRACK__SESSION:
+        getSession().clear();
+        getSession().addAll((Collection<? extends Session>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -196,11 +196,11 @@ public class IndustryTrackImpl extends MinimalEObjectImpl.Container implements I
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.INDUSTRY_TRACK__NAME:
+      case ConferenceProgramPackage.TRACK__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case ConferenceProgramPackage.INDUSTRY_TRACK__INDUTRYSESSION:
-        getIndutrysession().clear();
+      case ConferenceProgramPackage.TRACK__SESSION:
+        getSession().clear();
         return;
     }
     super.eUnset(featureID);
@@ -216,10 +216,10 @@ public class IndustryTrackImpl extends MinimalEObjectImpl.Container implements I
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.INDUSTRY_TRACK__NAME:
+      case ConferenceProgramPackage.TRACK__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case ConferenceProgramPackage.INDUSTRY_TRACK__INDUTRYSESSION:
-        return indutrysession != null && !indutrysession.isEmpty();
+      case ConferenceProgramPackage.TRACK__SESSION:
+        return session != null && !session.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -241,4 +241,4 @@ public class IndustryTrackImpl extends MinimalEObjectImpl.Container implements I
     return result.toString();
   }
 
-} //IndustryTrackImpl
+} //TrackImpl

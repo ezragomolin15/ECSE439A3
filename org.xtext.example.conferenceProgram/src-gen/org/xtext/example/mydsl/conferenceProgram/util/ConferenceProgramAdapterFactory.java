@@ -81,44 +81,14 @@ public class ConferenceProgramAdapterFactory extends AdapterFactoryImpl
         return createConferenceProgramAdapter();
       }
       @Override
-      public Adapter caseResearchTrack(ResearchTrack object)
+      public Adapter caseTrack(Track object)
       {
-        return createResearchTrackAdapter();
+        return createTrackAdapter();
       }
       @Override
-      public Adapter caseIndustryTrack(IndustryTrack object)
+      public Adapter caseSession(Session object)
       {
-        return createIndustryTrackAdapter();
-      }
-      @Override
-      public Adapter caseDemosAndPosterTrack(DemosAndPosterTrack object)
-      {
-        return createDemosAndPosterTrackAdapter();
-      }
-      @Override
-      public Adapter casePanelTrack(PanelTrack object)
-      {
-        return createPanelTrackAdapter();
-      }
-      @Override
-      public Adapter caseResearchSession(ResearchSession object)
-      {
-        return createResearchSessionAdapter();
-      }
-      @Override
-      public Adapter caseIndustrySession(IndustrySession object)
-      {
-        return createIndustrySessionAdapter();
-      }
-      @Override
-      public Adapter caseDemoSession(DemoSession object)
-      {
-        return createDemoSessionAdapter();
-      }
-      @Override
-      public Adapter casePanelSession(PanelSession object)
-      {
-        return createPanelSessionAdapter();
+        return createSessionAdapter();
       }
       @Override
       public Adapter caseResearchPaper(ResearchPaper object)
@@ -213,121 +183,31 @@ public class ConferenceProgramAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.conferenceProgram.ResearchTrack <em>Research Track</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.conferenceProgram.Track <em>Track</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.mydsl.conferenceProgram.ResearchTrack
+   * @see org.xtext.example.mydsl.conferenceProgram.Track
    * @generated
    */
-  public Adapter createResearchTrackAdapter()
+  public Adapter createTrackAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.conferenceProgram.IndustryTrack <em>Industry Track</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.conferenceProgram.Session <em>Session</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.mydsl.conferenceProgram.IndustryTrack
+   * @see org.xtext.example.mydsl.conferenceProgram.Session
    * @generated
    */
-  public Adapter createIndustryTrackAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.conferenceProgram.DemosAndPosterTrack <em>Demos And Poster Track</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.mydsl.conferenceProgram.DemosAndPosterTrack
-   * @generated
-   */
-  public Adapter createDemosAndPosterTrackAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.conferenceProgram.PanelTrack <em>Panel Track</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.mydsl.conferenceProgram.PanelTrack
-   * @generated
-   */
-  public Adapter createPanelTrackAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.conferenceProgram.ResearchSession <em>Research Session</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.mydsl.conferenceProgram.ResearchSession
-   * @generated
-   */
-  public Adapter createResearchSessionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.conferenceProgram.IndustrySession <em>Industry Session</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.mydsl.conferenceProgram.IndustrySession
-   * @generated
-   */
-  public Adapter createIndustrySessionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.conferenceProgram.DemoSession <em>Demo Session</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.mydsl.conferenceProgram.DemoSession
-   * @generated
-   */
-  public Adapter createDemoSessionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.conferenceProgram.PanelSession <em>Panel Session</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.mydsl.conferenceProgram.PanelSession
-   * @generated
-   */
-  public Adapter createPanelSessionAdapter()
+  public Adapter createSessionAdapter()
   {
     return null;
   }

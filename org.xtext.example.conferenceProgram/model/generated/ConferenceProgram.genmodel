@@ -9,58 +9,25 @@
     <genClasses ecoreClass="ConferenceProgram.ecore#//ConferenceProgram">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//ConferenceProgram/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//ConferenceProgram/date"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//ConferenceProgram/researchtracks"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//ConferenceProgram/industrytracks"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//ConferenceProgram/demosandposterstrack"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//ConferenceProgram/panelstrack"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//ConferenceProgram/tracks"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//ConferenceProgram/socialEvents"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//ConferenceProgram/keynotes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//ConferenceProgram/coffebreaks"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//ConferenceProgram/lunches"/>
     </genClasses>
-    <genClasses ecoreClass="ConferenceProgram.ecore#//ResearchTrack">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//ResearchTrack/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//ResearchTrack/researchsession"/>
+    <genClasses ecoreClass="ConferenceProgram.ecore#//Track">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//Track/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//Track/session"/>
     </genClasses>
-    <genClasses ecoreClass="ConferenceProgram.ecore#//IndustryTrack">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//IndustryTrack/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//IndustryTrack/indutrysession"/>
-    </genClasses>
-    <genClasses ecoreClass="ConferenceProgram.ecore#//DemosAndPosterTrack">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//DemosAndPosterTrack/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//DemosAndPosterTrack/demosession"/>
-    </genClasses>
-    <genClasses ecoreClass="ConferenceProgram.ecore#//PanelTrack">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//PanelTrack/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//PanelTrack/panelsession"/>
-    </genClasses>
-    <genClasses ecoreClass="ConferenceProgram.ecore#//ResearchSession">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//ResearchSession/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//ResearchSession/researchpaper"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//ResearchSession/location"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//ResearchSession/startTime"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//ResearchSession/endTime"/>
-    </genClasses>
-    <genClasses ecoreClass="ConferenceProgram.ecore#//IndustrySession">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//IndustrySession/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//IndustrySession/industrypaper"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//IndustrySession/location"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//IndustrySession/startTime"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//IndustrySession/endTime"/>
-    </genClasses>
-    <genClasses ecoreClass="ConferenceProgram.ecore#//DemoSession">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//DemoSession/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//DemoSession/demoandposter"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//DemoSession/location"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//DemoSession/startTime"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//DemoSession/endTime"/>
-    </genClasses>
-    <genClasses ecoreClass="ConferenceProgram.ecore#//PanelSession">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//PanelSession/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//PanelSession/panel"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//PanelSession/location"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//PanelSession/startTime"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//PanelSession/endTime"/>
+    <genClasses ecoreClass="ConferenceProgram.ecore#//Session">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//Session/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//Session/researchpaper"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//Session/industrypaper"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//Session/demoandposter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//Session/panel"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ConferenceProgram.ecore#//Session/location"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//Session/startTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//Session/endTime"/>
     </genClasses>
     <genClasses ecoreClass="ConferenceProgram.ecore#//ResearchPaper">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//ResearchPaper/name"/>
@@ -82,12 +49,18 @@
     </genClasses>
     <genClasses ecoreClass="ConferenceProgram.ecore#//Keynote">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//Keynote/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//Keynote/startTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//Keynote/endTime"/>
     </genClasses>
     <genClasses ecoreClass="ConferenceProgram.ecore#//CoffeBreak">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//CoffeBreak/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//CoffeBreak/startTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//CoffeBreak/endTime"/>
     </genClasses>
     <genClasses ecoreClass="ConferenceProgram.ecore#//Lunch">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//Lunch/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//Lunch/startTime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//Lunch/endTime"/>
     </genClasses>
     <genClasses ecoreClass="ConferenceProgram.ecore#//SocialEvent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ConferenceProgram.ecore#//SocialEvent/name"/>

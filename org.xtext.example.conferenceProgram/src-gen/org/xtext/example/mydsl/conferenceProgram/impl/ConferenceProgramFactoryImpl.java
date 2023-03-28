@@ -66,14 +66,8 @@ public class ConferenceProgramFactoryImpl extends EFactoryImpl implements Confer
     switch (eClass.getClassifierID())
     {
       case ConferenceProgramPackage.CONFERENCE_PROGRAM: return createConferenceProgram();
-      case ConferenceProgramPackage.RESEARCH_TRACK: return createResearchTrack();
-      case ConferenceProgramPackage.INDUSTRY_TRACK: return createIndustryTrack();
-      case ConferenceProgramPackage.DEMOS_AND_POSTER_TRACK: return createDemosAndPosterTrack();
-      case ConferenceProgramPackage.PANEL_TRACK: return createPanelTrack();
-      case ConferenceProgramPackage.RESEARCH_SESSION: return createResearchSession();
-      case ConferenceProgramPackage.INDUSTRY_SESSION: return createIndustrySession();
-      case ConferenceProgramPackage.DEMO_SESSION: return createDemoSession();
-      case ConferenceProgramPackage.PANEL_SESSION: return createPanelSession();
+      case ConferenceProgramPackage.TRACK: return createTrack();
+      case ConferenceProgramPackage.SESSION: return createSession();
       case ConferenceProgramPackage.RESEARCH_PAPER: return createResearchPaper();
       case ConferenceProgramPackage.INDUSTRY_PAPER: return createIndustryPaper();
       case ConferenceProgramPackage.DEMO_AND_POSTER: return createDemoAndPoster();
@@ -108,10 +102,10 @@ public class ConferenceProgramFactoryImpl extends EFactoryImpl implements Confer
    * @generated
    */
   @Override
-  public ResearchTrack createResearchTrack()
+  public Track createTrack()
   {
-    ResearchTrackImpl researchTrack = new ResearchTrackImpl();
-    return researchTrack;
+    TrackImpl track = new TrackImpl();
+    return track;
   }
 
   /**
@@ -120,82 +114,10 @@ public class ConferenceProgramFactoryImpl extends EFactoryImpl implements Confer
    * @generated
    */
   @Override
-  public IndustryTrack createIndustryTrack()
+  public Session createSession()
   {
-    IndustryTrackImpl industryTrack = new IndustryTrackImpl();
-    return industryTrack;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public DemosAndPosterTrack createDemosAndPosterTrack()
-  {
-    DemosAndPosterTrackImpl demosAndPosterTrack = new DemosAndPosterTrackImpl();
-    return demosAndPosterTrack;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public PanelTrack createPanelTrack()
-  {
-    PanelTrackImpl panelTrack = new PanelTrackImpl();
-    return panelTrack;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public ResearchSession createResearchSession()
-  {
-    ResearchSessionImpl researchSession = new ResearchSessionImpl();
-    return researchSession;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public IndustrySession createIndustrySession()
-  {
-    IndustrySessionImpl industrySession = new IndustrySessionImpl();
-    return industrySession;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public DemoSession createDemoSession()
-  {
-    DemoSessionImpl demoSession = new DemoSessionImpl();
-    return demoSession;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public PanelSession createPanelSession()
-  {
-    PanelSessionImpl panelSession = new PanelSessionImpl();
-    return panelSession;
+    SessionImpl session = new SessionImpl();
+    return session;
   }
 
   /**

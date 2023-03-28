@@ -389,10 +389,10 @@ public class InternalConferenceProgramLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalConferenceProgram.g:3968:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalConferenceProgram.g:3968:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalConferenceProgram.g:2660:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalConferenceProgram.g:2660:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalConferenceProgram.g:3968:11: ( '^' )?
+            // InternalConferenceProgram.g:2660:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -401,7 +401,7 @@ public class InternalConferenceProgramLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalConferenceProgram.g:3968:11: '^'
+                    // InternalConferenceProgram.g:2660:11: '^'
                     {
                     match('^'); 
 
@@ -419,7 +419,7 @@ public class InternalConferenceProgramLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalConferenceProgram.g:3968:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalConferenceProgram.g:2660:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -468,10 +468,10 @@ public class InternalConferenceProgramLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalConferenceProgram.g:3970:10: ( ( '0' .. '9' )+ )
-            // InternalConferenceProgram.g:3970:12: ( '0' .. '9' )+
+            // InternalConferenceProgram.g:2662:10: ( ( '0' .. '9' )+ )
+            // InternalConferenceProgram.g:2662:12: ( '0' .. '9' )+
             {
-            // InternalConferenceProgram.g:3970:12: ( '0' .. '9' )+
+            // InternalConferenceProgram.g:2662:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -485,7 +485,7 @@ public class InternalConferenceProgramLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalConferenceProgram.g:3970:13: '0' .. '9'
+            	    // InternalConferenceProgram.g:2662:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -517,10 +517,10 @@ public class InternalConferenceProgramLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalConferenceProgram.g:3972:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalConferenceProgram.g:3972:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalConferenceProgram.g:2664:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalConferenceProgram.g:2664:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalConferenceProgram.g:3972:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalConferenceProgram.g:2664:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -538,10 +538,10 @@ public class InternalConferenceProgramLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalConferenceProgram.g:3972:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalConferenceProgram.g:2664:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalConferenceProgram.g:3972:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalConferenceProgram.g:2664:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -557,7 +557,7 @@ public class InternalConferenceProgramLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalConferenceProgram.g:3972:21: '\\\\' .
+                    	    // InternalConferenceProgram.g:2664:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -565,7 +565,7 @@ public class InternalConferenceProgramLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalConferenceProgram.g:3972:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalConferenceProgram.g:2664:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -590,10 +590,10 @@ public class InternalConferenceProgramLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalConferenceProgram.g:3972:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalConferenceProgram.g:2664:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalConferenceProgram.g:3972:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalConferenceProgram.g:2664:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -609,7 +609,7 @@ public class InternalConferenceProgramLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalConferenceProgram.g:3972:54: '\\\\' .
+                    	    // InternalConferenceProgram.g:2664:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -617,7 +617,7 @@ public class InternalConferenceProgramLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalConferenceProgram.g:3972:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalConferenceProgram.g:2664:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -660,12 +660,12 @@ public class InternalConferenceProgramLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalConferenceProgram.g:3974:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalConferenceProgram.g:3974:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalConferenceProgram.g:2666:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalConferenceProgram.g:2666:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalConferenceProgram.g:3974:24: ( options {greedy=false; } : . )*
+            // InternalConferenceProgram.g:2666:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -690,7 +690,7 @@ public class InternalConferenceProgramLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalConferenceProgram.g:3974:52: .
+            	    // InternalConferenceProgram.g:2666:52: .
             	    {
             	    matchAny(); 
 
@@ -720,12 +720,12 @@ public class InternalConferenceProgramLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalConferenceProgram.g:3976:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalConferenceProgram.g:3976:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalConferenceProgram.g:2668:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalConferenceProgram.g:2668:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalConferenceProgram.g:3976:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalConferenceProgram.g:2668:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -738,7 +738,7 @@ public class InternalConferenceProgramLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalConferenceProgram.g:3976:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalConferenceProgram.g:2668:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -758,7 +758,7 @@ public class InternalConferenceProgramLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalConferenceProgram.g:3976:40: ( ( '\\r' )? '\\n' )?
+            // InternalConferenceProgram.g:2668:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -767,9 +767,9 @@ public class InternalConferenceProgramLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalConferenceProgram.g:3976:41: ( '\\r' )? '\\n'
+                    // InternalConferenceProgram.g:2668:41: ( '\\r' )? '\\n'
                     {
-                    // InternalConferenceProgram.g:3976:41: ( '\\r' )?
+                    // InternalConferenceProgram.g:2668:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -778,7 +778,7 @@ public class InternalConferenceProgramLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalConferenceProgram.g:3976:41: '\\r'
+                            // InternalConferenceProgram.g:2668:41: '\\r'
                             {
                             match('\r'); 
 
@@ -810,10 +810,10 @@ public class InternalConferenceProgramLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalConferenceProgram.g:3978:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalConferenceProgram.g:3978:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalConferenceProgram.g:2670:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalConferenceProgram.g:2670:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalConferenceProgram.g:3978:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalConferenceProgram.g:2670:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -867,8 +867,8 @@ public class InternalConferenceProgramLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalConferenceProgram.g:3980:16: ( . )
-            // InternalConferenceProgram.g:3980:18: .
+            // InternalConferenceProgram.g:2672:16: ( . )
+            // InternalConferenceProgram.g:2672:18: .
             {
             matchAny(); 
 

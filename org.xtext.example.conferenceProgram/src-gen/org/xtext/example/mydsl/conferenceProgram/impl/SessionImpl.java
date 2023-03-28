@@ -20,28 +20,34 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.mydsl.conferenceProgram.ConferenceProgramPackage;
+import org.xtext.example.mydsl.conferenceProgram.DemoAndPoster;
 import org.xtext.example.mydsl.conferenceProgram.IndustryPaper;
-import org.xtext.example.mydsl.conferenceProgram.IndustrySession;
 import org.xtext.example.mydsl.conferenceProgram.Location;
+import org.xtext.example.mydsl.conferenceProgram.Panel;
+import org.xtext.example.mydsl.conferenceProgram.ResearchPaper;
+import org.xtext.example.mydsl.conferenceProgram.Session;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Industry Session</b></em>'.
+ * An implementation of the model object '<em><b>Session</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.IndustrySessionImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.IndustrySessionImpl#getIndustrypaper <em>Industrypaper</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.IndustrySessionImpl#getLocation <em>Location</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.IndustrySessionImpl#getStartTime <em>Start Time</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.IndustrySessionImpl#getEndTime <em>End Time</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.SessionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.SessionImpl#getResearchpaper <em>Researchpaper</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.SessionImpl#getIndustrypaper <em>Industrypaper</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.SessionImpl#getDemoandposter <em>Demoandposter</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.SessionImpl#getPanel <em>Panel</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.SessionImpl#getLocation <em>Location</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.SessionImpl#getStartTime <em>Start Time</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.SessionImpl#getEndTime <em>End Time</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IndustrySessionImpl extends MinimalEObjectImpl.Container implements IndustrySession
+public class SessionImpl extends MinimalEObjectImpl.Container implements Session
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -64,6 +70,16 @@ public class IndustrySessionImpl extends MinimalEObjectImpl.Container implements
   protected String name = NAME_EDEFAULT;
 
   /**
+   * The cached value of the '{@link #getResearchpaper() <em>Researchpaper</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getResearchpaper()
+   * @generated
+   * @ordered
+   */
+  protected EList<ResearchPaper> researchpaper;
+
+  /**
    * The cached value of the '{@link #getIndustrypaper() <em>Industrypaper</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -72,6 +88,26 @@ public class IndustrySessionImpl extends MinimalEObjectImpl.Container implements
    * @ordered
    */
   protected EList<IndustryPaper> industrypaper;
+
+  /**
+   * The cached value of the '{@link #getDemoandposter() <em>Demoandposter</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDemoandposter()
+   * @generated
+   * @ordered
+   */
+  protected EList<DemoAndPoster> demoandposter;
+
+  /**
+   * The cached value of the '{@link #getPanel() <em>Panel</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPanel()
+   * @generated
+   * @ordered
+   */
+  protected EList<Panel> panel;
 
   /**
    * The cached value of the '{@link #getLocation() <em>Location</em>}' containment reference.
@@ -128,7 +164,7 @@ public class IndustrySessionImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
-  protected IndustrySessionImpl()
+  protected SessionImpl()
   {
     super();
   }
@@ -141,7 +177,7 @@ public class IndustrySessionImpl extends MinimalEObjectImpl.Container implements
   @Override
   protected EClass eStaticClass()
   {
-    return ConferenceProgramPackage.Literals.INDUSTRY_SESSION;
+    return ConferenceProgramPackage.Literals.SESSION;
   }
 
   /**
@@ -166,7 +202,22 @@ public class IndustrySessionImpl extends MinimalEObjectImpl.Container implements
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.INDUSTRY_SESSION__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.SESSION__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<ResearchPaper> getResearchpaper()
+  {
+    if (researchpaper == null)
+    {
+      researchpaper = new EObjectContainmentEList<ResearchPaper>(ResearchPaper.class, this, ConferenceProgramPackage.SESSION__RESEARCHPAPER);
+    }
+    return researchpaper;
   }
 
   /**
@@ -179,9 +230,39 @@ public class IndustrySessionImpl extends MinimalEObjectImpl.Container implements
   {
     if (industrypaper == null)
     {
-      industrypaper = new EObjectContainmentEList<IndustryPaper>(IndustryPaper.class, this, ConferenceProgramPackage.INDUSTRY_SESSION__INDUSTRYPAPER);
+      industrypaper = new EObjectContainmentEList<IndustryPaper>(IndustryPaper.class, this, ConferenceProgramPackage.SESSION__INDUSTRYPAPER);
     }
     return industrypaper;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<DemoAndPoster> getDemoandposter()
+  {
+    if (demoandposter == null)
+    {
+      demoandposter = new EObjectContainmentEList<DemoAndPoster>(DemoAndPoster.class, this, ConferenceProgramPackage.SESSION__DEMOANDPOSTER);
+    }
+    return demoandposter;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<Panel> getPanel()
+  {
+    if (panel == null)
+    {
+      panel = new EObjectContainmentEList<Panel>(Panel.class, this, ConferenceProgramPackage.SESSION__PANEL);
+    }
+    return panel;
   }
 
   /**
@@ -206,7 +287,7 @@ public class IndustrySessionImpl extends MinimalEObjectImpl.Container implements
     location = newLocation;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.INDUSTRY_SESSION__LOCATION, oldLocation, newLocation);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.SESSION__LOCATION, oldLocation, newLocation);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -224,14 +305,14 @@ public class IndustrySessionImpl extends MinimalEObjectImpl.Container implements
     {
       NotificationChain msgs = null;
       if (location != null)
-        msgs = ((InternalEObject)location).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ConferenceProgramPackage.INDUSTRY_SESSION__LOCATION, null, msgs);
+        msgs = ((InternalEObject)location).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ConferenceProgramPackage.SESSION__LOCATION, null, msgs);
       if (newLocation != null)
-        msgs = ((InternalEObject)newLocation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ConferenceProgramPackage.INDUSTRY_SESSION__LOCATION, null, msgs);
+        msgs = ((InternalEObject)newLocation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ConferenceProgramPackage.SESSION__LOCATION, null, msgs);
       msgs = basicSetLocation(newLocation, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.INDUSTRY_SESSION__LOCATION, newLocation, newLocation));
+      eNotify(new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.SESSION__LOCATION, newLocation, newLocation));
   }
 
   /**
@@ -256,7 +337,7 @@ public class IndustrySessionImpl extends MinimalEObjectImpl.Container implements
     String oldStartTime = startTime;
     startTime = newStartTime;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.INDUSTRY_SESSION__START_TIME, oldStartTime, startTime));
+      eNotify(new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.SESSION__START_TIME, oldStartTime, startTime));
   }
 
   /**
@@ -281,7 +362,7 @@ public class IndustrySessionImpl extends MinimalEObjectImpl.Container implements
     String oldEndTime = endTime;
     endTime = newEndTime;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.INDUSTRY_SESSION__END_TIME, oldEndTime, endTime));
+      eNotify(new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.SESSION__END_TIME, oldEndTime, endTime));
   }
 
   /**
@@ -294,9 +375,15 @@ public class IndustrySessionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.INDUSTRY_SESSION__INDUSTRYPAPER:
+      case ConferenceProgramPackage.SESSION__RESEARCHPAPER:
+        return ((InternalEList<?>)getResearchpaper()).basicRemove(otherEnd, msgs);
+      case ConferenceProgramPackage.SESSION__INDUSTRYPAPER:
         return ((InternalEList<?>)getIndustrypaper()).basicRemove(otherEnd, msgs);
-      case ConferenceProgramPackage.INDUSTRY_SESSION__LOCATION:
+      case ConferenceProgramPackage.SESSION__DEMOANDPOSTER:
+        return ((InternalEList<?>)getDemoandposter()).basicRemove(otherEnd, msgs);
+      case ConferenceProgramPackage.SESSION__PANEL:
+        return ((InternalEList<?>)getPanel()).basicRemove(otherEnd, msgs);
+      case ConferenceProgramPackage.SESSION__LOCATION:
         return basicSetLocation(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -312,15 +399,21 @@ public class IndustrySessionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.INDUSTRY_SESSION__NAME:
+      case ConferenceProgramPackage.SESSION__NAME:
         return getName();
-      case ConferenceProgramPackage.INDUSTRY_SESSION__INDUSTRYPAPER:
+      case ConferenceProgramPackage.SESSION__RESEARCHPAPER:
+        return getResearchpaper();
+      case ConferenceProgramPackage.SESSION__INDUSTRYPAPER:
         return getIndustrypaper();
-      case ConferenceProgramPackage.INDUSTRY_SESSION__LOCATION:
+      case ConferenceProgramPackage.SESSION__DEMOANDPOSTER:
+        return getDemoandposter();
+      case ConferenceProgramPackage.SESSION__PANEL:
+        return getPanel();
+      case ConferenceProgramPackage.SESSION__LOCATION:
         return getLocation();
-      case ConferenceProgramPackage.INDUSTRY_SESSION__START_TIME:
+      case ConferenceProgramPackage.SESSION__START_TIME:
         return getStartTime();
-      case ConferenceProgramPackage.INDUSTRY_SESSION__END_TIME:
+      case ConferenceProgramPackage.SESSION__END_TIME:
         return getEndTime();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -337,20 +430,32 @@ public class IndustrySessionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.INDUSTRY_SESSION__NAME:
+      case ConferenceProgramPackage.SESSION__NAME:
         setName((String)newValue);
         return;
-      case ConferenceProgramPackage.INDUSTRY_SESSION__INDUSTRYPAPER:
+      case ConferenceProgramPackage.SESSION__RESEARCHPAPER:
+        getResearchpaper().clear();
+        getResearchpaper().addAll((Collection<? extends ResearchPaper>)newValue);
+        return;
+      case ConferenceProgramPackage.SESSION__INDUSTRYPAPER:
         getIndustrypaper().clear();
         getIndustrypaper().addAll((Collection<? extends IndustryPaper>)newValue);
         return;
-      case ConferenceProgramPackage.INDUSTRY_SESSION__LOCATION:
+      case ConferenceProgramPackage.SESSION__DEMOANDPOSTER:
+        getDemoandposter().clear();
+        getDemoandposter().addAll((Collection<? extends DemoAndPoster>)newValue);
+        return;
+      case ConferenceProgramPackage.SESSION__PANEL:
+        getPanel().clear();
+        getPanel().addAll((Collection<? extends Panel>)newValue);
+        return;
+      case ConferenceProgramPackage.SESSION__LOCATION:
         setLocation((Location)newValue);
         return;
-      case ConferenceProgramPackage.INDUSTRY_SESSION__START_TIME:
+      case ConferenceProgramPackage.SESSION__START_TIME:
         setStartTime((String)newValue);
         return;
-      case ConferenceProgramPackage.INDUSTRY_SESSION__END_TIME:
+      case ConferenceProgramPackage.SESSION__END_TIME:
         setEndTime((String)newValue);
         return;
     }
@@ -367,19 +472,28 @@ public class IndustrySessionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.INDUSTRY_SESSION__NAME:
+      case ConferenceProgramPackage.SESSION__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case ConferenceProgramPackage.INDUSTRY_SESSION__INDUSTRYPAPER:
+      case ConferenceProgramPackage.SESSION__RESEARCHPAPER:
+        getResearchpaper().clear();
+        return;
+      case ConferenceProgramPackage.SESSION__INDUSTRYPAPER:
         getIndustrypaper().clear();
         return;
-      case ConferenceProgramPackage.INDUSTRY_SESSION__LOCATION:
+      case ConferenceProgramPackage.SESSION__DEMOANDPOSTER:
+        getDemoandposter().clear();
+        return;
+      case ConferenceProgramPackage.SESSION__PANEL:
+        getPanel().clear();
+        return;
+      case ConferenceProgramPackage.SESSION__LOCATION:
         setLocation((Location)null);
         return;
-      case ConferenceProgramPackage.INDUSTRY_SESSION__START_TIME:
+      case ConferenceProgramPackage.SESSION__START_TIME:
         setStartTime(START_TIME_EDEFAULT);
         return;
-      case ConferenceProgramPackage.INDUSTRY_SESSION__END_TIME:
+      case ConferenceProgramPackage.SESSION__END_TIME:
         setEndTime(END_TIME_EDEFAULT);
         return;
     }
@@ -396,15 +510,21 @@ public class IndustrySessionImpl extends MinimalEObjectImpl.Container implements
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.INDUSTRY_SESSION__NAME:
+      case ConferenceProgramPackage.SESSION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case ConferenceProgramPackage.INDUSTRY_SESSION__INDUSTRYPAPER:
+      case ConferenceProgramPackage.SESSION__RESEARCHPAPER:
+        return researchpaper != null && !researchpaper.isEmpty();
+      case ConferenceProgramPackage.SESSION__INDUSTRYPAPER:
         return industrypaper != null && !industrypaper.isEmpty();
-      case ConferenceProgramPackage.INDUSTRY_SESSION__LOCATION:
+      case ConferenceProgramPackage.SESSION__DEMOANDPOSTER:
+        return demoandposter != null && !demoandposter.isEmpty();
+      case ConferenceProgramPackage.SESSION__PANEL:
+        return panel != null && !panel.isEmpty();
+      case ConferenceProgramPackage.SESSION__LOCATION:
         return location != null;
-      case ConferenceProgramPackage.INDUSTRY_SESSION__START_TIME:
+      case ConferenceProgramPackage.SESSION__START_TIME:
         return START_TIME_EDEFAULT == null ? startTime != null : !START_TIME_EDEFAULT.equals(startTime);
-      case ConferenceProgramPackage.INDUSTRY_SESSION__END_TIME:
+      case ConferenceProgramPackage.SESSION__END_TIME:
         return END_TIME_EDEFAULT == null ? endTime != null : !END_TIME_EDEFAULT.equals(endTime);
     }
     return super.eIsSet(featureID);
@@ -431,4 +551,4 @@ public class IndustrySessionImpl extends MinimalEObjectImpl.Container implements
     return result.toString();
   }
 
-} //IndustrySessionImpl
+} //SessionImpl

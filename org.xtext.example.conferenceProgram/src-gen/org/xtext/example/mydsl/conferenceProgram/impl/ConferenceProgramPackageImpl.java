@@ -15,23 +15,17 @@ import org.xtext.example.mydsl.conferenceProgram.ConferenceProgram;
 import org.xtext.example.mydsl.conferenceProgram.ConferenceProgramFactory;
 import org.xtext.example.mydsl.conferenceProgram.ConferenceProgramPackage;
 import org.xtext.example.mydsl.conferenceProgram.DemoAndPoster;
-import org.xtext.example.mydsl.conferenceProgram.DemoSession;
-import org.xtext.example.mydsl.conferenceProgram.DemosAndPosterTrack;
 import org.xtext.example.mydsl.conferenceProgram.GoogleMapsDirections;
 import org.xtext.example.mydsl.conferenceProgram.IndustryPaper;
-import org.xtext.example.mydsl.conferenceProgram.IndustrySession;
-import org.xtext.example.mydsl.conferenceProgram.IndustryTrack;
 import org.xtext.example.mydsl.conferenceProgram.Keynote;
 import org.xtext.example.mydsl.conferenceProgram.Location;
 import org.xtext.example.mydsl.conferenceProgram.Lunch;
 import org.xtext.example.mydsl.conferenceProgram.Panel;
-import org.xtext.example.mydsl.conferenceProgram.PanelSession;
-import org.xtext.example.mydsl.conferenceProgram.PanelTrack;
 import org.xtext.example.mydsl.conferenceProgram.ResearchPaper;
-import org.xtext.example.mydsl.conferenceProgram.ResearchSession;
-import org.xtext.example.mydsl.conferenceProgram.ResearchTrack;
 import org.xtext.example.mydsl.conferenceProgram.Room;
+import org.xtext.example.mydsl.conferenceProgram.Session;
 import org.xtext.example.mydsl.conferenceProgram.SocialEvent;
+import org.xtext.example.mydsl.conferenceProgram.Track;
 
 /**
  * <!-- begin-user-doc -->
@@ -53,56 +47,14 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass researchTrackEClass = null;
+  private EClass trackEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass industryTrackEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass demosAndPosterTrackEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass panelTrackEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass researchSessionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass industrySessionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass demoSessionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass panelSessionEClass = null;
+  private EClass sessionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -282,7 +234,7 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
-  public EReference getConferenceProgram_Researchtracks()
+  public EReference getConferenceProgram_Tracks()
   {
     return (EReference)conferenceProgramEClass.getEStructuralFeatures().get(2);
   }
@@ -293,7 +245,7 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
-  public EReference getConferenceProgram_Industrytracks()
+  public EReference getConferenceProgram_SocialEvents()
   {
     return (EReference)conferenceProgramEClass.getEStructuralFeatures().get(3);
   }
@@ -304,7 +256,7 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
-  public EReference getConferenceProgram_Demosandposterstrack()
+  public EReference getConferenceProgram_Keynotes()
   {
     return (EReference)conferenceProgramEClass.getEStructuralFeatures().get(4);
   }
@@ -315,7 +267,7 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
-  public EReference getConferenceProgram_Panelstrack()
+  public EReference getConferenceProgram_Coffebreaks()
   {
     return (EReference)conferenceProgramEClass.getEStructuralFeatures().get(5);
   }
@@ -326,7 +278,7 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
-  public EReference getConferenceProgram_SocialEvents()
+  public EReference getConferenceProgram_Lunches()
   {
     return (EReference)conferenceProgramEClass.getEStructuralFeatures().get(6);
   }
@@ -337,9 +289,9 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
-  public EReference getConferenceProgram_Keynotes()
+  public EClass getTrack()
   {
-    return (EReference)conferenceProgramEClass.getEStructuralFeatures().get(7);
+    return trackEClass;
   }
 
   /**
@@ -348,9 +300,9 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
-  public EReference getConferenceProgram_Coffebreaks()
+  public EAttribute getTrack_Name()
   {
-    return (EReference)conferenceProgramEClass.getEStructuralFeatures().get(8);
+    return (EAttribute)trackEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -359,9 +311,9 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
-  public EReference getConferenceProgram_Lunches()
+  public EReference getTrack_Session()
   {
-    return (EReference)conferenceProgramEClass.getEStructuralFeatures().get(9);
+    return (EReference)trackEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -370,9 +322,9 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
-  public EClass getResearchTrack()
+  public EClass getSession()
   {
-    return researchTrackEClass;
+    return sessionEClass;
   }
 
   /**
@@ -381,9 +333,9 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
-  public EAttribute getResearchTrack_Name()
+  public EAttribute getSession_Name()
   {
-    return (EAttribute)researchTrackEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)sessionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -392,9 +344,9 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
-  public EReference getResearchTrack_Researchsession()
+  public EReference getSession_Researchpaper()
   {
-    return (EReference)researchTrackEClass.getEStructuralFeatures().get(1);
+    return (EReference)sessionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -403,9 +355,9 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
-  public EClass getIndustryTrack()
+  public EReference getSession_Industrypaper()
   {
-    return industryTrackEClass;
+    return (EReference)sessionEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -414,9 +366,9 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
-  public EAttribute getIndustryTrack_Name()
+  public EReference getSession_Demoandposter()
   {
-    return (EAttribute)industryTrackEClass.getEStructuralFeatures().get(0);
+    return (EReference)sessionEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -425,9 +377,9 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
-  public EReference getIndustryTrack_Indutrysession()
+  public EReference getSession_Panel()
   {
-    return (EReference)industryTrackEClass.getEStructuralFeatures().get(1);
+    return (EReference)sessionEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -436,9 +388,9 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
-  public EClass getDemosAndPosterTrack()
+  public EReference getSession_Location()
   {
-    return demosAndPosterTrackEClass;
+    return (EReference)sessionEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -447,9 +399,9 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
-  public EAttribute getDemosAndPosterTrack_Name()
+  public EAttribute getSession_StartTime()
   {
-    return (EAttribute)demosAndPosterTrackEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)sessionEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -458,306 +410,9 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
-  public EReference getDemosAndPosterTrack_Demosession()
+  public EAttribute getSession_EndTime()
   {
-    return (EReference)demosAndPosterTrackEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getPanelTrack()
-  {
-    return panelTrackEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getPanelTrack_Name()
-  {
-    return (EAttribute)panelTrackEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getPanelTrack_Panelsession()
-  {
-    return (EReference)panelTrackEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getResearchSession()
-  {
-    return researchSessionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getResearchSession_Name()
-  {
-    return (EAttribute)researchSessionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getResearchSession_Researchpaper()
-  {
-    return (EReference)researchSessionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getResearchSession_Location()
-  {
-    return (EReference)researchSessionEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getResearchSession_StartTime()
-  {
-    return (EAttribute)researchSessionEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getResearchSession_EndTime()
-  {
-    return (EAttribute)researchSessionEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getIndustrySession()
-  {
-    return industrySessionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getIndustrySession_Name()
-  {
-    return (EAttribute)industrySessionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getIndustrySession_Industrypaper()
-  {
-    return (EReference)industrySessionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getIndustrySession_Location()
-  {
-    return (EReference)industrySessionEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getIndustrySession_StartTime()
-  {
-    return (EAttribute)industrySessionEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getIndustrySession_EndTime()
-  {
-    return (EAttribute)industrySessionEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getDemoSession()
-  {
-    return demoSessionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getDemoSession_Name()
-  {
-    return (EAttribute)demoSessionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getDemoSession_Demoandposter()
-  {
-    return (EReference)demoSessionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getDemoSession_Location()
-  {
-    return (EReference)demoSessionEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getDemoSession_StartTime()
-  {
-    return (EAttribute)demoSessionEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getDemoSession_EndTime()
-  {
-    return (EAttribute)demoSessionEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getPanelSession()
-  {
-    return panelSessionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getPanelSession_Name()
-  {
-    return (EAttribute)panelSessionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getPanelSession_Panel()
-  {
-    return (EReference)panelSessionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getPanelSession_Location()
-  {
-    return (EReference)panelSessionEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getPanelSession_StartTime()
-  {
-    return (EAttribute)panelSessionEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getPanelSession_EndTime()
-  {
-    return (EAttribute)panelSessionEClass.getEStructuralFeatures().get(4);
+    return (EAttribute)sessionEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -920,6 +575,28 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
+  public EAttribute getKeynote_StartTime()
+  {
+    return (EAttribute)keynoteEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getKeynote_EndTime()
+  {
+    return (EAttribute)keynoteEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getCoffeBreak()
   {
     return coffeBreakEClass;
@@ -942,6 +619,28 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
    * @generated
    */
   @Override
+  public EAttribute getCoffeBreak_StartTime()
+  {
+    return (EAttribute)coffeBreakEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getCoffeBreak_EndTime()
+  {
+    return (EAttribute)coffeBreakEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getLunch()
   {
     return lunchEClass;
@@ -956,6 +655,28 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
   public EAttribute getLunch_Name()
   {
     return (EAttribute)lunchEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getLunch_StartTime()
+  {
+    return (EAttribute)lunchEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getLunch_EndTime()
+  {
+    return (EAttribute)lunchEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1080,58 +801,25 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
     conferenceProgramEClass = createEClass(CONFERENCE_PROGRAM);
     createEAttribute(conferenceProgramEClass, CONFERENCE_PROGRAM__NAME);
     createEAttribute(conferenceProgramEClass, CONFERENCE_PROGRAM__DATE);
-    createEReference(conferenceProgramEClass, CONFERENCE_PROGRAM__RESEARCHTRACKS);
-    createEReference(conferenceProgramEClass, CONFERENCE_PROGRAM__INDUSTRYTRACKS);
-    createEReference(conferenceProgramEClass, CONFERENCE_PROGRAM__DEMOSANDPOSTERSTRACK);
-    createEReference(conferenceProgramEClass, CONFERENCE_PROGRAM__PANELSTRACK);
+    createEReference(conferenceProgramEClass, CONFERENCE_PROGRAM__TRACKS);
     createEReference(conferenceProgramEClass, CONFERENCE_PROGRAM__SOCIAL_EVENTS);
     createEReference(conferenceProgramEClass, CONFERENCE_PROGRAM__KEYNOTES);
     createEReference(conferenceProgramEClass, CONFERENCE_PROGRAM__COFFEBREAKS);
     createEReference(conferenceProgramEClass, CONFERENCE_PROGRAM__LUNCHES);
 
-    researchTrackEClass = createEClass(RESEARCH_TRACK);
-    createEAttribute(researchTrackEClass, RESEARCH_TRACK__NAME);
-    createEReference(researchTrackEClass, RESEARCH_TRACK__RESEARCHSESSION);
+    trackEClass = createEClass(TRACK);
+    createEAttribute(trackEClass, TRACK__NAME);
+    createEReference(trackEClass, TRACK__SESSION);
 
-    industryTrackEClass = createEClass(INDUSTRY_TRACK);
-    createEAttribute(industryTrackEClass, INDUSTRY_TRACK__NAME);
-    createEReference(industryTrackEClass, INDUSTRY_TRACK__INDUTRYSESSION);
-
-    demosAndPosterTrackEClass = createEClass(DEMOS_AND_POSTER_TRACK);
-    createEAttribute(demosAndPosterTrackEClass, DEMOS_AND_POSTER_TRACK__NAME);
-    createEReference(demosAndPosterTrackEClass, DEMOS_AND_POSTER_TRACK__DEMOSESSION);
-
-    panelTrackEClass = createEClass(PANEL_TRACK);
-    createEAttribute(panelTrackEClass, PANEL_TRACK__NAME);
-    createEReference(panelTrackEClass, PANEL_TRACK__PANELSESSION);
-
-    researchSessionEClass = createEClass(RESEARCH_SESSION);
-    createEAttribute(researchSessionEClass, RESEARCH_SESSION__NAME);
-    createEReference(researchSessionEClass, RESEARCH_SESSION__RESEARCHPAPER);
-    createEReference(researchSessionEClass, RESEARCH_SESSION__LOCATION);
-    createEAttribute(researchSessionEClass, RESEARCH_SESSION__START_TIME);
-    createEAttribute(researchSessionEClass, RESEARCH_SESSION__END_TIME);
-
-    industrySessionEClass = createEClass(INDUSTRY_SESSION);
-    createEAttribute(industrySessionEClass, INDUSTRY_SESSION__NAME);
-    createEReference(industrySessionEClass, INDUSTRY_SESSION__INDUSTRYPAPER);
-    createEReference(industrySessionEClass, INDUSTRY_SESSION__LOCATION);
-    createEAttribute(industrySessionEClass, INDUSTRY_SESSION__START_TIME);
-    createEAttribute(industrySessionEClass, INDUSTRY_SESSION__END_TIME);
-
-    demoSessionEClass = createEClass(DEMO_SESSION);
-    createEAttribute(demoSessionEClass, DEMO_SESSION__NAME);
-    createEReference(demoSessionEClass, DEMO_SESSION__DEMOANDPOSTER);
-    createEReference(demoSessionEClass, DEMO_SESSION__LOCATION);
-    createEAttribute(demoSessionEClass, DEMO_SESSION__START_TIME);
-    createEAttribute(demoSessionEClass, DEMO_SESSION__END_TIME);
-
-    panelSessionEClass = createEClass(PANEL_SESSION);
-    createEAttribute(panelSessionEClass, PANEL_SESSION__NAME);
-    createEReference(panelSessionEClass, PANEL_SESSION__PANEL);
-    createEReference(panelSessionEClass, PANEL_SESSION__LOCATION);
-    createEAttribute(panelSessionEClass, PANEL_SESSION__START_TIME);
-    createEAttribute(panelSessionEClass, PANEL_SESSION__END_TIME);
+    sessionEClass = createEClass(SESSION);
+    createEAttribute(sessionEClass, SESSION__NAME);
+    createEReference(sessionEClass, SESSION__RESEARCHPAPER);
+    createEReference(sessionEClass, SESSION__INDUSTRYPAPER);
+    createEReference(sessionEClass, SESSION__DEMOANDPOSTER);
+    createEReference(sessionEClass, SESSION__PANEL);
+    createEReference(sessionEClass, SESSION__LOCATION);
+    createEAttribute(sessionEClass, SESSION__START_TIME);
+    createEAttribute(sessionEClass, SESSION__END_TIME);
 
     researchPaperEClass = createEClass(RESEARCH_PAPER);
     createEAttribute(researchPaperEClass, RESEARCH_PAPER__NAME);
@@ -1153,12 +841,18 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
 
     keynoteEClass = createEClass(KEYNOTE);
     createEAttribute(keynoteEClass, KEYNOTE__NAME);
+    createEAttribute(keynoteEClass, KEYNOTE__START_TIME);
+    createEAttribute(keynoteEClass, KEYNOTE__END_TIME);
 
     coffeBreakEClass = createEClass(COFFE_BREAK);
     createEAttribute(coffeBreakEClass, COFFE_BREAK__NAME);
+    createEAttribute(coffeBreakEClass, COFFE_BREAK__START_TIME);
+    createEAttribute(coffeBreakEClass, COFFE_BREAK__END_TIME);
 
     lunchEClass = createEClass(LUNCH);
     createEAttribute(lunchEClass, LUNCH__NAME);
+    createEAttribute(lunchEClass, LUNCH__START_TIME);
+    createEAttribute(lunchEClass, LUNCH__END_TIME);
 
     socialEventEClass = createEClass(SOCIAL_EVENT);
     createEAttribute(socialEventEClass, SOCIAL_EVENT__NAME);
@@ -1205,58 +899,25 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
     initEClass(conferenceProgramEClass, ConferenceProgram.class, "ConferenceProgram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getConferenceProgram_Name(), ecorePackage.getEString(), "name", null, 0, 1, ConferenceProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getConferenceProgram_Date(), ecorePackage.getEString(), "date", null, 0, 1, ConferenceProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConferenceProgram_Researchtracks(), this.getResearchTrack(), null, "researchtracks", null, 0, 1, ConferenceProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConferenceProgram_Industrytracks(), this.getIndustryTrack(), null, "industrytracks", null, 0, -1, ConferenceProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConferenceProgram_Demosandposterstrack(), this.getDemosAndPosterTrack(), null, "demosandposterstrack", null, 0, -1, ConferenceProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getConferenceProgram_Panelstrack(), this.getPanelTrack(), null, "panelstrack", null, 0, -1, ConferenceProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getConferenceProgram_Tracks(), this.getTrack(), null, "tracks", null, 0, -1, ConferenceProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getConferenceProgram_SocialEvents(), this.getSocialEvent(), null, "socialEvents", null, 0, -1, ConferenceProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getConferenceProgram_Keynotes(), this.getKeynote(), null, "keynotes", null, 0, -1, ConferenceProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getConferenceProgram_Coffebreaks(), this.getCoffeBreak(), null, "coffebreaks", null, 0, -1, ConferenceProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getConferenceProgram_Lunches(), this.getLunch(), null, "lunches", null, 0, -1, ConferenceProgram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(researchTrackEClass, ResearchTrack.class, "ResearchTrack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getResearchTrack_Name(), ecorePackage.getEString(), "name", null, 0, 1, ResearchTrack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getResearchTrack_Researchsession(), this.getResearchSession(), null, "researchsession", null, 0, -1, ResearchTrack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(trackEClass, Track.class, "Track", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTrack_Name(), ecorePackage.getEString(), "name", null, 0, 1, Track.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTrack_Session(), this.getSession(), null, "session", null, 0, -1, Track.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(industryTrackEClass, IndustryTrack.class, "IndustryTrack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getIndustryTrack_Name(), ecorePackage.getEString(), "name", null, 0, 1, IndustryTrack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getIndustryTrack_Indutrysession(), this.getIndustrySession(), null, "indutrysession", null, 0, -1, IndustryTrack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(demosAndPosterTrackEClass, DemosAndPosterTrack.class, "DemosAndPosterTrack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDemosAndPosterTrack_Name(), ecorePackage.getEString(), "name", null, 0, 1, DemosAndPosterTrack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDemosAndPosterTrack_Demosession(), this.getDemoSession(), null, "demosession", null, 0, -1, DemosAndPosterTrack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(panelTrackEClass, PanelTrack.class, "PanelTrack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPanelTrack_Name(), ecorePackage.getEString(), "name", null, 0, 1, PanelTrack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPanelTrack_Panelsession(), this.getPanelSession(), null, "panelsession", null, 0, -1, PanelTrack.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(researchSessionEClass, ResearchSession.class, "ResearchSession", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getResearchSession_Name(), ecorePackage.getEString(), "name", null, 0, 1, ResearchSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getResearchSession_Researchpaper(), this.getResearchPaper(), null, "researchpaper", null, 0, -1, ResearchSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getResearchSession_Location(), this.getLocation(), null, "location", null, 0, 1, ResearchSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getResearchSession_StartTime(), ecorePackage.getEString(), "startTime", null, 0, 1, ResearchSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getResearchSession_EndTime(), ecorePackage.getEString(), "endTime", null, 0, 1, ResearchSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(industrySessionEClass, IndustrySession.class, "IndustrySession", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getIndustrySession_Name(), ecorePackage.getEString(), "name", null, 0, 1, IndustrySession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getIndustrySession_Industrypaper(), this.getIndustryPaper(), null, "industrypaper", null, 0, -1, IndustrySession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getIndustrySession_Location(), this.getLocation(), null, "location", null, 0, 1, IndustrySession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getIndustrySession_StartTime(), ecorePackage.getEString(), "startTime", null, 0, 1, IndustrySession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getIndustrySession_EndTime(), ecorePackage.getEString(), "endTime", null, 0, 1, IndustrySession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(demoSessionEClass, DemoSession.class, "DemoSession", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDemoSession_Name(), ecorePackage.getEString(), "name", null, 0, 1, DemoSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDemoSession_Demoandposter(), this.getDemoAndPoster(), null, "demoandposter", null, 0, -1, DemoSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDemoSession_Location(), this.getLocation(), null, "location", null, 0, 1, DemoSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDemoSession_StartTime(), ecorePackage.getEString(), "startTime", null, 0, 1, DemoSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDemoSession_EndTime(), ecorePackage.getEString(), "endTime", null, 0, 1, DemoSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(panelSessionEClass, PanelSession.class, "PanelSession", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPanelSession_Name(), ecorePackage.getEString(), "name", null, 0, 1, PanelSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPanelSession_Panel(), this.getPanel(), null, "panel", null, 0, -1, PanelSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPanelSession_Location(), this.getLocation(), null, "location", null, 0, 1, PanelSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPanelSession_StartTime(), ecorePackage.getEString(), "startTime", null, 0, 1, PanelSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPanelSession_EndTime(), ecorePackage.getEString(), "endTime", null, 0, 1, PanelSession.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(sessionEClass, Session.class, "Session", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSession_Name(), ecorePackage.getEString(), "name", null, 0, 1, Session.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSession_Researchpaper(), this.getResearchPaper(), null, "researchpaper", null, 0, -1, Session.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSession_Industrypaper(), this.getIndustryPaper(), null, "industrypaper", null, 0, -1, Session.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSession_Demoandposter(), this.getDemoAndPoster(), null, "demoandposter", null, 0, -1, Session.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSession_Panel(), this.getPanel(), null, "panel", null, 0, -1, Session.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSession_Location(), this.getLocation(), null, "location", null, 0, 1, Session.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSession_StartTime(), ecorePackage.getEString(), "startTime", null, 0, 1, Session.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSession_EndTime(), ecorePackage.getEString(), "endTime", null, 0, 1, Session.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(researchPaperEClass, ResearchPaper.class, "ResearchPaper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getResearchPaper_Name(), ecorePackage.getEString(), "name", null, 0, 1, ResearchPaper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1278,12 +939,18 @@ public class ConferenceProgramPackageImpl extends EPackageImpl implements Confer
 
     initEClass(keynoteEClass, Keynote.class, "Keynote", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getKeynote_Name(), ecorePackage.getEString(), "name", null, 0, 1, Keynote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getKeynote_StartTime(), ecorePackage.getEString(), "startTime", null, 0, 1, Keynote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getKeynote_EndTime(), ecorePackage.getEString(), "endTime", null, 0, 1, Keynote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(coffeBreakEClass, CoffeBreak.class, "CoffeBreak", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCoffeBreak_Name(), ecorePackage.getEString(), "name", null, 0, 1, CoffeBreak.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCoffeBreak_StartTime(), ecorePackage.getEString(), "startTime", null, 0, 1, CoffeBreak.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCoffeBreak_EndTime(), ecorePackage.getEString(), "endTime", null, 0, 1, CoffeBreak.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(lunchEClass, Lunch.class, "Lunch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getLunch_Name(), ecorePackage.getEString(), "name", null, 0, 1, Lunch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLunch_StartTime(), ecorePackage.getEString(), "startTime", null, 0, 1, Lunch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLunch_EndTime(), ecorePackage.getEString(), "endTime", null, 0, 1, Lunch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(socialEventEClass, SocialEvent.class, "SocialEvent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getSocialEvent_Name(), ecorePackage.getEString(), "name", null, 0, 1, SocialEvent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -5,68 +5,30 @@ generate conferenceProgram "http://www.xtext.org/example/mydsl/ConferenceProgram
 ConferenceProgram:
     'Program' name=ID 
     date=STRING
-    researchtracks=ResearchTrack //1 research track
-    (industrytracks+=IndustryTrack)? //zero or 1 industry trakcs
-    (demosandposterstrack+=DemosAndPosterTrack)? //zero or 1 demos and poster track
-    (panelstrack+=PanelTrack)? //zero or 1 panel tracks
+    (tracks+=Track)+ //1 or more  track
     (socialEvents+=SocialEvent)* //zero or more social events
     (keynotes+=Keynote)* //zero or more keynotes
     (coffebreaks+=CoffeBreak)* //zeror or more coffee breaks
     (lunches+=Lunch)* //zeror or more lunch breaks
     ;
     
-ResearchTrack:
+Track:
     'Track' name=ID '{'
-    (researchsession+=ResearchSession)+
+    (session+=Session)+
     '}';
     
-IndustryTrack:
-    'Track' name=ID '{'
-    (indutrysession+=IndustrySession)+
-    '}';
 
-DemosAndPosterTrack:
-    'Track' name=ID '{'
-    (demosession+=DemoSession)+
-    '}';
-    
-PanelTrack:
-    'Track' name=ID '{'
-    (panelsession+=PanelSession)+
-    '}';
-    
-ResearchSession:
+Session:
     'Session' name=ID '{'
-    (researchpaper+=ResearchPaper)+
+    (researchpaper+=ResearchPaper)*
+    (industrypaper+=IndustryPaper)*
+    (demoandposter+=DemoAndPoster)*
+    (panel+=Panel)*
     (location=Location)?
     startTime=STRING
     endTime=STRING
     '}';
- 
-IndustrySession:
-    'Session' name=ID '{'
-    (industrypaper+=IndustryPaper)+
-    (location=Location)?
-    startTime=STRING
-    endTime=STRING
-    '}';
-    
-DemoSession:
-    'Session' name=ID '{'
-    (demoandposter+=DemoAndPoster)+
-    (location=Location)?
-    startTime=STRING
-    endTime=STRING
-    '}';
-    
-PanelSession:
-    'Session' name=ID '{'
-    (panel+=Panel)+
-    (location=Location)?
-    startTime=STRING
-    endTime=STRING
-    '}';
-    
+     
 ResearchPaper:
     'Paper' name=ID;
 
@@ -89,13 +51,20 @@ Room:
     'Room' name=ID;
 
 Keynote:
-    'Keynote' name=ID;
+    'Keynote' name=ID
+    startTime=STRING
+    endTime=STRING;
 
 CoffeBreak:
-    'Break' name=ID;
+    'Break' name=ID
+    startTime=STRING
+    endTime=STRING;
+    
 
 Lunch:
-    'Lunch' name=ID;
+    'Lunch' name=ID
+    startTime=STRING
+    endTime=STRING;
 
 SocialEvent:
     'SocialEvent' name=ID '{'

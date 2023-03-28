@@ -119,85 +119,28 @@ ruleConferenceProgram returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getConferenceProgramAccess().getResearchtracksResearchTrackParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getConferenceProgramAccess().getTracksTrackParserRuleCall_3_0());
 				}
-				lv_researchtracks_3_0=ruleResearchTrack
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getConferenceProgramRule());
-					}
-					set(
-						$current,
-						"researchtracks",
-						lv_researchtracks_3_0,
-						"org.xtext.example.mydsl.ConferenceProgram.ResearchTrack");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getConferenceProgramAccess().getIndustrytracksIndustryTrackParserRuleCall_4_0());
-				}
-				lv_industrytracks_4_0=ruleIndustryTrack
+				lv_tracks_3_0=ruleTrack
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getConferenceProgramRule());
 					}
 					add(
 						$current,
-						"industrytracks",
-						lv_industrytracks_4_0,
-						"org.xtext.example.mydsl.ConferenceProgram.IndustryTrack");
+						"tracks",
+						lv_tracks_3_0,
+						"org.xtext.example.mydsl.ConferenceProgram.Track");
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)?
+		)+
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getConferenceProgramAccess().getDemosandposterstrackDemosAndPosterTrackParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getConferenceProgramAccess().getSocialEventsSocialEventParserRuleCall_4_0());
 				}
-				lv_demosandposterstrack_5_0=ruleDemosAndPosterTrack
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getConferenceProgramRule());
-					}
-					add(
-						$current,
-						"demosandposterstrack",
-						lv_demosandposterstrack_5_0,
-						"org.xtext.example.mydsl.ConferenceProgram.DemosAndPosterTrack");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)?
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getConferenceProgramAccess().getPanelstrackPanelTrackParserRuleCall_6_0());
-				}
-				lv_panelstrack_6_0=rulePanelTrack
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getConferenceProgramRule());
-					}
-					add(
-						$current,
-						"panelstrack",
-						lv_panelstrack_6_0,
-						"org.xtext.example.mydsl.ConferenceProgram.PanelTrack");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)?
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getConferenceProgramAccess().getSocialEventsSocialEventParserRuleCall_7_0());
-				}
-				lv_socialEvents_7_0=ruleSocialEvent
+				lv_socialEvents_4_0=ruleSocialEvent
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getConferenceProgramRule());
@@ -205,7 +148,7 @@ ruleConferenceProgram returns [EObject current=null]
 					add(
 						$current,
 						"socialEvents",
-						lv_socialEvents_7_0,
+						lv_socialEvents_4_0,
 						"org.xtext.example.mydsl.ConferenceProgram.SocialEvent");
 					afterParserOrEnumRuleCall();
 				}
@@ -214,9 +157,9 @@ ruleConferenceProgram returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getConferenceProgramAccess().getKeynotesKeynoteParserRuleCall_8_0());
+					newCompositeNode(grammarAccess.getConferenceProgramAccess().getKeynotesKeynoteParserRuleCall_5_0());
 				}
-				lv_keynotes_8_0=ruleKeynote
+				lv_keynotes_5_0=ruleKeynote
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getConferenceProgramRule());
@@ -224,7 +167,7 @@ ruleConferenceProgram returns [EObject current=null]
 					add(
 						$current,
 						"keynotes",
-						lv_keynotes_8_0,
+						lv_keynotes_5_0,
 						"org.xtext.example.mydsl.ConferenceProgram.Keynote");
 					afterParserOrEnumRuleCall();
 				}
@@ -233,9 +176,9 @@ ruleConferenceProgram returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getConferenceProgramAccess().getCoffebreaksCoffeBreakParserRuleCall_9_0());
+					newCompositeNode(grammarAccess.getConferenceProgramAccess().getCoffebreaksCoffeBreakParserRuleCall_6_0());
 				}
-				lv_coffebreaks_9_0=ruleCoffeBreak
+				lv_coffebreaks_6_0=ruleCoffeBreak
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getConferenceProgramRule());
@@ -243,7 +186,7 @@ ruleConferenceProgram returns [EObject current=null]
 					add(
 						$current,
 						"coffebreaks",
-						lv_coffebreaks_9_0,
+						lv_coffebreaks_6_0,
 						"org.xtext.example.mydsl.ConferenceProgram.CoffeBreak");
 					afterParserOrEnumRuleCall();
 				}
@@ -252,9 +195,9 @@ ruleConferenceProgram returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getConferenceProgramAccess().getLunchesLunchParserRuleCall_10_0());
+					newCompositeNode(grammarAccess.getConferenceProgramAccess().getLunchesLunchParserRuleCall_7_0());
 				}
-				lv_lunches_10_0=ruleLunch
+				lv_lunches_7_0=ruleLunch
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getConferenceProgramRule());
@@ -262,7 +205,7 @@ ruleConferenceProgram returns [EObject current=null]
 					add(
 						$current,
 						"lunches",
-						lv_lunches_10_0,
+						lv_lunches_7_0,
 						"org.xtext.example.mydsl.ConferenceProgram.Lunch");
 					afterParserOrEnumRuleCall();
 				}
@@ -271,15 +214,15 @@ ruleConferenceProgram returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleResearchTrack
-entryRuleResearchTrack returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getResearchTrackRule()); }
-	iv_ruleResearchTrack=ruleResearchTrack
-	{ $current=$iv_ruleResearchTrack.current; }
+// Entry rule entryRuleTrack
+entryRuleTrack returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTrackRule()); }
+	iv_ruleTrack=ruleTrack
+	{ $current=$iv_ruleTrack.current; }
 	EOF;
 
-// Rule ResearchTrack
-ruleResearchTrack returns [EObject current=null]
+// Rule Track
+ruleTrack returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -289,17 +232,17 @@ ruleResearchTrack returns [EObject current=null]
 	(
 		otherlv_0='Track'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getResearchTrackAccess().getTrackKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getTrackAccess().getTrackKeyword_0());
 		}
 		(
 			(
 				lv_name_1_0=RULE_ID
 				{
-					newLeafNode(lv_name_1_0, grammarAccess.getResearchTrackAccess().getNameIDTerminalRuleCall_1_0());
+					newLeafNode(lv_name_1_0, grammarAccess.getTrackAccess().getNameIDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getResearchTrackRule());
+						$current = createModelElement(grammarAccess.getTrackRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -311,247 +254,43 @@ ruleResearchTrack returns [EObject current=null]
 		)
 		otherlv_2='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getResearchTrackAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_2, grammarAccess.getTrackAccess().getLeftCurlyBracketKeyword_2());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getResearchTrackAccess().getResearchsessionResearchSessionParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getTrackAccess().getSessionSessionParserRuleCall_3_0());
 				}
-				lv_researchsession_3_0=ruleResearchSession
+				lv_session_3_0=ruleSession
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getResearchTrackRule());
+						$current = createModelElementForParent(grammarAccess.getTrackRule());
 					}
 					add(
 						$current,
-						"researchsession",
-						lv_researchsession_3_0,
-						"org.xtext.example.mydsl.ConferenceProgram.ResearchSession");
+						"session",
+						lv_session_3_0,
+						"org.xtext.example.mydsl.ConferenceProgram.Session");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
 		otherlv_4='}'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getResearchTrackAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_4, grammarAccess.getTrackAccess().getRightCurlyBracketKeyword_4());
 		}
 	)
 ;
 
-// Entry rule entryRuleIndustryTrack
-entryRuleIndustryTrack returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getIndustryTrackRule()); }
-	iv_ruleIndustryTrack=ruleIndustryTrack
-	{ $current=$iv_ruleIndustryTrack.current; }
+// Entry rule entryRuleSession
+entryRuleSession returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getSessionRule()); }
+	iv_ruleSession=ruleSession
+	{ $current=$iv_ruleSession.current; }
 	EOF;
 
-// Rule IndustryTrack
-ruleIndustryTrack returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='Track'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getIndustryTrackAccess().getTrackKeyword_0());
-		}
-		(
-			(
-				lv_name_1_0=RULE_ID
-				{
-					newLeafNode(lv_name_1_0, grammarAccess.getIndustryTrackAccess().getNameIDTerminalRuleCall_1_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getIndustryTrackRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"name",
-						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
-				}
-			)
-		)
-		otherlv_2='{'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getIndustryTrackAccess().getLeftCurlyBracketKeyword_2());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getIndustryTrackAccess().getIndutrysessionIndustrySessionParserRuleCall_3_0());
-				}
-				lv_indutrysession_3_0=ruleIndustrySession
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getIndustryTrackRule());
-					}
-					add(
-						$current,
-						"indutrysession",
-						lv_indutrysession_3_0,
-						"org.xtext.example.mydsl.ConferenceProgram.IndustrySession");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)+
-		otherlv_4='}'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getIndustryTrackAccess().getRightCurlyBracketKeyword_4());
-		}
-	)
-;
-
-// Entry rule entryRuleDemosAndPosterTrack
-entryRuleDemosAndPosterTrack returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getDemosAndPosterTrackRule()); }
-	iv_ruleDemosAndPosterTrack=ruleDemosAndPosterTrack
-	{ $current=$iv_ruleDemosAndPosterTrack.current; }
-	EOF;
-
-// Rule DemosAndPosterTrack
-ruleDemosAndPosterTrack returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='Track'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getDemosAndPosterTrackAccess().getTrackKeyword_0());
-		}
-		(
-			(
-				lv_name_1_0=RULE_ID
-				{
-					newLeafNode(lv_name_1_0, grammarAccess.getDemosAndPosterTrackAccess().getNameIDTerminalRuleCall_1_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDemosAndPosterTrackRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"name",
-						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
-				}
-			)
-		)
-		otherlv_2='{'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getDemosAndPosterTrackAccess().getLeftCurlyBracketKeyword_2());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getDemosAndPosterTrackAccess().getDemosessionDemoSessionParserRuleCall_3_0());
-				}
-				lv_demosession_3_0=ruleDemoSession
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getDemosAndPosterTrackRule());
-					}
-					add(
-						$current,
-						"demosession",
-						lv_demosession_3_0,
-						"org.xtext.example.mydsl.ConferenceProgram.DemoSession");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)+
-		otherlv_4='}'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getDemosAndPosterTrackAccess().getRightCurlyBracketKeyword_4());
-		}
-	)
-;
-
-// Entry rule entryRulePanelTrack
-entryRulePanelTrack returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getPanelTrackRule()); }
-	iv_rulePanelTrack=rulePanelTrack
-	{ $current=$iv_rulePanelTrack.current; }
-	EOF;
-
-// Rule PanelTrack
-rulePanelTrack returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='Track'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getPanelTrackAccess().getTrackKeyword_0());
-		}
-		(
-			(
-				lv_name_1_0=RULE_ID
-				{
-					newLeafNode(lv_name_1_0, grammarAccess.getPanelTrackAccess().getNameIDTerminalRuleCall_1_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getPanelTrackRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"name",
-						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
-				}
-			)
-		)
-		otherlv_2='{'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getPanelTrackAccess().getLeftCurlyBracketKeyword_2());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getPanelTrackAccess().getPanelsessionPanelSessionParserRuleCall_3_0());
-				}
-				lv_panelsession_3_0=rulePanelSession
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getPanelTrackRule());
-					}
-					add(
-						$current,
-						"panelsession",
-						lv_panelsession_3_0,
-						"org.xtext.example.mydsl.ConferenceProgram.PanelSession");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)+
-		otherlv_4='}'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getPanelTrackAccess().getRightCurlyBracketKeyword_4());
-		}
-	)
-;
-
-// Entry rule entryRuleResearchSession
-entryRuleResearchSession returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getResearchSessionRule()); }
-	iv_ruleResearchSession=ruleResearchSession
-	{ $current=$iv_ruleResearchSession.current; }
-	EOF;
-
-// Rule ResearchSession
-ruleResearchSession returns [EObject current=null]
+// Rule Session
+ruleSession returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -561,17 +300,17 @@ ruleResearchSession returns [EObject current=null]
 	(
 		otherlv_0='Session'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getResearchSessionAccess().getSessionKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getSessionAccess().getSessionKeyword_0());
 		}
 		(
 			(
 				lv_name_1_0=RULE_ID
 				{
-					newLeafNode(lv_name_1_0, grammarAccess.getResearchSessionAccess().getNameIDTerminalRuleCall_1_0());
+					newLeafNode(lv_name_1_0, grammarAccess.getSessionAccess().getNameIDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getResearchSessionRule());
+						$current = createModelElement(grammarAccess.getSessionRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -583,17 +322,17 @@ ruleResearchSession returns [EObject current=null]
 		)
 		otherlv_2='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getResearchSessionAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_2, grammarAccess.getSessionAccess().getLeftCurlyBracketKeyword_2());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getResearchSessionAccess().getResearchpaperResearchPaperParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getSessionAccess().getResearchpaperResearchPaperParserRuleCall_3_0());
 				}
 				lv_researchpaper_3_0=ruleResearchPaper
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getResearchSessionRule());
+						$current = createModelElementForParent(grammarAccess.getSessionRule());
 					}
 					add(
 						$current,
@@ -603,390 +342,78 @@ ruleResearchSession returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)+
+		)*
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getResearchSessionAccess().getLocationLocationParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getSessionAccess().getIndustrypaperIndustryPaperParserRuleCall_4_0());
 				}
-				lv_location_4_0=ruleLocation
+				lv_industrypaper_4_0=ruleIndustryPaper
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getResearchSessionRule());
-					}
-					set(
-						$current,
-						"location",
-						lv_location_4_0,
-						"org.xtext.example.mydsl.ConferenceProgram.Location");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)?
-		(
-			(
-				lv_startTime_5_0=RULE_STRING
-				{
-					newLeafNode(lv_startTime_5_0, grammarAccess.getResearchSessionAccess().getStartTimeSTRINGTerminalRuleCall_5_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getResearchSessionRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"startTime",
-						lv_startTime_5_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
-				}
-			)
-		)
-		(
-			(
-				lv_endTime_6_0=RULE_STRING
-				{
-					newLeafNode(lv_endTime_6_0, grammarAccess.getResearchSessionAccess().getEndTimeSTRINGTerminalRuleCall_6_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getResearchSessionRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"endTime",
-						lv_endTime_6_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
-				}
-			)
-		)
-		otherlv_7='}'
-		{
-			newLeafNode(otherlv_7, grammarAccess.getResearchSessionAccess().getRightCurlyBracketKeyword_7());
-		}
-	)
-;
-
-// Entry rule entryRuleIndustrySession
-entryRuleIndustrySession returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getIndustrySessionRule()); }
-	iv_ruleIndustrySession=ruleIndustrySession
-	{ $current=$iv_ruleIndustrySession.current; }
-	EOF;
-
-// Rule IndustrySession
-ruleIndustrySession returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='Session'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getIndustrySessionAccess().getSessionKeyword_0());
-		}
-		(
-			(
-				lv_name_1_0=RULE_ID
-				{
-					newLeafNode(lv_name_1_0, grammarAccess.getIndustrySessionAccess().getNameIDTerminalRuleCall_1_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getIndustrySessionRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"name",
-						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
-				}
-			)
-		)
-		otherlv_2='{'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getIndustrySessionAccess().getLeftCurlyBracketKeyword_2());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getIndustrySessionAccess().getIndustrypaperIndustryPaperParserRuleCall_3_0());
-				}
-				lv_industrypaper_3_0=ruleIndustryPaper
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getIndustrySessionRule());
+						$current = createModelElementForParent(grammarAccess.getSessionRule());
 					}
 					add(
 						$current,
 						"industrypaper",
-						lv_industrypaper_3_0,
+						lv_industrypaper_4_0,
 						"org.xtext.example.mydsl.ConferenceProgram.IndustryPaper");
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)+
+		)*
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getIndustrySessionAccess().getLocationLocationParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getSessionAccess().getDemoandposterDemoAndPosterParserRuleCall_5_0());
 				}
-				lv_location_4_0=ruleLocation
+				lv_demoandposter_5_0=ruleDemoAndPoster
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getIndustrySessionRule());
-					}
-					set(
-						$current,
-						"location",
-						lv_location_4_0,
-						"org.xtext.example.mydsl.ConferenceProgram.Location");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)?
-		(
-			(
-				lv_startTime_5_0=RULE_STRING
-				{
-					newLeafNode(lv_startTime_5_0, grammarAccess.getIndustrySessionAccess().getStartTimeSTRINGTerminalRuleCall_5_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getIndustrySessionRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"startTime",
-						lv_startTime_5_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
-				}
-			)
-		)
-		(
-			(
-				lv_endTime_6_0=RULE_STRING
-				{
-					newLeafNode(lv_endTime_6_0, grammarAccess.getIndustrySessionAccess().getEndTimeSTRINGTerminalRuleCall_6_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getIndustrySessionRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"endTime",
-						lv_endTime_6_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
-				}
-			)
-		)
-		otherlv_7='}'
-		{
-			newLeafNode(otherlv_7, grammarAccess.getIndustrySessionAccess().getRightCurlyBracketKeyword_7());
-		}
-	)
-;
-
-// Entry rule entryRuleDemoSession
-entryRuleDemoSession returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getDemoSessionRule()); }
-	iv_ruleDemoSession=ruleDemoSession
-	{ $current=$iv_ruleDemoSession.current; }
-	EOF;
-
-// Rule DemoSession
-ruleDemoSession returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='Session'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getDemoSessionAccess().getSessionKeyword_0());
-		}
-		(
-			(
-				lv_name_1_0=RULE_ID
-				{
-					newLeafNode(lv_name_1_0, grammarAccess.getDemoSessionAccess().getNameIDTerminalRuleCall_1_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDemoSessionRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"name",
-						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
-				}
-			)
-		)
-		otherlv_2='{'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getDemoSessionAccess().getLeftCurlyBracketKeyword_2());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getDemoSessionAccess().getDemoandposterDemoAndPosterParserRuleCall_3_0());
-				}
-				lv_demoandposter_3_0=ruleDemoAndPoster
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getDemoSessionRule());
+						$current = createModelElementForParent(grammarAccess.getSessionRule());
 					}
 					add(
 						$current,
 						"demoandposter",
-						lv_demoandposter_3_0,
+						lv_demoandposter_5_0,
 						"org.xtext.example.mydsl.ConferenceProgram.DemoAndPoster");
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)+
+		)*
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDemoSessionAccess().getLocationLocationParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getSessionAccess().getPanelPanelParserRuleCall_6_0());
 				}
-				lv_location_4_0=ruleLocation
+				lv_panel_6_0=rulePanel
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getDemoSessionRule());
-					}
-					set(
-						$current,
-						"location",
-						lv_location_4_0,
-						"org.xtext.example.mydsl.ConferenceProgram.Location");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)?
-		(
-			(
-				lv_startTime_5_0=RULE_STRING
-				{
-					newLeafNode(lv_startTime_5_0, grammarAccess.getDemoSessionAccess().getStartTimeSTRINGTerminalRuleCall_5_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDemoSessionRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"startTime",
-						lv_startTime_5_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
-				}
-			)
-		)
-		(
-			(
-				lv_endTime_6_0=RULE_STRING
-				{
-					newLeafNode(lv_endTime_6_0, grammarAccess.getDemoSessionAccess().getEndTimeSTRINGTerminalRuleCall_6_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDemoSessionRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"endTime",
-						lv_endTime_6_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
-				}
-			)
-		)
-		otherlv_7='}'
-		{
-			newLeafNode(otherlv_7, grammarAccess.getDemoSessionAccess().getRightCurlyBracketKeyword_7());
-		}
-	)
-;
-
-// Entry rule entryRulePanelSession
-entryRulePanelSession returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getPanelSessionRule()); }
-	iv_rulePanelSession=rulePanelSession
-	{ $current=$iv_rulePanelSession.current; }
-	EOF;
-
-// Rule PanelSession
-rulePanelSession returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='Session'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getPanelSessionAccess().getSessionKeyword_0());
-		}
-		(
-			(
-				lv_name_1_0=RULE_ID
-				{
-					newLeafNode(lv_name_1_0, grammarAccess.getPanelSessionAccess().getNameIDTerminalRuleCall_1_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getPanelSessionRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"name",
-						lv_name_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
-				}
-			)
-		)
-		otherlv_2='{'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getPanelSessionAccess().getLeftCurlyBracketKeyword_2());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getPanelSessionAccess().getPanelPanelParserRuleCall_3_0());
-				}
-				lv_panel_3_0=rulePanel
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getPanelSessionRule());
+						$current = createModelElementForParent(grammarAccess.getSessionRule());
 					}
 					add(
 						$current,
 						"panel",
-						lv_panel_3_0,
+						lv_panel_6_0,
 						"org.xtext.example.mydsl.ConferenceProgram.Panel");
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)+
+		)*
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getPanelSessionAccess().getLocationLocationParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getSessionAccess().getLocationLocationParserRuleCall_7_0());
 				}
-				lv_location_4_0=ruleLocation
+				lv_location_7_0=ruleLocation
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getPanelSessionRule());
+						$current = createModelElementForParent(grammarAccess.getSessionRule());
 					}
 					set(
 						$current,
 						"location",
-						lv_location_4_0,
+						lv_location_7_0,
 						"org.xtext.example.mydsl.ConferenceProgram.Location");
 					afterParserOrEnumRuleCall();
 				}
@@ -994,43 +421,43 @@ rulePanelSession returns [EObject current=null]
 		)?
 		(
 			(
-				lv_startTime_5_0=RULE_STRING
+				lv_startTime_8_0=RULE_STRING
 				{
-					newLeafNode(lv_startTime_5_0, grammarAccess.getPanelSessionAccess().getStartTimeSTRINGTerminalRuleCall_5_0());
+					newLeafNode(lv_startTime_8_0, grammarAccess.getSessionAccess().getStartTimeSTRINGTerminalRuleCall_8_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getPanelSessionRule());
+						$current = createModelElement(grammarAccess.getSessionRule());
 					}
 					setWithLastConsumed(
 						$current,
 						"startTime",
-						lv_startTime_5_0,
+						lv_startTime_8_0,
 						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
 		(
 			(
-				lv_endTime_6_0=RULE_STRING
+				lv_endTime_9_0=RULE_STRING
 				{
-					newLeafNode(lv_endTime_6_0, grammarAccess.getPanelSessionAccess().getEndTimeSTRINGTerminalRuleCall_6_0());
+					newLeafNode(lv_endTime_9_0, grammarAccess.getSessionAccess().getEndTimeSTRINGTerminalRuleCall_9_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getPanelSessionRule());
+						$current = createModelElement(grammarAccess.getSessionRule());
 					}
 					setWithLastConsumed(
 						$current,
 						"endTime",
-						lv_endTime_6_0,
+						lv_endTime_9_0,
 						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
-		otherlv_7='}'
+		otherlv_10='}'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getPanelSessionAccess().getRightCurlyBracketKeyword_7());
+			newLeafNode(otherlv_10, grammarAccess.getSessionAccess().getRightCurlyBracketKeyword_10());
 		}
 	)
 ;
@@ -1328,6 +755,42 @@ ruleKeynote returns [EObject current=null]
 				}
 			)
 		)
+		(
+			(
+				lv_startTime_2_0=RULE_STRING
+				{
+					newLeafNode(lv_startTime_2_0, grammarAccess.getKeynoteAccess().getStartTimeSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getKeynoteRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"startTime",
+						lv_startTime_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		(
+			(
+				lv_endTime_3_0=RULE_STRING
+				{
+					newLeafNode(lv_endTime_3_0, grammarAccess.getKeynoteAccess().getEndTimeSTRINGTerminalRuleCall_3_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getKeynoteRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"endTime",
+						lv_endTime_3_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
 	)
 ;
 
@@ -1369,6 +832,42 @@ ruleCoffeBreak returns [EObject current=null]
 				}
 			)
 		)
+		(
+			(
+				lv_startTime_2_0=RULE_STRING
+				{
+					newLeafNode(lv_startTime_2_0, grammarAccess.getCoffeBreakAccess().getStartTimeSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getCoffeBreakRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"startTime",
+						lv_startTime_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		(
+			(
+				lv_endTime_3_0=RULE_STRING
+				{
+					newLeafNode(lv_endTime_3_0, grammarAccess.getCoffeBreakAccess().getEndTimeSTRINGTerminalRuleCall_3_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getCoffeBreakRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"endTime",
+						lv_endTime_3_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
 	)
 ;
 
@@ -1407,6 +906,42 @@ ruleLunch returns [EObject current=null]
 						"name",
 						lv_name_1_0,
 						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		(
+			(
+				lv_startTime_2_0=RULE_STRING
+				{
+					newLeafNode(lv_startTime_2_0, grammarAccess.getLunchAccess().getStartTimeSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getLunchRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"startTime",
+						lv_startTime_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		(
+			(
+				lv_endTime_3_0=RULE_STRING
+				{
+					newLeafNode(lv_endTime_3_0, grammarAccess.getLunchAccess().getEndTimeSTRINGTerminalRuleCall_3_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getLunchRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"endTime",
+						lv_endTime_3_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
