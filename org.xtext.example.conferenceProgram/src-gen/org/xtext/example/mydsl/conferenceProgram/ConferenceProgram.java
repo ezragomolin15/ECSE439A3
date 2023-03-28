@@ -18,7 +18,10 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getDate <em>Date</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getTracks <em>Tracks</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getResearchtracks <em>Researchtracks</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getIndustrytracks <em>Industrytracks</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getDemosandposterstrack <em>Demosandposterstrack</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getPanelstrack <em>Panelstrack</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getSocialEvents <em>Social Events</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getKeynotes <em>Keynotes</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getCoffebreaks <em>Coffebreaks</em>}</li>
@@ -76,16 +79,62 @@ public interface ConferenceProgram extends EObject
   void setDate(String value);
 
   /**
-   * Returns the value of the '<em><b>Tracks</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.example.mydsl.conferenceProgram.Track}.
+   * Returns the value of the '<em><b>Researchtracks</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Tracks</em>' containment reference list.
-   * @see org.xtext.example.mydsl.conferenceProgram.ConferenceProgramPackage#getConferenceProgram_Tracks()
+   * @return the value of the '<em>Researchtracks</em>' containment reference.
+   * @see #setResearchtracks(ResearchTrack)
+   * @see org.xtext.example.mydsl.conferenceProgram.ConferenceProgramPackage#getConferenceProgram_Researchtracks()
    * @model containment="true"
    * @generated
    */
-  EList<Track> getTracks();
+  ResearchTrack getResearchtracks();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getResearchtracks <em>Researchtracks</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Researchtracks</em>' containment reference.
+   * @see #getResearchtracks()
+   * @generated
+   */
+  void setResearchtracks(ResearchTrack value);
+
+  /**
+   * Returns the value of the '<em><b>Industrytracks</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.conferenceProgram.IndustryTrack}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Industrytracks</em>' containment reference list.
+   * @see org.xtext.example.mydsl.conferenceProgram.ConferenceProgramPackage#getConferenceProgram_Industrytracks()
+   * @model containment="true"
+   * @generated
+   */
+  EList<IndustryTrack> getIndustrytracks();
+
+  /**
+   * Returns the value of the '<em><b>Demosandposterstrack</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.conferenceProgram.DemosAndPosterTrack}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Demosandposterstrack</em>' containment reference list.
+   * @see org.xtext.example.mydsl.conferenceProgram.ConferenceProgramPackage#getConferenceProgram_Demosandposterstrack()
+   * @model containment="true"
+   * @generated
+   */
+  EList<DemosAndPosterTrack> getDemosandposterstrack();
+
+  /**
+   * Returns the value of the '<em><b>Panelstrack</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.conferenceProgram.PanelTrack}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Panelstrack</em>' containment reference list.
+   * @see org.xtext.example.mydsl.conferenceProgram.ConferenceProgramPackage#getConferenceProgram_Panelstrack()
+   * @model containment="true"
+   * @generated
+   */
+  EList<PanelTrack> getPanelstrack();
 
   /**
    * Returns the value of the '<em><b>Social Events</b></em>' containment reference list.

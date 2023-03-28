@@ -22,10 +22,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.xtext.example.mydsl.conferenceProgram.CoffeBreak;
 import org.xtext.example.mydsl.conferenceProgram.ConferenceProgram;
 import org.xtext.example.mydsl.conferenceProgram.ConferenceProgramPackage;
+import org.xtext.example.mydsl.conferenceProgram.DemosAndPosterTrack;
+import org.xtext.example.mydsl.conferenceProgram.IndustryTrack;
 import org.xtext.example.mydsl.conferenceProgram.Keynote;
 import org.xtext.example.mydsl.conferenceProgram.Lunch;
+import org.xtext.example.mydsl.conferenceProgram.PanelTrack;
+import org.xtext.example.mydsl.conferenceProgram.ResearchTrack;
 import org.xtext.example.mydsl.conferenceProgram.SocialEvent;
-import org.xtext.example.mydsl.conferenceProgram.Track;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,7 +40,10 @@ import org.xtext.example.mydsl.conferenceProgram.Track;
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramImpl#getDate <em>Date</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramImpl#getTracks <em>Tracks</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramImpl#getResearchtracks <em>Researchtracks</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramImpl#getIndustrytracks <em>Industrytracks</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramImpl#getDemosandposterstrack <em>Demosandposterstrack</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramImpl#getPanelstrack <em>Panelstrack</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramImpl#getSocialEvents <em>Social Events</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramImpl#getKeynotes <em>Keynotes</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramImpl#getCoffebreaks <em>Coffebreaks</em>}</li>
@@ -89,14 +95,44 @@ public class ConferenceProgramImpl extends MinimalEObjectImpl.Container implemen
   protected String date = DATE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getTracks() <em>Tracks</em>}' containment reference list.
+   * The cached value of the '{@link #getResearchtracks() <em>Researchtracks</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTracks()
+   * @see #getResearchtracks()
    * @generated
    * @ordered
    */
-  protected EList<Track> tracks;
+  protected ResearchTrack researchtracks;
+
+  /**
+   * The cached value of the '{@link #getIndustrytracks() <em>Industrytracks</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIndustrytracks()
+   * @generated
+   * @ordered
+   */
+  protected EList<IndustryTrack> industrytracks;
+
+  /**
+   * The cached value of the '{@link #getDemosandposterstrack() <em>Demosandposterstrack</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDemosandposterstrack()
+   * @generated
+   * @ordered
+   */
+  protected EList<DemosAndPosterTrack> demosandposterstrack;
+
+  /**
+   * The cached value of the '{@link #getPanelstrack() <em>Panelstrack</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPanelstrack()
+   * @generated
+   * @ordered
+   */
+  protected EList<PanelTrack> panelstrack;
 
   /**
    * The cached value of the '{@link #getSocialEvents() <em>Social Events</em>}' containment reference list.
@@ -215,13 +251,93 @@ public class ConferenceProgramImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    */
   @Override
-  public EList<Track> getTracks()
+  public ResearchTrack getResearchtracks()
   {
-    if (tracks == null)
+    return researchtracks;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetResearchtracks(ResearchTrack newResearchtracks, NotificationChain msgs)
+  {
+    ResearchTrack oldResearchtracks = researchtracks;
+    researchtracks = newResearchtracks;
+    if (eNotificationRequired())
     {
-      tracks = new EObjectContainmentEList<Track>(Track.class, this, ConferenceProgramPackage.CONFERENCE_PROGRAM__TRACKS);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.CONFERENCE_PROGRAM__RESEARCHTRACKS, oldResearchtracks, newResearchtracks);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return tracks;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setResearchtracks(ResearchTrack newResearchtracks)
+  {
+    if (newResearchtracks != researchtracks)
+    {
+      NotificationChain msgs = null;
+      if (researchtracks != null)
+        msgs = ((InternalEObject)researchtracks).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ConferenceProgramPackage.CONFERENCE_PROGRAM__RESEARCHTRACKS, null, msgs);
+      if (newResearchtracks != null)
+        msgs = ((InternalEObject)newResearchtracks).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ConferenceProgramPackage.CONFERENCE_PROGRAM__RESEARCHTRACKS, null, msgs);
+      msgs = basicSetResearchtracks(newResearchtracks, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.CONFERENCE_PROGRAM__RESEARCHTRACKS, newResearchtracks, newResearchtracks));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<IndustryTrack> getIndustrytracks()
+  {
+    if (industrytracks == null)
+    {
+      industrytracks = new EObjectContainmentEList<IndustryTrack>(IndustryTrack.class, this, ConferenceProgramPackage.CONFERENCE_PROGRAM__INDUSTRYTRACKS);
+    }
+    return industrytracks;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<DemosAndPosterTrack> getDemosandposterstrack()
+  {
+    if (demosandposterstrack == null)
+    {
+      demosandposterstrack = new EObjectContainmentEList<DemosAndPosterTrack>(DemosAndPosterTrack.class, this, ConferenceProgramPackage.CONFERENCE_PROGRAM__DEMOSANDPOSTERSTRACK);
+    }
+    return demosandposterstrack;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<PanelTrack> getPanelstrack()
+  {
+    if (panelstrack == null)
+    {
+      panelstrack = new EObjectContainmentEList<PanelTrack>(PanelTrack.class, this, ConferenceProgramPackage.CONFERENCE_PROGRAM__PANELSTRACK);
+    }
+    return panelstrack;
   }
 
   /**
@@ -294,8 +410,14 @@ public class ConferenceProgramImpl extends MinimalEObjectImpl.Container implemen
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.CONFERENCE_PROGRAM__TRACKS:
-        return ((InternalEList<?>)getTracks()).basicRemove(otherEnd, msgs);
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__RESEARCHTRACKS:
+        return basicSetResearchtracks(null, msgs);
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__INDUSTRYTRACKS:
+        return ((InternalEList<?>)getIndustrytracks()).basicRemove(otherEnd, msgs);
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__DEMOSANDPOSTERSTRACK:
+        return ((InternalEList<?>)getDemosandposterstrack()).basicRemove(otherEnd, msgs);
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__PANELSTRACK:
+        return ((InternalEList<?>)getPanelstrack()).basicRemove(otherEnd, msgs);
       case ConferenceProgramPackage.CONFERENCE_PROGRAM__SOCIAL_EVENTS:
         return ((InternalEList<?>)getSocialEvents()).basicRemove(otherEnd, msgs);
       case ConferenceProgramPackage.CONFERENCE_PROGRAM__KEYNOTES:
@@ -322,8 +444,14 @@ public class ConferenceProgramImpl extends MinimalEObjectImpl.Container implemen
         return getName();
       case ConferenceProgramPackage.CONFERENCE_PROGRAM__DATE:
         return getDate();
-      case ConferenceProgramPackage.CONFERENCE_PROGRAM__TRACKS:
-        return getTracks();
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__RESEARCHTRACKS:
+        return getResearchtracks();
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__INDUSTRYTRACKS:
+        return getIndustrytracks();
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__DEMOSANDPOSTERSTRACK:
+        return getDemosandposterstrack();
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__PANELSTRACK:
+        return getPanelstrack();
       case ConferenceProgramPackage.CONFERENCE_PROGRAM__SOCIAL_EVENTS:
         return getSocialEvents();
       case ConferenceProgramPackage.CONFERENCE_PROGRAM__KEYNOTES:
@@ -353,9 +481,20 @@ public class ConferenceProgramImpl extends MinimalEObjectImpl.Container implemen
       case ConferenceProgramPackage.CONFERENCE_PROGRAM__DATE:
         setDate((String)newValue);
         return;
-      case ConferenceProgramPackage.CONFERENCE_PROGRAM__TRACKS:
-        getTracks().clear();
-        getTracks().addAll((Collection<? extends Track>)newValue);
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__RESEARCHTRACKS:
+        setResearchtracks((ResearchTrack)newValue);
+        return;
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__INDUSTRYTRACKS:
+        getIndustrytracks().clear();
+        getIndustrytracks().addAll((Collection<? extends IndustryTrack>)newValue);
+        return;
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__DEMOSANDPOSTERSTRACK:
+        getDemosandposterstrack().clear();
+        getDemosandposterstrack().addAll((Collection<? extends DemosAndPosterTrack>)newValue);
+        return;
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__PANELSTRACK:
+        getPanelstrack().clear();
+        getPanelstrack().addAll((Collection<? extends PanelTrack>)newValue);
         return;
       case ConferenceProgramPackage.CONFERENCE_PROGRAM__SOCIAL_EVENTS:
         getSocialEvents().clear();
@@ -393,8 +532,17 @@ public class ConferenceProgramImpl extends MinimalEObjectImpl.Container implemen
       case ConferenceProgramPackage.CONFERENCE_PROGRAM__DATE:
         setDate(DATE_EDEFAULT);
         return;
-      case ConferenceProgramPackage.CONFERENCE_PROGRAM__TRACKS:
-        getTracks().clear();
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__RESEARCHTRACKS:
+        setResearchtracks((ResearchTrack)null);
+        return;
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__INDUSTRYTRACKS:
+        getIndustrytracks().clear();
+        return;
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__DEMOSANDPOSTERSTRACK:
+        getDemosandposterstrack().clear();
+        return;
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__PANELSTRACK:
+        getPanelstrack().clear();
         return;
       case ConferenceProgramPackage.CONFERENCE_PROGRAM__SOCIAL_EVENTS:
         getSocialEvents().clear();
@@ -426,8 +574,14 @@ public class ConferenceProgramImpl extends MinimalEObjectImpl.Container implemen
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case ConferenceProgramPackage.CONFERENCE_PROGRAM__DATE:
         return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
-      case ConferenceProgramPackage.CONFERENCE_PROGRAM__TRACKS:
-        return tracks != null && !tracks.isEmpty();
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__RESEARCHTRACKS:
+        return researchtracks != null;
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__INDUSTRYTRACKS:
+        return industrytracks != null && !industrytracks.isEmpty();
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__DEMOSANDPOSTERSTRACK:
+        return demosandposterstrack != null && !demosandposterstrack.isEmpty();
+      case ConferenceProgramPackage.CONFERENCE_PROGRAM__PANELSTRACK:
+        return panelstrack != null && !panelstrack.isEmpty();
       case ConferenceProgramPackage.CONFERENCE_PROGRAM__SOCIAL_EVENTS:
         return socialEvents != null && !socialEvents.isEmpty();
       case ConferenceProgramPackage.CONFERENCE_PROGRAM__KEYNOTES:

@@ -3,30 +3,41 @@
  */
 package org.xtext.example.mydsl.conferenceProgram.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.xtext.example.mydsl.conferenceProgram.ConferenceProgramPackage;
-import org.xtext.example.mydsl.conferenceProgram.Lunch;
+import org.xtext.example.mydsl.conferenceProgram.PanelSession;
+import org.xtext.example.mydsl.conferenceProgram.PanelTrack;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Lunch</b></em>'.
+ * An implementation of the model object '<em><b>Panel Track</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.LunchImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.PanelTrackImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.PanelTrackImpl#getPanelsession <em>Panelsession</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
+public class PanelTrackImpl extends MinimalEObjectImpl.Container implements PanelTrack
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -49,11 +60,21 @@ public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
   protected String name = NAME_EDEFAULT;
 
   /**
+   * The cached value of the '{@link #getPanelsession() <em>Panelsession</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPanelsession()
+   * @generated
+   * @ordered
+   */
+  protected EList<PanelSession> panelsession;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected LunchImpl()
+  protected PanelTrackImpl()
   {
     super();
   }
@@ -66,7 +87,7 @@ public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
   @Override
   protected EClass eStaticClass()
   {
-    return ConferenceProgramPackage.Literals.LUNCH;
+    return ConferenceProgramPackage.Literals.PANEL_TRACK;
   }
 
   /**
@@ -91,7 +112,38 @@ public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.LUNCH__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.PANEL_TRACK__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<PanelSession> getPanelsession()
+  {
+    if (panelsession == null)
+    {
+      panelsession = new EObjectContainmentEList<PanelSession>(PanelSession.class, this, ConferenceProgramPackage.PANEL_TRACK__PANELSESSION);
+    }
+    return panelsession;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case ConferenceProgramPackage.PANEL_TRACK__PANELSESSION:
+        return ((InternalEList<?>)getPanelsession()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -104,8 +156,10 @@ public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.LUNCH__NAME:
+      case ConferenceProgramPackage.PANEL_TRACK__NAME:
         return getName();
+      case ConferenceProgramPackage.PANEL_TRACK__PANELSESSION:
+        return getPanelsession();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -115,13 +169,18 @@ public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.LUNCH__NAME:
+      case ConferenceProgramPackage.PANEL_TRACK__NAME:
         setName((String)newValue);
+        return;
+      case ConferenceProgramPackage.PANEL_TRACK__PANELSESSION:
+        getPanelsession().clear();
+        getPanelsession().addAll((Collection<? extends PanelSession>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,8 +196,11 @@ public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.LUNCH__NAME:
+      case ConferenceProgramPackage.PANEL_TRACK__NAME:
         setName(NAME_EDEFAULT);
+        return;
+      case ConferenceProgramPackage.PANEL_TRACK__PANELSESSION:
+        getPanelsession().clear();
         return;
     }
     super.eUnset(featureID);
@@ -154,8 +216,10 @@ public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.LUNCH__NAME:
+      case ConferenceProgramPackage.PANEL_TRACK__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case ConferenceProgramPackage.PANEL_TRACK__PANELSESSION:
+        return panelsession != null && !panelsession.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -177,4 +241,4 @@ public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
     return result.toString();
   }
 
-} //LunchImpl
+} //PanelTrackImpl

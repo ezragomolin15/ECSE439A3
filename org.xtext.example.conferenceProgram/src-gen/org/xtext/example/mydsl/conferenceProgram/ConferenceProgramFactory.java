@@ -33,22 +33,76 @@ public interface ConferenceProgramFactory extends EFactory
   ConferenceProgram createConferenceProgram();
 
   /**
-   * Returns a new object of class '<em>Track</em>'.
+   * Returns a new object of class '<em>Research Track</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Track</em>'.
+   * @return a new object of class '<em>Research Track</em>'.
    * @generated
    */
-  Track createTrack();
+  ResearchTrack createResearchTrack();
 
   /**
-   * Returns a new object of class '<em>Session</em>'.
+   * Returns a new object of class '<em>Industry Track</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Session</em>'.
+   * @return a new object of class '<em>Industry Track</em>'.
    * @generated
    */
-  Session createSession();
+  IndustryTrack createIndustryTrack();
+
+  /**
+   * Returns a new object of class '<em>Demos And Poster Track</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Demos And Poster Track</em>'.
+   * @generated
+   */
+  DemosAndPosterTrack createDemosAndPosterTrack();
+
+  /**
+   * Returns a new object of class '<em>Panel Track</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Panel Track</em>'.
+   * @generated
+   */
+  PanelTrack createPanelTrack();
+
+  /**
+   * Returns a new object of class '<em>Research Session</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Research Session</em>'.
+   * @generated
+   */
+  ResearchSession createResearchSession();
+
+  /**
+   * Returns a new object of class '<em>Industry Session</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Industry Session</em>'.
+   * @generated
+   */
+  IndustrySession createIndustrySession();
+
+  /**
+   * Returns a new object of class '<em>Demo Session</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Demo Session</em>'.
+   * @generated
+   */
+  DemoSession createDemoSession();
+
+  /**
+   * Returns a new object of class '<em>Panel Session</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Panel Session</em>'.
+   * @generated
+   */
+  PanelSession createPanelSession();
 
   /**
    * Returns a new object of class '<em>Research Paper</em>'.

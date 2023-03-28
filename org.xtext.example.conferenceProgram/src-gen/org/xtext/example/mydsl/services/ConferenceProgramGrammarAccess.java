@@ -29,21 +29,30 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Assignment cDateAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cDateSTRINGTerminalRuleCall_2_0 = (RuleCall)cDateAssignment_2.eContents().get(0);
-		private final Assignment cTracksAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cTracksTrackParserRuleCall_3_0 = (RuleCall)cTracksAssignment_3.eContents().get(0);
-		private final Assignment cSocialEventsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cSocialEventsSocialEventParserRuleCall_4_0 = (RuleCall)cSocialEventsAssignment_4.eContents().get(0);
-		private final Assignment cKeynotesAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cKeynotesKeynoteParserRuleCall_5_0 = (RuleCall)cKeynotesAssignment_5.eContents().get(0);
-		private final Assignment cCoffebreaksAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cCoffebreaksCoffeBreakParserRuleCall_6_0 = (RuleCall)cCoffebreaksAssignment_6.eContents().get(0);
-		private final Assignment cLunchesAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cLunchesLunchParserRuleCall_7_0 = (RuleCall)cLunchesAssignment_7.eContents().get(0);
+		private final Assignment cResearchtracksAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cResearchtracksResearchTrackParserRuleCall_3_0 = (RuleCall)cResearchtracksAssignment_3.eContents().get(0);
+		private final Assignment cIndustrytracksAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cIndustrytracksIndustryTrackParserRuleCall_4_0 = (RuleCall)cIndustrytracksAssignment_4.eContents().get(0);
+		private final Assignment cDemosandposterstrackAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cDemosandposterstrackDemosAndPosterTrackParserRuleCall_5_0 = (RuleCall)cDemosandposterstrackAssignment_5.eContents().get(0);
+		private final Assignment cPanelstrackAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cPanelstrackPanelTrackParserRuleCall_6_0 = (RuleCall)cPanelstrackAssignment_6.eContents().get(0);
+		private final Assignment cSocialEventsAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cSocialEventsSocialEventParserRuleCall_7_0 = (RuleCall)cSocialEventsAssignment_7.eContents().get(0);
+		private final Assignment cKeynotesAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cKeynotesKeynoteParserRuleCall_8_0 = (RuleCall)cKeynotesAssignment_8.eContents().get(0);
+		private final Assignment cCoffebreaksAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cCoffebreaksCoffeBreakParserRuleCall_9_0 = (RuleCall)cCoffebreaksAssignment_9.eContents().get(0);
+		private final Assignment cLunchesAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cLunchesLunchParserRuleCall_10_0 = (RuleCall)cLunchesAssignment_10.eContents().get(0);
 		
 		//ConferenceProgram:
 		//    'Program' name=ID
 		//    date=STRING
-		//    (tracks+=Track)+ //1 or more  track
+		//    researchtracks=ResearchTrack //1 research track
+		//    (industrytracks+=IndustryTrack)? //zero or 1 industry trakcs
+		//    (demosandposterstrack+=DemosAndPosterTrack)? //zero or 1 demos and poster track
+		//    (panelstrack+=PanelTrack)? //zero or 1 panel tracks
 		//    (socialEvents+=SocialEvent)* //zero or more social events
 		//    (keynotes+=Keynote)* //zero or more keynotes
 		//    (coffebreaks+=CoffeBreak)* //zeror or more coffee breaks
@@ -53,7 +62,10 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 		
 		//'Program' name=ID
 		//date=STRING
-		//(tracks+=Track)+ //1 or more  track
+		//researchtracks=ResearchTrack //1 research track
+		//(industrytracks+=IndustryTrack)? //zero or 1 industry trakcs
+		//(demosandposterstrack+=DemosAndPosterTrack)? //zero or 1 demos and poster track
+		//(panelstrack+=PanelTrack)? //zero or 1 panel tracks
 		//(socialEvents+=SocialEvent)* //zero or more social events
 		//(keynotes+=Keynote)* //zero or more keynotes
 		//(coffebreaks+=CoffeBreak)* //zeror or more coffee breaks
@@ -75,59 +87,80 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 		//STRING
 		public RuleCall getDateSTRINGTerminalRuleCall_2_0() { return cDateSTRINGTerminalRuleCall_2_0; }
 		
-		//(tracks+=Track)+
-		public Assignment getTracksAssignment_3() { return cTracksAssignment_3; }
+		//researchtracks=ResearchTrack
+		public Assignment getResearchtracksAssignment_3() { return cResearchtracksAssignment_3; }
 		
-		//Track
-		public RuleCall getTracksTrackParserRuleCall_3_0() { return cTracksTrackParserRuleCall_3_0; }
+		//ResearchTrack
+		public RuleCall getResearchtracksResearchTrackParserRuleCall_3_0() { return cResearchtracksResearchTrackParserRuleCall_3_0; }
 		
-		////1 or more  track
+		////1 research track
+		//   (industrytracks+=IndustryTrack)?
+		public Assignment getIndustrytracksAssignment_4() { return cIndustrytracksAssignment_4; }
+		
+		//IndustryTrack
+		public RuleCall getIndustrytracksIndustryTrackParserRuleCall_4_0() { return cIndustrytracksIndustryTrackParserRuleCall_4_0; }
+		
+		////zero or 1 industry trakcs
+		//   (demosandposterstrack+=DemosAndPosterTrack)?
+		public Assignment getDemosandposterstrackAssignment_5() { return cDemosandposterstrackAssignment_5; }
+		
+		//DemosAndPosterTrack
+		public RuleCall getDemosandposterstrackDemosAndPosterTrackParserRuleCall_5_0() { return cDemosandposterstrackDemosAndPosterTrackParserRuleCall_5_0; }
+		
+		////zero or 1 demos and poster track
+		//   (panelstrack+=PanelTrack)?
+		public Assignment getPanelstrackAssignment_6() { return cPanelstrackAssignment_6; }
+		
+		//PanelTrack
+		public RuleCall getPanelstrackPanelTrackParserRuleCall_6_0() { return cPanelstrackPanelTrackParserRuleCall_6_0; }
+		
+		////zero or 1 panel tracks
 		//   (socialEvents+=SocialEvent)*
-		public Assignment getSocialEventsAssignment_4() { return cSocialEventsAssignment_4; }
+		public Assignment getSocialEventsAssignment_7() { return cSocialEventsAssignment_7; }
 		
 		//SocialEvent
-		public RuleCall getSocialEventsSocialEventParserRuleCall_4_0() { return cSocialEventsSocialEventParserRuleCall_4_0; }
+		public RuleCall getSocialEventsSocialEventParserRuleCall_7_0() { return cSocialEventsSocialEventParserRuleCall_7_0; }
 		
 		////zero or more social events
 		//   (keynotes+=Keynote)*
-		public Assignment getKeynotesAssignment_5() { return cKeynotesAssignment_5; }
+		public Assignment getKeynotesAssignment_8() { return cKeynotesAssignment_8; }
 		
 		//Keynote
-		public RuleCall getKeynotesKeynoteParserRuleCall_5_0() { return cKeynotesKeynoteParserRuleCall_5_0; }
+		public RuleCall getKeynotesKeynoteParserRuleCall_8_0() { return cKeynotesKeynoteParserRuleCall_8_0; }
 		
 		////zero or more keynotes
 		//   (coffebreaks+=CoffeBreak)*
-		public Assignment getCoffebreaksAssignment_6() { return cCoffebreaksAssignment_6; }
+		public Assignment getCoffebreaksAssignment_9() { return cCoffebreaksAssignment_9; }
 		
 		//CoffeBreak
-		public RuleCall getCoffebreaksCoffeBreakParserRuleCall_6_0() { return cCoffebreaksCoffeBreakParserRuleCall_6_0; }
+		public RuleCall getCoffebreaksCoffeBreakParserRuleCall_9_0() { return cCoffebreaksCoffeBreakParserRuleCall_9_0; }
 		
 		////zeror or more coffee breaks
 		//   (lunches+=Lunch)*
-		public Assignment getLunchesAssignment_7() { return cLunchesAssignment_7; }
+		public Assignment getLunchesAssignment_10() { return cLunchesAssignment_10; }
 		
 		//Lunch
-		public RuleCall getLunchesLunchParserRuleCall_7_0() { return cLunchesLunchParserRuleCall_7_0; }
+		public RuleCall getLunchesLunchParserRuleCall_10_0() { return cLunchesLunchParserRuleCall_10_0; }
 	}
-	public class TrackElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ConferenceProgram.Track");
+	public class ResearchTrackElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ConferenceProgram.ResearchTrack");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cTrackKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cSessionAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cSessionSessionParserRuleCall_3_0 = (RuleCall)cSessionAssignment_3.eContents().get(0);
+		private final Assignment cResearchsessionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cResearchsessionResearchSessionParserRuleCall_3_0 = (RuleCall)cResearchsessionAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//Track:
+		//ResearchTrack:
 		//    'Track' name=ID '{'
-		//    (session+=Session)+
+		//    (researchsession+=ResearchSession)+
 		//    '}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'Track' name=ID '{'
-		//(session+=Session)+
+		//(researchsession+=ResearchSession)+
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
@@ -143,17 +176,146 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//(session+=Session)+
-		public Assignment getSessionAssignment_3() { return cSessionAssignment_3; }
+		//(researchsession+=ResearchSession)+
+		public Assignment getResearchsessionAssignment_3() { return cResearchsessionAssignment_3; }
 		
-		//Session
-		public RuleCall getSessionSessionParserRuleCall_3_0() { return cSessionSessionParserRuleCall_3_0; }
+		//ResearchSession
+		public RuleCall getResearchsessionResearchSessionParserRuleCall_3_0() { return cResearchsessionResearchSessionParserRuleCall_3_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
-	public class SessionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ConferenceProgram.Session");
+	public class IndustryTrackElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ConferenceProgram.IndustryTrack");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTrackKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cIndutrysessionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cIndutrysessionIndustrySessionParserRuleCall_3_0 = (RuleCall)cIndutrysessionAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//IndustryTrack:
+		//    'Track' name=ID '{'
+		//    (indutrysession+=IndustrySession)+
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'Track' name=ID '{'
+		//(indutrysession+=IndustrySession)+
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//'Track'
+		public Keyword getTrackKeyword_0() { return cTrackKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//(indutrysession+=IndustrySession)+
+		public Assignment getIndutrysessionAssignment_3() { return cIndutrysessionAssignment_3; }
+		
+		//IndustrySession
+		public RuleCall getIndutrysessionIndustrySessionParserRuleCall_3_0() { return cIndutrysessionIndustrySessionParserRuleCall_3_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+	}
+	public class DemosAndPosterTrackElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ConferenceProgram.DemosAndPosterTrack");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTrackKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cDemosessionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cDemosessionDemoSessionParserRuleCall_3_0 = (RuleCall)cDemosessionAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//DemosAndPosterTrack:
+		//    'Track' name=ID '{'
+		//    (demosession+=DemoSession)+
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'Track' name=ID '{'
+		//(demosession+=DemoSession)+
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//'Track'
+		public Keyword getTrackKeyword_0() { return cTrackKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//(demosession+=DemoSession)+
+		public Assignment getDemosessionAssignment_3() { return cDemosessionAssignment_3; }
+		
+		//DemoSession
+		public RuleCall getDemosessionDemoSessionParserRuleCall_3_0() { return cDemosessionDemoSessionParserRuleCall_3_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+	}
+	public class PanelTrackElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ConferenceProgram.PanelTrack");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTrackKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cPanelsessionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPanelsessionPanelSessionParserRuleCall_3_0 = (RuleCall)cPanelsessionAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//PanelTrack:
+		//    'Track' name=ID '{'
+		//    (panelsession+=PanelSession)+
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'Track' name=ID '{'
+		//(panelsession+=PanelSession)+
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//'Track'
+		public Keyword getTrackKeyword_0() { return cTrackKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//(panelsession+=PanelSession)+
+		public Assignment getPanelsessionAssignment_3() { return cPanelsessionAssignment_3; }
+		
+		//PanelSession
+		public RuleCall getPanelsessionPanelSessionParserRuleCall_3_0() { return cPanelsessionPanelSessionParserRuleCall_3_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+	}
+	public class ResearchSessionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ConferenceProgram.ResearchSession");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSessionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -161,26 +323,17 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cResearchpaperAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cResearchpaperResearchPaperParserRuleCall_3_0 = (RuleCall)cResearchpaperAssignment_3.eContents().get(0);
-		private final Assignment cIndustrypaperAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIndustrypaperIndustryPaperParserRuleCall_4_0 = (RuleCall)cIndustrypaperAssignment_4.eContents().get(0);
-		private final Assignment cDemoandposterAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cDemoandposterDemoAndPosterParserRuleCall_5_0 = (RuleCall)cDemoandposterAssignment_5.eContents().get(0);
-		private final Assignment cPanelAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cPanelPanelParserRuleCall_6_0 = (RuleCall)cPanelAssignment_6.eContents().get(0);
-		private final Assignment cLocationAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cLocationLocationParserRuleCall_7_0 = (RuleCall)cLocationAssignment_7.eContents().get(0);
-		private final Assignment cStartTimeAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cStartTimeSTRINGTerminalRuleCall_8_0 = (RuleCall)cStartTimeAssignment_8.eContents().get(0);
-		private final Assignment cEndTimeAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cEndTimeSTRINGTerminalRuleCall_9_0 = (RuleCall)cEndTimeAssignment_9.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Assignment cLocationAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cLocationLocationParserRuleCall_4_0 = (RuleCall)cLocationAssignment_4.eContents().get(0);
+		private final Assignment cStartTimeAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cStartTimeSTRINGTerminalRuleCall_5_0 = (RuleCall)cStartTimeAssignment_5.eContents().get(0);
+		private final Assignment cEndTimeAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cEndTimeSTRINGTerminalRuleCall_6_0 = (RuleCall)cEndTimeAssignment_6.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//Session:
+		//ResearchSession:
 		//    'Session' name=ID '{'
-		//    (researchpaper+=ResearchPaper)*
-		//    (industrypaper+=IndustryPaper)*
-		//    (demoandposter+=DemoAndPoster)*
-		//    (panel+=Panel)*
+		//    (researchpaper+=ResearchPaper)+
 		//    (location=Location)?
 		//    startTime=STRING
 		//    endTime=STRING
@@ -188,10 +341,7 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'Session' name=ID '{'
-		//(researchpaper+=ResearchPaper)*
-		//(industrypaper+=IndustryPaper)*
-		//(demoandposter+=DemoAndPoster)*
-		//(panel+=Panel)*
+		//(researchpaper+=ResearchPaper)+
 		//(location=Location)?
 		//startTime=STRING
 		//endTime=STRING
@@ -210,50 +360,251 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//(researchpaper+=ResearchPaper)*
+		//(researchpaper+=ResearchPaper)+
 		public Assignment getResearchpaperAssignment_3() { return cResearchpaperAssignment_3; }
 		
 		//ResearchPaper
 		public RuleCall getResearchpaperResearchPaperParserRuleCall_3_0() { return cResearchpaperResearchPaperParserRuleCall_3_0; }
 		
-		//(industrypaper+=IndustryPaper)*
-		public Assignment getIndustrypaperAssignment_4() { return cIndustrypaperAssignment_4; }
-		
-		//IndustryPaper
-		public RuleCall getIndustrypaperIndustryPaperParserRuleCall_4_0() { return cIndustrypaperIndustryPaperParserRuleCall_4_0; }
-		
-		//(demoandposter+=DemoAndPoster)*
-		public Assignment getDemoandposterAssignment_5() { return cDemoandposterAssignment_5; }
-		
-		//DemoAndPoster
-		public RuleCall getDemoandposterDemoAndPosterParserRuleCall_5_0() { return cDemoandposterDemoAndPosterParserRuleCall_5_0; }
-		
-		//(panel+=Panel)*
-		public Assignment getPanelAssignment_6() { return cPanelAssignment_6; }
-		
-		//Panel
-		public RuleCall getPanelPanelParserRuleCall_6_0() { return cPanelPanelParserRuleCall_6_0; }
-		
 		//(location=Location)?
-		public Assignment getLocationAssignment_7() { return cLocationAssignment_7; }
+		public Assignment getLocationAssignment_4() { return cLocationAssignment_4; }
 		
 		//Location
-		public RuleCall getLocationLocationParserRuleCall_7_0() { return cLocationLocationParserRuleCall_7_0; }
+		public RuleCall getLocationLocationParserRuleCall_4_0() { return cLocationLocationParserRuleCall_4_0; }
 		
 		//startTime=STRING
-		public Assignment getStartTimeAssignment_8() { return cStartTimeAssignment_8; }
+		public Assignment getStartTimeAssignment_5() { return cStartTimeAssignment_5; }
 		
 		//STRING
-		public RuleCall getStartTimeSTRINGTerminalRuleCall_8_0() { return cStartTimeSTRINGTerminalRuleCall_8_0; }
+		public RuleCall getStartTimeSTRINGTerminalRuleCall_5_0() { return cStartTimeSTRINGTerminalRuleCall_5_0; }
 		
 		//endTime=STRING
-		public Assignment getEndTimeAssignment_9() { return cEndTimeAssignment_9; }
+		public Assignment getEndTimeAssignment_6() { return cEndTimeAssignment_6; }
 		
 		//STRING
-		public RuleCall getEndTimeSTRINGTerminalRuleCall_9_0() { return cEndTimeSTRINGTerminalRuleCall_9_0; }
+		public RuleCall getEndTimeSTRINGTerminalRuleCall_6_0() { return cEndTimeSTRINGTerminalRuleCall_6_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+	}
+	public class IndustrySessionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ConferenceProgram.IndustrySession");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSessionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cIndustrypaperAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cIndustrypaperIndustryPaperParserRuleCall_3_0 = (RuleCall)cIndustrypaperAssignment_3.eContents().get(0);
+		private final Assignment cLocationAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cLocationLocationParserRuleCall_4_0 = (RuleCall)cLocationAssignment_4.eContents().get(0);
+		private final Assignment cStartTimeAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cStartTimeSTRINGTerminalRuleCall_5_0 = (RuleCall)cStartTimeAssignment_5.eContents().get(0);
+		private final Assignment cEndTimeAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cEndTimeSTRINGTerminalRuleCall_6_0 = (RuleCall)cEndTimeAssignment_6.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		
+		//IndustrySession:
+		//    'Session' name=ID '{'
+		//    (industrypaper+=IndustryPaper)+
+		//    (location=Location)?
+		//    startTime=STRING
+		//    endTime=STRING
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'Session' name=ID '{'
+		//(industrypaper+=IndustryPaper)+
+		//(location=Location)?
+		//startTime=STRING
+		//endTime=STRING
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//'Session'
+		public Keyword getSessionKeyword_0() { return cSessionKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//(industrypaper+=IndustryPaper)+
+		public Assignment getIndustrypaperAssignment_3() { return cIndustrypaperAssignment_3; }
+		
+		//IndustryPaper
+		public RuleCall getIndustrypaperIndustryPaperParserRuleCall_3_0() { return cIndustrypaperIndustryPaperParserRuleCall_3_0; }
+		
+		//(location=Location)?
+		public Assignment getLocationAssignment_4() { return cLocationAssignment_4; }
+		
+		//Location
+		public RuleCall getLocationLocationParserRuleCall_4_0() { return cLocationLocationParserRuleCall_4_0; }
+		
+		//startTime=STRING
+		public Assignment getStartTimeAssignment_5() { return cStartTimeAssignment_5; }
+		
+		//STRING
+		public RuleCall getStartTimeSTRINGTerminalRuleCall_5_0() { return cStartTimeSTRINGTerminalRuleCall_5_0; }
+		
+		//endTime=STRING
+		public Assignment getEndTimeAssignment_6() { return cEndTimeAssignment_6; }
+		
+		//STRING
+		public RuleCall getEndTimeSTRINGTerminalRuleCall_6_0() { return cEndTimeSTRINGTerminalRuleCall_6_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+	}
+	public class DemoSessionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ConferenceProgram.DemoSession");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSessionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cDemoandposterAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cDemoandposterDemoAndPosterParserRuleCall_3_0 = (RuleCall)cDemoandposterAssignment_3.eContents().get(0);
+		private final Assignment cLocationAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cLocationLocationParserRuleCall_4_0 = (RuleCall)cLocationAssignment_4.eContents().get(0);
+		private final Assignment cStartTimeAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cStartTimeSTRINGTerminalRuleCall_5_0 = (RuleCall)cStartTimeAssignment_5.eContents().get(0);
+		private final Assignment cEndTimeAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cEndTimeSTRINGTerminalRuleCall_6_0 = (RuleCall)cEndTimeAssignment_6.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		
+		//DemoSession:
+		//    'Session' name=ID '{'
+		//    (demoandposter+=DemoAndPoster)+
+		//    (location=Location)?
+		//    startTime=STRING
+		//    endTime=STRING
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'Session' name=ID '{'
+		//(demoandposter+=DemoAndPoster)+
+		//(location=Location)?
+		//startTime=STRING
+		//endTime=STRING
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//'Session'
+		public Keyword getSessionKeyword_0() { return cSessionKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//(demoandposter+=DemoAndPoster)+
+		public Assignment getDemoandposterAssignment_3() { return cDemoandposterAssignment_3; }
+		
+		//DemoAndPoster
+		public RuleCall getDemoandposterDemoAndPosterParserRuleCall_3_0() { return cDemoandposterDemoAndPosterParserRuleCall_3_0; }
+		
+		//(location=Location)?
+		public Assignment getLocationAssignment_4() { return cLocationAssignment_4; }
+		
+		//Location
+		public RuleCall getLocationLocationParserRuleCall_4_0() { return cLocationLocationParserRuleCall_4_0; }
+		
+		//startTime=STRING
+		public Assignment getStartTimeAssignment_5() { return cStartTimeAssignment_5; }
+		
+		//STRING
+		public RuleCall getStartTimeSTRINGTerminalRuleCall_5_0() { return cStartTimeSTRINGTerminalRuleCall_5_0; }
+		
+		//endTime=STRING
+		public Assignment getEndTimeAssignment_6() { return cEndTimeAssignment_6; }
+		
+		//STRING
+		public RuleCall getEndTimeSTRINGTerminalRuleCall_6_0() { return cEndTimeSTRINGTerminalRuleCall_6_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+	}
+	public class PanelSessionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ConferenceProgram.PanelSession");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSessionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cPanelAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPanelPanelParserRuleCall_3_0 = (RuleCall)cPanelAssignment_3.eContents().get(0);
+		private final Assignment cLocationAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cLocationLocationParserRuleCall_4_0 = (RuleCall)cLocationAssignment_4.eContents().get(0);
+		private final Assignment cStartTimeAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cStartTimeSTRINGTerminalRuleCall_5_0 = (RuleCall)cStartTimeAssignment_5.eContents().get(0);
+		private final Assignment cEndTimeAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cEndTimeSTRINGTerminalRuleCall_6_0 = (RuleCall)cEndTimeAssignment_6.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		
+		//PanelSession:
+		//    'Session' name=ID '{'
+		//    (panel+=Panel)+
+		//    (location=Location)?
+		//    startTime=STRING
+		//    endTime=STRING
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'Session' name=ID '{'
+		//(panel+=Panel)+
+		//(location=Location)?
+		//startTime=STRING
+		//endTime=STRING
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//'Session'
+		public Keyword getSessionKeyword_0() { return cSessionKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//(panel+=Panel)+
+		public Assignment getPanelAssignment_3() { return cPanelAssignment_3; }
+		
+		//Panel
+		public RuleCall getPanelPanelParserRuleCall_3_0() { return cPanelPanelParserRuleCall_3_0; }
+		
+		//(location=Location)?
+		public Assignment getLocationAssignment_4() { return cLocationAssignment_4; }
+		
+		//Location
+		public RuleCall getLocationLocationParserRuleCall_4_0() { return cLocationLocationParserRuleCall_4_0; }
+		
+		//startTime=STRING
+		public Assignment getStartTimeAssignment_5() { return cStartTimeAssignment_5; }
+		
+		//STRING
+		public RuleCall getStartTimeSTRINGTerminalRuleCall_5_0() { return cStartTimeSTRINGTerminalRuleCall_5_0; }
+		
+		//endTime=STRING
+		public Assignment getEndTimeAssignment_6() { return cEndTimeAssignment_6; }
+		
+		//STRING
+		public RuleCall getEndTimeSTRINGTerminalRuleCall_6_0() { return cEndTimeSTRINGTerminalRuleCall_6_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 	public class ResearchPaperElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ConferenceProgram.ResearchPaper");
@@ -411,20 +762,12 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 		private final Keyword cKeynoteKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cStartTimeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cStartTimeSTRINGTerminalRuleCall_2_0 = (RuleCall)cStartTimeAssignment_2.eContents().get(0);
-		private final Assignment cEndTimeAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cEndTimeSTRINGTerminalRuleCall_3_0 = (RuleCall)cEndTimeAssignment_3.eContents().get(0);
 		
 		//Keynote:
-		//    'Keynote' name=ID
-		//    startTime=STRING
-		//    endTime=STRING;
+		//    'Keynote' name=ID;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'Keynote' name=ID
-		//startTime=STRING
-		//endTime=STRING
 		public Group getGroup() { return cGroup; }
 		
 		//'Keynote'
@@ -435,18 +778,6 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 		
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-		
-		//startTime=STRING
-		public Assignment getStartTimeAssignment_2() { return cStartTimeAssignment_2; }
-		
-		//STRING
-		public RuleCall getStartTimeSTRINGTerminalRuleCall_2_0() { return cStartTimeSTRINGTerminalRuleCall_2_0; }
-		
-		//endTime=STRING
-		public Assignment getEndTimeAssignment_3() { return cEndTimeAssignment_3; }
-		
-		//STRING
-		public RuleCall getEndTimeSTRINGTerminalRuleCall_3_0() { return cEndTimeSTRINGTerminalRuleCall_3_0; }
 	}
 	public class CoffeBreakElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ConferenceProgram.CoffeBreak");
@@ -454,20 +785,12 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 		private final Keyword cBreakKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cStartTimeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cStartTimeSTRINGTerminalRuleCall_2_0 = (RuleCall)cStartTimeAssignment_2.eContents().get(0);
-		private final Assignment cEndTimeAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cEndTimeSTRINGTerminalRuleCall_3_0 = (RuleCall)cEndTimeAssignment_3.eContents().get(0);
 		
 		//CoffeBreak:
-		//    'Break' name=ID
-		//    startTime=STRING
-		//    endTime=STRING;
+		//    'Break' name=ID;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'Break' name=ID
-		//startTime=STRING
-		//endTime=STRING
 		public Group getGroup() { return cGroup; }
 		
 		//'Break'
@@ -478,18 +801,6 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 		
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-		
-		//startTime=STRING
-		public Assignment getStartTimeAssignment_2() { return cStartTimeAssignment_2; }
-		
-		//STRING
-		public RuleCall getStartTimeSTRINGTerminalRuleCall_2_0() { return cStartTimeSTRINGTerminalRuleCall_2_0; }
-		
-		//endTime=STRING
-		public Assignment getEndTimeAssignment_3() { return cEndTimeAssignment_3; }
-		
-		//STRING
-		public RuleCall getEndTimeSTRINGTerminalRuleCall_3_0() { return cEndTimeSTRINGTerminalRuleCall_3_0; }
 	}
 	public class LunchElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ConferenceProgram.Lunch");
@@ -497,20 +808,12 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 		private final Keyword cLunchKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Assignment cStartTimeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cStartTimeSTRINGTerminalRuleCall_2_0 = (RuleCall)cStartTimeAssignment_2.eContents().get(0);
-		private final Assignment cEndTimeAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cEndTimeSTRINGTerminalRuleCall_3_0 = (RuleCall)cEndTimeAssignment_3.eContents().get(0);
 		
 		//Lunch:
-		//    'Lunch' name=ID
-		//    startTime=STRING
-		//    endTime=STRING;
+		//    'Lunch' name=ID;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'Lunch' name=ID
-		//startTime=STRING
-		//endTime=STRING
 		public Group getGroup() { return cGroup; }
 		
 		//'Lunch'
@@ -521,18 +824,6 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 		
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-		
-		//startTime=STRING
-		public Assignment getStartTimeAssignment_2() { return cStartTimeAssignment_2; }
-		
-		//STRING
-		public RuleCall getStartTimeSTRINGTerminalRuleCall_2_0() { return cStartTimeSTRINGTerminalRuleCall_2_0; }
-		
-		//endTime=STRING
-		public Assignment getEndTimeAssignment_3() { return cEndTimeAssignment_3; }
-		
-		//STRING
-		public RuleCall getEndTimeSTRINGTerminalRuleCall_3_0() { return cEndTimeSTRINGTerminalRuleCall_3_0; }
 	}
 	public class SocialEventElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ConferenceProgram.SocialEvent");
@@ -645,8 +936,14 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 	
 	
 	private final ConferenceProgramElements pConferenceProgram;
-	private final TrackElements pTrack;
-	private final SessionElements pSession;
+	private final ResearchTrackElements pResearchTrack;
+	private final IndustryTrackElements pIndustryTrack;
+	private final DemosAndPosterTrackElements pDemosAndPosterTrack;
+	private final PanelTrackElements pPanelTrack;
+	private final ResearchSessionElements pResearchSession;
+	private final IndustrySessionElements pIndustrySession;
+	private final DemoSessionElements pDemoSession;
+	private final PanelSessionElements pPanelSession;
 	private final ResearchPaperElements pResearchPaper;
 	private final IndustryPaperElements pIndustryPaper;
 	private final DemoAndPosterElements pDemoAndPoster;
@@ -669,8 +966,14 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pConferenceProgram = new ConferenceProgramElements();
-		this.pTrack = new TrackElements();
-		this.pSession = new SessionElements();
+		this.pResearchTrack = new ResearchTrackElements();
+		this.pIndustryTrack = new IndustryTrackElements();
+		this.pDemosAndPosterTrack = new DemosAndPosterTrackElements();
+		this.pPanelTrack = new PanelTrackElements();
+		this.pResearchSession = new ResearchSessionElements();
+		this.pIndustrySession = new IndustrySessionElements();
+		this.pDemoSession = new DemoSessionElements();
+		this.pPanelSession = new PanelSessionElements();
 		this.pResearchPaper = new ResearchPaperElements();
 		this.pIndustryPaper = new IndustryPaperElements();
 		this.pDemoAndPoster = new DemoAndPosterElements();
@@ -714,7 +1017,10 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 	//ConferenceProgram:
 	//    'Program' name=ID
 	//    date=STRING
-	//    (tracks+=Track)+ //1 or more  track
+	//    researchtracks=ResearchTrack //1 research track
+	//    (industrytracks+=IndustryTrack)? //zero or 1 industry trakcs
+	//    (demosandposterstrack+=DemosAndPosterTrack)? //zero or 1 demos and poster track
+	//    (panelstrack+=PanelTrack)? //zero or 1 panel tracks
 	//    (socialEvents+=SocialEvent)* //zero or more social events
 	//    (keynotes+=Keynote)* //zero or more keynotes
 	//    (coffebreaks+=CoffeBreak)* //zeror or more coffee breaks
@@ -728,34 +1034,112 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 		return getConferenceProgramAccess().getRule();
 	}
 	
-	//Track:
+	//ResearchTrack:
 	//    'Track' name=ID '{'
-	//    (session+=Session)+
+	//    (researchsession+=ResearchSession)+
 	//    '}';
-	public TrackElements getTrackAccess() {
-		return pTrack;
+	public ResearchTrackElements getResearchTrackAccess() {
+		return pResearchTrack;
 	}
 	
-	public ParserRule getTrackRule() {
-		return getTrackAccess().getRule();
+	public ParserRule getResearchTrackRule() {
+		return getResearchTrackAccess().getRule();
 	}
 	
-	//Session:
+	//IndustryTrack:
+	//    'Track' name=ID '{'
+	//    (indutrysession+=IndustrySession)+
+	//    '}';
+	public IndustryTrackElements getIndustryTrackAccess() {
+		return pIndustryTrack;
+	}
+	
+	public ParserRule getIndustryTrackRule() {
+		return getIndustryTrackAccess().getRule();
+	}
+	
+	//DemosAndPosterTrack:
+	//    'Track' name=ID '{'
+	//    (demosession+=DemoSession)+
+	//    '}';
+	public DemosAndPosterTrackElements getDemosAndPosterTrackAccess() {
+		return pDemosAndPosterTrack;
+	}
+	
+	public ParserRule getDemosAndPosterTrackRule() {
+		return getDemosAndPosterTrackAccess().getRule();
+	}
+	
+	//PanelTrack:
+	//    'Track' name=ID '{'
+	//    (panelsession+=PanelSession)+
+	//    '}';
+	public PanelTrackElements getPanelTrackAccess() {
+		return pPanelTrack;
+	}
+	
+	public ParserRule getPanelTrackRule() {
+		return getPanelTrackAccess().getRule();
+	}
+	
+	//ResearchSession:
 	//    'Session' name=ID '{'
-	//    (researchpaper+=ResearchPaper)*
-	//    (industrypaper+=IndustryPaper)*
-	//    (demoandposter+=DemoAndPoster)*
-	//    (panel+=Panel)*
+	//    (researchpaper+=ResearchPaper)+
 	//    (location=Location)?
 	//    startTime=STRING
 	//    endTime=STRING
 	//    '}';
-	public SessionElements getSessionAccess() {
-		return pSession;
+	public ResearchSessionElements getResearchSessionAccess() {
+		return pResearchSession;
 	}
 	
-	public ParserRule getSessionRule() {
-		return getSessionAccess().getRule();
+	public ParserRule getResearchSessionRule() {
+		return getResearchSessionAccess().getRule();
+	}
+	
+	//IndustrySession:
+	//    'Session' name=ID '{'
+	//    (industrypaper+=IndustryPaper)+
+	//    (location=Location)?
+	//    startTime=STRING
+	//    endTime=STRING
+	//    '}';
+	public IndustrySessionElements getIndustrySessionAccess() {
+		return pIndustrySession;
+	}
+	
+	public ParserRule getIndustrySessionRule() {
+		return getIndustrySessionAccess().getRule();
+	}
+	
+	//DemoSession:
+	//    'Session' name=ID '{'
+	//    (demoandposter+=DemoAndPoster)+
+	//    (location=Location)?
+	//    startTime=STRING
+	//    endTime=STRING
+	//    '}';
+	public DemoSessionElements getDemoSessionAccess() {
+		return pDemoSession;
+	}
+	
+	public ParserRule getDemoSessionRule() {
+		return getDemoSessionAccess().getRule();
+	}
+	
+	//PanelSession:
+	//    'Session' name=ID '{'
+	//    (panel+=Panel)+
+	//    (location=Location)?
+	//    startTime=STRING
+	//    endTime=STRING
+	//    '}';
+	public PanelSessionElements getPanelSessionAccess() {
+		return pPanelSession;
+	}
+	
+	public ParserRule getPanelSessionRule() {
+		return getPanelSessionAccess().getRule();
 	}
 	
 	//ResearchPaper:
@@ -821,9 +1205,7 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 	}
 	
 	//Keynote:
-	//    'Keynote' name=ID
-	//    startTime=STRING
-	//    endTime=STRING;
+	//    'Keynote' name=ID;
 	public KeynoteElements getKeynoteAccess() {
 		return pKeynote;
 	}
@@ -833,9 +1215,7 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 	}
 	
 	//CoffeBreak:
-	//    'Break' name=ID
-	//    startTime=STRING
-	//    endTime=STRING;
+	//    'Break' name=ID;
 	public CoffeBreakElements getCoffeBreakAccess() {
 		return pCoffeBreak;
 	}
@@ -845,9 +1225,7 @@ public class ConferenceProgramGrammarAccess extends AbstractElementFinder.Abstra
 	}
 	
 	//Lunch:
-	//    'Lunch' name=ID
-	//    startTime=STRING
-	//    endTime=STRING;
+	//    'Lunch' name=ID;
 	public LunchElements getLunchAccess() {
 		return pLunch;
 	}

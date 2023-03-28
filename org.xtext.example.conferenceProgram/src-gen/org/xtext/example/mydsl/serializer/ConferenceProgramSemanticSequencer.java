@@ -18,17 +18,23 @@ import org.xtext.example.mydsl.conferenceProgram.CoffeBreak;
 import org.xtext.example.mydsl.conferenceProgram.ConferenceProgram;
 import org.xtext.example.mydsl.conferenceProgram.ConferenceProgramPackage;
 import org.xtext.example.mydsl.conferenceProgram.DemoAndPoster;
+import org.xtext.example.mydsl.conferenceProgram.DemoSession;
+import org.xtext.example.mydsl.conferenceProgram.DemosAndPosterTrack;
 import org.xtext.example.mydsl.conferenceProgram.GoogleMapsDirections;
 import org.xtext.example.mydsl.conferenceProgram.IndustryPaper;
+import org.xtext.example.mydsl.conferenceProgram.IndustrySession;
+import org.xtext.example.mydsl.conferenceProgram.IndustryTrack;
 import org.xtext.example.mydsl.conferenceProgram.Keynote;
 import org.xtext.example.mydsl.conferenceProgram.Location;
 import org.xtext.example.mydsl.conferenceProgram.Lunch;
 import org.xtext.example.mydsl.conferenceProgram.Panel;
+import org.xtext.example.mydsl.conferenceProgram.PanelSession;
+import org.xtext.example.mydsl.conferenceProgram.PanelTrack;
 import org.xtext.example.mydsl.conferenceProgram.ResearchPaper;
+import org.xtext.example.mydsl.conferenceProgram.ResearchSession;
+import org.xtext.example.mydsl.conferenceProgram.ResearchTrack;
 import org.xtext.example.mydsl.conferenceProgram.Room;
-import org.xtext.example.mydsl.conferenceProgram.Session;
 import org.xtext.example.mydsl.conferenceProgram.SocialEvent;
-import org.xtext.example.mydsl.conferenceProgram.Track;
 import org.xtext.example.mydsl.services.ConferenceProgramGrammarAccess;
 
 @SuppressWarnings("all")
@@ -54,11 +60,23 @@ public class ConferenceProgramSemanticSequencer extends AbstractDelegatingSemant
 			case ConferenceProgramPackage.DEMO_AND_POSTER:
 				sequence_DemoAndPoster(context, (DemoAndPoster) semanticObject); 
 				return; 
+			case ConferenceProgramPackage.DEMO_SESSION:
+				sequence_DemoSession(context, (DemoSession) semanticObject); 
+				return; 
+			case ConferenceProgramPackage.DEMOS_AND_POSTER_TRACK:
+				sequence_DemosAndPosterTrack(context, (DemosAndPosterTrack) semanticObject); 
+				return; 
 			case ConferenceProgramPackage.GOOGLE_MAPS_DIRECTIONS:
 				sequence_GoogleMapsDirections(context, (GoogleMapsDirections) semanticObject); 
 				return; 
 			case ConferenceProgramPackage.INDUSTRY_PAPER:
 				sequence_IndustryPaper(context, (IndustryPaper) semanticObject); 
+				return; 
+			case ConferenceProgramPackage.INDUSTRY_SESSION:
+				sequence_IndustrySession(context, (IndustrySession) semanticObject); 
+				return; 
+			case ConferenceProgramPackage.INDUSTRY_TRACK:
+				sequence_IndustryTrack(context, (IndustryTrack) semanticObject); 
 				return; 
 			case ConferenceProgramPackage.KEYNOTE:
 				sequence_Keynote(context, (Keynote) semanticObject); 
@@ -72,20 +90,26 @@ public class ConferenceProgramSemanticSequencer extends AbstractDelegatingSemant
 			case ConferenceProgramPackage.PANEL:
 				sequence_Panel(context, (Panel) semanticObject); 
 				return; 
+			case ConferenceProgramPackage.PANEL_SESSION:
+				sequence_PanelSession(context, (PanelSession) semanticObject); 
+				return; 
+			case ConferenceProgramPackage.PANEL_TRACK:
+				sequence_PanelTrack(context, (PanelTrack) semanticObject); 
+				return; 
 			case ConferenceProgramPackage.RESEARCH_PAPER:
 				sequence_ResearchPaper(context, (ResearchPaper) semanticObject); 
+				return; 
+			case ConferenceProgramPackage.RESEARCH_SESSION:
+				sequence_ResearchSession(context, (ResearchSession) semanticObject); 
+				return; 
+			case ConferenceProgramPackage.RESEARCH_TRACK:
+				sequence_ResearchTrack(context, (ResearchTrack) semanticObject); 
 				return; 
 			case ConferenceProgramPackage.ROOM:
 				sequence_Room(context, (Room) semanticObject); 
 				return; 
-			case ConferenceProgramPackage.SESSION:
-				sequence_Session(context, (Session) semanticObject); 
-				return; 
 			case ConferenceProgramPackage.SOCIAL_EVENT:
 				sequence_SocialEvent(context, (SocialEvent) semanticObject); 
-				return; 
-			case ConferenceProgramPackage.TRACK:
-				sequence_Track(context, (Track) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -98,22 +122,16 @@ public class ConferenceProgramSemanticSequencer extends AbstractDelegatingSemant
 	 *     CoffeBreak returns CoffeBreak
 	 *
 	 * Constraint:
-	 *     (name=ID startTime=STRING endTime=STRING)
+	 *     name=ID
 	 * </pre>
 	 */
 	protected void sequence_CoffeBreak(ISerializationContext context, CoffeBreak semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, ConferenceProgramPackage.Literals.COFFE_BREAK__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ConferenceProgramPackage.Literals.COFFE_BREAK__NAME));
-			if (transientValues.isValueTransient(semanticObject, ConferenceProgramPackage.Literals.COFFE_BREAK__START_TIME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ConferenceProgramPackage.Literals.COFFE_BREAK__START_TIME));
-			if (transientValues.isValueTransient(semanticObject, ConferenceProgramPackage.Literals.COFFE_BREAK__END_TIME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ConferenceProgramPackage.Literals.COFFE_BREAK__END_TIME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getCoffeBreakAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getCoffeBreakAccess().getStartTimeSTRINGTerminalRuleCall_2_0(), semanticObject.getStartTime());
-		feeder.accept(grammarAccess.getCoffeBreakAccess().getEndTimeSTRINGTerminalRuleCall_3_0(), semanticObject.getEndTime());
 		feeder.finish();
 	}
 	
@@ -127,7 +145,10 @@ public class ConferenceProgramSemanticSequencer extends AbstractDelegatingSemant
 	 *     (
 	 *         name=ID 
 	 *         date=STRING 
-	 *         tracks+=Track+ 
+	 *         researchtracks=ResearchTrack 
+	 *         industrytracks+=IndustryTrack? 
+	 *         demosandposterstrack+=DemosAndPosterTrack? 
+	 *         panelstrack+=PanelTrack? 
 	 *         socialEvents+=SocialEvent* 
 	 *         keynotes+=Keynote* 
 	 *         coffebreaks+=CoffeBreak* 
@@ -157,6 +178,34 @@ public class ConferenceProgramSemanticSequencer extends AbstractDelegatingSemant
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDemoAndPosterAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     DemoSession returns DemoSession
+	 *
+	 * Constraint:
+	 *     (name=ID demoandposter+=DemoAndPoster+ location=Location? startTime=STRING endTime=STRING)
+	 * </pre>
+	 */
+	protected void sequence_DemoSession(ISerializationContext context, DemoSession semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     DemosAndPosterTrack returns DemosAndPosterTrack
+	 *
+	 * Constraint:
+	 *     (name=ID demosession+=DemoSession+)
+	 * </pre>
+	 */
+	protected void sequence_DemosAndPosterTrack(ISerializationContext context, DemosAndPosterTrack semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -203,25 +252,47 @@ public class ConferenceProgramSemanticSequencer extends AbstractDelegatingSemant
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     IndustrySession returns IndustrySession
+	 *
+	 * Constraint:
+	 *     (name=ID industrypaper+=IndustryPaper+ location=Location? startTime=STRING endTime=STRING)
+	 * </pre>
+	 */
+	protected void sequence_IndustrySession(ISerializationContext context, IndustrySession semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     IndustryTrack returns IndustryTrack
+	 *
+	 * Constraint:
+	 *     (name=ID indutrysession+=IndustrySession+)
+	 * </pre>
+	 */
+	protected void sequence_IndustryTrack(ISerializationContext context, IndustryTrack semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     Keynote returns Keynote
 	 *
 	 * Constraint:
-	 *     (name=ID startTime=STRING endTime=STRING)
+	 *     name=ID
 	 * </pre>
 	 */
 	protected void sequence_Keynote(ISerializationContext context, Keynote semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, ConferenceProgramPackage.Literals.KEYNOTE__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ConferenceProgramPackage.Literals.KEYNOTE__NAME));
-			if (transientValues.isValueTransient(semanticObject, ConferenceProgramPackage.Literals.KEYNOTE__START_TIME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ConferenceProgramPackage.Literals.KEYNOTE__START_TIME));
-			if (transientValues.isValueTransient(semanticObject, ConferenceProgramPackage.Literals.KEYNOTE__END_TIME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ConferenceProgramPackage.Literals.KEYNOTE__END_TIME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getKeynoteAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getKeynoteAccess().getStartTimeSTRINGTerminalRuleCall_2_0(), semanticObject.getStartTime());
-		feeder.accept(grammarAccess.getKeynoteAccess().getEndTimeSTRINGTerminalRuleCall_3_0(), semanticObject.getEndTime());
 		feeder.finish();
 	}
 	
@@ -252,23 +323,45 @@ public class ConferenceProgramSemanticSequencer extends AbstractDelegatingSemant
 	 *     Lunch returns Lunch
 	 *
 	 * Constraint:
-	 *     (name=ID startTime=STRING endTime=STRING)
+	 *     name=ID
 	 * </pre>
 	 */
 	protected void sequence_Lunch(ISerializationContext context, Lunch semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, ConferenceProgramPackage.Literals.LUNCH__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ConferenceProgramPackage.Literals.LUNCH__NAME));
-			if (transientValues.isValueTransient(semanticObject, ConferenceProgramPackage.Literals.LUNCH__START_TIME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ConferenceProgramPackage.Literals.LUNCH__START_TIME));
-			if (transientValues.isValueTransient(semanticObject, ConferenceProgramPackage.Literals.LUNCH__END_TIME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ConferenceProgramPackage.Literals.LUNCH__END_TIME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getLunchAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getLunchAccess().getStartTimeSTRINGTerminalRuleCall_2_0(), semanticObject.getStartTime());
-		feeder.accept(grammarAccess.getLunchAccess().getEndTimeSTRINGTerminalRuleCall_3_0(), semanticObject.getEndTime());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     PanelSession returns PanelSession
+	 *
+	 * Constraint:
+	 *     (name=ID panel+=Panel+ location=Location? startTime=STRING endTime=STRING)
+	 * </pre>
+	 */
+	protected void sequence_PanelSession(ISerializationContext context, PanelSession semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     PanelTrack returns PanelTrack
+	 *
+	 * Constraint:
+	 *     (name=ID panelsession+=PanelSession+)
+	 * </pre>
+	 */
+	protected void sequence_PanelTrack(ISerializationContext context, PanelTrack semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -315,6 +408,34 @@ public class ConferenceProgramSemanticSequencer extends AbstractDelegatingSemant
 	/**
 	 * <pre>
 	 * Contexts:
+	 *     ResearchSession returns ResearchSession
+	 *
+	 * Constraint:
+	 *     (name=ID researchpaper+=ResearchPaper+ location=Location? startTime=STRING endTime=STRING)
+	 * </pre>
+	 */
+	protected void sequence_ResearchSession(ISerializationContext context, ResearchSession semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     ResearchTrack returns ResearchTrack
+	 *
+	 * Constraint:
+	 *     (name=ID researchsession+=ResearchSession+)
+	 * </pre>
+	 */
+	protected void sequence_ResearchTrack(ISerializationContext context, ResearchTrack semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
 	 *     Room returns Room
 	 *
 	 * Constraint:
@@ -329,29 +450,6 @@ public class ConferenceProgramSemanticSequencer extends AbstractDelegatingSemant
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getRoomAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     Session returns Session
-	 *
-	 * Constraint:
-	 *     (
-	 *         name=ID 
-	 *         researchpaper+=ResearchPaper* 
-	 *         industrypaper+=IndustryPaper* 
-	 *         demoandposter+=DemoAndPoster* 
-	 *         panel+=Panel* 
-	 *         location=Location? 
-	 *         startTime=STRING 
-	 *         endTime=STRING
-	 *     )
-	 * </pre>
-	 */
-	protected void sequence_Session(ISerializationContext context, Session semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -384,20 +482,6 @@ public class ConferenceProgramSemanticSequencer extends AbstractDelegatingSemant
 		feeder.accept(grammarAccess.getSocialEventAccess().getEndTimeSTRINGTerminalRuleCall_5_0(), semanticObject.getEndTime());
 		feeder.accept(grammarAccess.getSocialEventAccess().getDirectionsGoogleMapsDirectionsParserRuleCall_6_0(), semanticObject.getDirections());
 		feeder.finish();
-	}
-	
-	
-	/**
-	 * <pre>
-	 * Contexts:
-	 *     Track returns Track
-	 *
-	 * Constraint:
-	 *     (name=ID session+=Session+)
-	 * </pre>
-	 */
-	protected void sequence_Track(ISerializationContext context, Track semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

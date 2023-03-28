@@ -3,30 +3,41 @@
  */
 package org.xtext.example.mydsl.conferenceProgram.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.xtext.example.mydsl.conferenceProgram.ConferenceProgramPackage;
-import org.xtext.example.mydsl.conferenceProgram.Lunch;
+import org.xtext.example.mydsl.conferenceProgram.ResearchSession;
+import org.xtext.example.mydsl.conferenceProgram.ResearchTrack;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Lunch</b></em>'.
+ * An implementation of the model object '<em><b>Research Track</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.LunchImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.ResearchTrackImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.ResearchTrackImpl#getResearchsession <em>Researchsession</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
+public class ResearchTrackImpl extends MinimalEObjectImpl.Container implements ResearchTrack
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -49,11 +60,21 @@ public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
   protected String name = NAME_EDEFAULT;
 
   /**
+   * The cached value of the '{@link #getResearchsession() <em>Researchsession</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getResearchsession()
+   * @generated
+   * @ordered
+   */
+  protected EList<ResearchSession> researchsession;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected LunchImpl()
+  protected ResearchTrackImpl()
   {
     super();
   }
@@ -66,7 +87,7 @@ public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
   @Override
   protected EClass eStaticClass()
   {
-    return ConferenceProgramPackage.Literals.LUNCH;
+    return ConferenceProgramPackage.Literals.RESEARCH_TRACK;
   }
 
   /**
@@ -91,7 +112,38 @@ public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.LUNCH__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.RESEARCH_TRACK__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<ResearchSession> getResearchsession()
+  {
+    if (researchsession == null)
+    {
+      researchsession = new EObjectContainmentEList<ResearchSession>(ResearchSession.class, this, ConferenceProgramPackage.RESEARCH_TRACK__RESEARCHSESSION);
+    }
+    return researchsession;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case ConferenceProgramPackage.RESEARCH_TRACK__RESEARCHSESSION:
+        return ((InternalEList<?>)getResearchsession()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -104,8 +156,10 @@ public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.LUNCH__NAME:
+      case ConferenceProgramPackage.RESEARCH_TRACK__NAME:
         return getName();
+      case ConferenceProgramPackage.RESEARCH_TRACK__RESEARCHSESSION:
+        return getResearchsession();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -115,13 +169,18 @@ public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.LUNCH__NAME:
+      case ConferenceProgramPackage.RESEARCH_TRACK__NAME:
         setName((String)newValue);
+        return;
+      case ConferenceProgramPackage.RESEARCH_TRACK__RESEARCHSESSION:
+        getResearchsession().clear();
+        getResearchsession().addAll((Collection<? extends ResearchSession>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,8 +196,11 @@ public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.LUNCH__NAME:
+      case ConferenceProgramPackage.RESEARCH_TRACK__NAME:
         setName(NAME_EDEFAULT);
+        return;
+      case ConferenceProgramPackage.RESEARCH_TRACK__RESEARCHSESSION:
+        getResearchsession().clear();
         return;
     }
     super.eUnset(featureID);
@@ -154,8 +216,10 @@ public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
   {
     switch (featureID)
     {
-      case ConferenceProgramPackage.LUNCH__NAME:
+      case ConferenceProgramPackage.RESEARCH_TRACK__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case ConferenceProgramPackage.RESEARCH_TRACK__RESEARCHSESSION:
+        return researchsession != null && !researchsession.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -177,4 +241,4 @@ public class LunchImpl extends MinimalEObjectImpl.Container implements Lunch
     return result.toString();
   }
 
-} //LunchImpl
+} //ResearchTrackImpl

@@ -86,13 +86,40 @@ public interface ConferenceProgramPackage extends EPackage
   int CONFERENCE_PROGRAM__DATE = 1;
 
   /**
-   * The feature id for the '<em><b>Tracks</b></em>' containment reference list.
+   * The feature id for the '<em><b>Researchtracks</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONFERENCE_PROGRAM__TRACKS = 2;
+  int CONFERENCE_PROGRAM__RESEARCHTRACKS = 2;
+
+  /**
+   * The feature id for the '<em><b>Industrytracks</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONFERENCE_PROGRAM__INDUSTRYTRACKS = 3;
+
+  /**
+   * The feature id for the '<em><b>Demosandposterstrack</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONFERENCE_PROGRAM__DEMOSANDPOSTERSTRACK = 4;
+
+  /**
+   * The feature id for the '<em><b>Panelstrack</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONFERENCE_PROGRAM__PANELSTRACK = 5;
 
   /**
    * The feature id for the '<em><b>Social Events</b></em>' containment reference list.
@@ -101,7 +128,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONFERENCE_PROGRAM__SOCIAL_EVENTS = 3;
+  int CONFERENCE_PROGRAM__SOCIAL_EVENTS = 6;
 
   /**
    * The feature id for the '<em><b>Keynotes</b></em>' containment reference list.
@@ -110,7 +137,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONFERENCE_PROGRAM__KEYNOTES = 4;
+  int CONFERENCE_PROGRAM__KEYNOTES = 7;
 
   /**
    * The feature id for the '<em><b>Coffebreaks</b></em>' containment reference list.
@@ -119,7 +146,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONFERENCE_PROGRAM__COFFEBREAKS = 5;
+  int CONFERENCE_PROGRAM__COFFEBREAKS = 8;
 
   /**
    * The feature id for the '<em><b>Lunches</b></em>' containment reference list.
@@ -128,7 +155,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONFERENCE_PROGRAM__LUNCHES = 6;
+  int CONFERENCE_PROGRAM__LUNCHES = 9;
 
   /**
    * The number of structural features of the '<em>Conference Program</em>' class.
@@ -137,54 +164,17 @@ public interface ConferenceProgramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONFERENCE_PROGRAM_FEATURE_COUNT = 7;
+  int CONFERENCE_PROGRAM_FEATURE_COUNT = 10;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.TrackImpl <em>Track</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.ResearchTrackImpl <em>Research Track</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.conferenceProgram.impl.TrackImpl
-   * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getTrack()
+   * @see org.xtext.example.mydsl.conferenceProgram.impl.ResearchTrackImpl
+   * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getResearchTrack()
    * @generated
    */
-  int TRACK = 1;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TRACK__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Session</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TRACK__SESSION = 1;
-
-  /**
-   * The number of structural features of the '<em>Track</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TRACK_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.SessionImpl <em>Session</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.conferenceProgram.impl.SessionImpl
-   * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getSession()
-   * @generated
-   */
-  int SESSION = 2;
+  int RESEARCH_TRACK = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -193,7 +183,155 @@ public interface ConferenceProgramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SESSION__NAME = 0;
+  int RESEARCH_TRACK__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Researchsession</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RESEARCH_TRACK__RESEARCHSESSION = 1;
+
+  /**
+   * The number of structural features of the '<em>Research Track</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RESEARCH_TRACK_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.IndustryTrackImpl <em>Industry Track</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.conferenceProgram.impl.IndustryTrackImpl
+   * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getIndustryTrack()
+   * @generated
+   */
+  int INDUSTRY_TRACK = 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDUSTRY_TRACK__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Indutrysession</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDUSTRY_TRACK__INDUTRYSESSION = 1;
+
+  /**
+   * The number of structural features of the '<em>Industry Track</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDUSTRY_TRACK_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.DemosAndPosterTrackImpl <em>Demos And Poster Track</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.conferenceProgram.impl.DemosAndPosterTrackImpl
+   * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getDemosAndPosterTrack()
+   * @generated
+   */
+  int DEMOS_AND_POSTER_TRACK = 3;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEMOS_AND_POSTER_TRACK__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Demosession</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEMOS_AND_POSTER_TRACK__DEMOSESSION = 1;
+
+  /**
+   * The number of structural features of the '<em>Demos And Poster Track</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEMOS_AND_POSTER_TRACK_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.PanelTrackImpl <em>Panel Track</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.conferenceProgram.impl.PanelTrackImpl
+   * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getPanelTrack()
+   * @generated
+   */
+  int PANEL_TRACK = 4;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PANEL_TRACK__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Panelsession</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PANEL_TRACK__PANELSESSION = 1;
+
+  /**
+   * The number of structural features of the '<em>Panel Track</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PANEL_TRACK_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.ResearchSessionImpl <em>Research Session</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.conferenceProgram.impl.ResearchSessionImpl
+   * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getResearchSession()
+   * @generated
+   */
+  int RESEARCH_SESSION = 5;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RESEARCH_SESSION__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Researchpaper</b></em>' containment reference list.
@@ -202,34 +340,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SESSION__RESEARCHPAPER = 1;
-
-  /**
-   * The feature id for the '<em><b>Industrypaper</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SESSION__INDUSTRYPAPER = 2;
-
-  /**
-   * The feature id for the '<em><b>Demoandposter</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SESSION__DEMOANDPOSTER = 3;
-
-  /**
-   * The feature id for the '<em><b>Panel</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SESSION__PANEL = 4;
+  int RESEARCH_SESSION__RESEARCHPAPER = 1;
 
   /**
    * The feature id for the '<em><b>Location</b></em>' containment reference.
@@ -238,7 +349,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SESSION__LOCATION = 5;
+  int RESEARCH_SESSION__LOCATION = 2;
 
   /**
    * The feature id for the '<em><b>Start Time</b></em>' attribute.
@@ -247,7 +358,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SESSION__START_TIME = 6;
+  int RESEARCH_SESSION__START_TIME = 3;
 
   /**
    * The feature id for the '<em><b>End Time</b></em>' attribute.
@@ -256,16 +367,208 @@ public interface ConferenceProgramPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SESSION__END_TIME = 7;
+  int RESEARCH_SESSION__END_TIME = 4;
 
   /**
-   * The number of structural features of the '<em>Session</em>' class.
+   * The number of structural features of the '<em>Research Session</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SESSION_FEATURE_COUNT = 8;
+  int RESEARCH_SESSION_FEATURE_COUNT = 5;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.IndustrySessionImpl <em>Industry Session</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.conferenceProgram.impl.IndustrySessionImpl
+   * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getIndustrySession()
+   * @generated
+   */
+  int INDUSTRY_SESSION = 6;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDUSTRY_SESSION__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Industrypaper</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDUSTRY_SESSION__INDUSTRYPAPER = 1;
+
+  /**
+   * The feature id for the '<em><b>Location</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDUSTRY_SESSION__LOCATION = 2;
+
+  /**
+   * The feature id for the '<em><b>Start Time</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDUSTRY_SESSION__START_TIME = 3;
+
+  /**
+   * The feature id for the '<em><b>End Time</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDUSTRY_SESSION__END_TIME = 4;
+
+  /**
+   * The number of structural features of the '<em>Industry Session</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDUSTRY_SESSION_FEATURE_COUNT = 5;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.DemoSessionImpl <em>Demo Session</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.conferenceProgram.impl.DemoSessionImpl
+   * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getDemoSession()
+   * @generated
+   */
+  int DEMO_SESSION = 7;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEMO_SESSION__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Demoandposter</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEMO_SESSION__DEMOANDPOSTER = 1;
+
+  /**
+   * The feature id for the '<em><b>Location</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEMO_SESSION__LOCATION = 2;
+
+  /**
+   * The feature id for the '<em><b>Start Time</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEMO_SESSION__START_TIME = 3;
+
+  /**
+   * The feature id for the '<em><b>End Time</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEMO_SESSION__END_TIME = 4;
+
+  /**
+   * The number of structural features of the '<em>Demo Session</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEMO_SESSION_FEATURE_COUNT = 5;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.PanelSessionImpl <em>Panel Session</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.conferenceProgram.impl.PanelSessionImpl
+   * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getPanelSession()
+   * @generated
+   */
+  int PANEL_SESSION = 8;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PANEL_SESSION__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Panel</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PANEL_SESSION__PANEL = 1;
+
+  /**
+   * The feature id for the '<em><b>Location</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PANEL_SESSION__LOCATION = 2;
+
+  /**
+   * The feature id for the '<em><b>Start Time</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PANEL_SESSION__START_TIME = 3;
+
+  /**
+   * The feature id for the '<em><b>End Time</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PANEL_SESSION__END_TIME = 4;
+
+  /**
+   * The number of structural features of the '<em>Panel Session</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PANEL_SESSION_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.ResearchPaperImpl <em>Research Paper</em>}' class.
@@ -275,7 +578,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getResearchPaper()
    * @generated
    */
-  int RESEARCH_PAPER = 3;
+  int RESEARCH_PAPER = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -303,7 +606,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getIndustryPaper()
    * @generated
    */
-  int INDUSTRY_PAPER = 4;
+  int INDUSTRY_PAPER = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -331,7 +634,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getDemoAndPoster()
    * @generated
    */
-  int DEMO_AND_POSTER = 5;
+  int DEMO_AND_POSTER = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -359,7 +662,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getPanel()
    * @generated
    */
-  int PANEL = 6;
+  int PANEL = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -387,7 +690,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getLocation()
    * @generated
    */
-  int LOCATION = 7;
+  int LOCATION = 13;
 
   /**
    * The feature id for the '<em><b>Room</b></em>' containment reference.
@@ -415,7 +718,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getRoom()
    * @generated
    */
-  int ROOM = 8;
+  int ROOM = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -443,7 +746,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getKeynote()
    * @generated
    */
-  int KEYNOTE = 9;
+  int KEYNOTE = 15;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -455,31 +758,13 @@ public interface ConferenceProgramPackage extends EPackage
   int KEYNOTE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Start Time</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int KEYNOTE__START_TIME = 1;
-
-  /**
-   * The feature id for the '<em><b>End Time</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int KEYNOTE__END_TIME = 2;
-
-  /**
    * The number of structural features of the '<em>Keynote</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int KEYNOTE_FEATURE_COUNT = 3;
+  int KEYNOTE_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.CoffeBreakImpl <em>Coffe Break</em>}' class.
@@ -489,7 +774,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getCoffeBreak()
    * @generated
    */
-  int COFFE_BREAK = 10;
+  int COFFE_BREAK = 16;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -501,31 +786,13 @@ public interface ConferenceProgramPackage extends EPackage
   int COFFE_BREAK__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Start Time</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COFFE_BREAK__START_TIME = 1;
-
-  /**
-   * The feature id for the '<em><b>End Time</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int COFFE_BREAK__END_TIME = 2;
-
-  /**
    * The number of structural features of the '<em>Coffe Break</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COFFE_BREAK_FEATURE_COUNT = 3;
+  int COFFE_BREAK_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.LunchImpl <em>Lunch</em>}' class.
@@ -535,7 +802,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getLunch()
    * @generated
    */
-  int LUNCH = 11;
+  int LUNCH = 17;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -547,31 +814,13 @@ public interface ConferenceProgramPackage extends EPackage
   int LUNCH__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Start Time</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LUNCH__START_TIME = 1;
-
-  /**
-   * The feature id for the '<em><b>End Time</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LUNCH__END_TIME = 2;
-
-  /**
    * The number of structural features of the '<em>Lunch</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LUNCH_FEATURE_COUNT = 3;
+  int LUNCH_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.SocialEventImpl <em>Social Event</em>}' class.
@@ -581,7 +830,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getSocialEvent()
    * @generated
    */
-  int SOCIAL_EVENT = 12;
+  int SOCIAL_EVENT = 18;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -645,7 +894,7 @@ public interface ConferenceProgramPackage extends EPackage
    * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getGoogleMapsDirections()
    * @generated
    */
-  int GOOGLE_MAPS_DIRECTIONS = 13;
+  int GOOGLE_MAPS_DIRECTIONS = 19;
 
   /**
    * The feature id for the '<em><b>Url</b></em>' attribute.
@@ -699,15 +948,48 @@ public interface ConferenceProgramPackage extends EPackage
   EAttribute getConferenceProgram_Date();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getTracks <em>Tracks</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getResearchtracks <em>Researchtracks</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Tracks</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getTracks()
+   * @return the meta object for the containment reference '<em>Researchtracks</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getResearchtracks()
    * @see #getConferenceProgram()
    * @generated
    */
-  EReference getConferenceProgram_Tracks();
+  EReference getConferenceProgram_Researchtracks();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getIndustrytracks <em>Industrytracks</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Industrytracks</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getIndustrytracks()
+   * @see #getConferenceProgram()
+   * @generated
+   */
+  EReference getConferenceProgram_Industrytracks();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getDemosandposterstrack <em>Demosandposterstrack</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Demosandposterstrack</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getDemosandposterstrack()
+   * @see #getConferenceProgram()
+   * @generated
+   */
+  EReference getConferenceProgram_Demosandposterstrack();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getPanelstrack <em>Panelstrack</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Panelstrack</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getPanelstrack()
+   * @see #getConferenceProgram()
+   * @generated
+   */
+  EReference getConferenceProgram_Panelstrack();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.ConferenceProgram#getSocialEvents <em>Social Events</em>}'.
@@ -754,134 +1036,392 @@ public interface ConferenceProgramPackage extends EPackage
   EReference getConferenceProgram_Lunches();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.mydsl.conferenceProgram.Track <em>Track</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.conferenceProgram.ResearchTrack <em>Research Track</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Track</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.Track
+   * @return the meta object for class '<em>Research Track</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.ResearchTrack
    * @generated
    */
-  EClass getTrack();
+  EClass getResearchTrack();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.Track#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.Track#getName()
-   * @see #getTrack()
-   * @generated
-   */
-  EAttribute getTrack_Name();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.Track#getSession <em>Session</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Session</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.Track#getSession()
-   * @see #getTrack()
-   * @generated
-   */
-  EReference getTrack_Session();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.mydsl.conferenceProgram.Session <em>Session</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Session</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.Session
-   * @generated
-   */
-  EClass getSession();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.Session#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.ResearchTrack#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.Session#getName()
-   * @see #getSession()
+   * @see org.xtext.example.mydsl.conferenceProgram.ResearchTrack#getName()
+   * @see #getResearchTrack()
    * @generated
    */
-  EAttribute getSession_Name();
+  EAttribute getResearchTrack_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.Session#getResearchpaper <em>Researchpaper</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.ResearchTrack#getResearchsession <em>Researchsession</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Researchsession</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.ResearchTrack#getResearchsession()
+   * @see #getResearchTrack()
+   * @generated
+   */
+  EReference getResearchTrack_Researchsession();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.conferenceProgram.IndustryTrack <em>Industry Track</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Industry Track</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.IndustryTrack
+   * @generated
+   */
+  EClass getIndustryTrack();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.IndustryTrack#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.IndustryTrack#getName()
+   * @see #getIndustryTrack()
+   * @generated
+   */
+  EAttribute getIndustryTrack_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.IndustryTrack#getIndutrysession <em>Indutrysession</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Indutrysession</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.IndustryTrack#getIndutrysession()
+   * @see #getIndustryTrack()
+   * @generated
+   */
+  EReference getIndustryTrack_Indutrysession();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.conferenceProgram.DemosAndPosterTrack <em>Demos And Poster Track</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Demos And Poster Track</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.DemosAndPosterTrack
+   * @generated
+   */
+  EClass getDemosAndPosterTrack();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.DemosAndPosterTrack#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.DemosAndPosterTrack#getName()
+   * @see #getDemosAndPosterTrack()
+   * @generated
+   */
+  EAttribute getDemosAndPosterTrack_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.DemosAndPosterTrack#getDemosession <em>Demosession</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Demosession</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.DemosAndPosterTrack#getDemosession()
+   * @see #getDemosAndPosterTrack()
+   * @generated
+   */
+  EReference getDemosAndPosterTrack_Demosession();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.conferenceProgram.PanelTrack <em>Panel Track</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Panel Track</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.PanelTrack
+   * @generated
+   */
+  EClass getPanelTrack();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.PanelTrack#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.PanelTrack#getName()
+   * @see #getPanelTrack()
+   * @generated
+   */
+  EAttribute getPanelTrack_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.PanelTrack#getPanelsession <em>Panelsession</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Panelsession</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.PanelTrack#getPanelsession()
+   * @see #getPanelTrack()
+   * @generated
+   */
+  EReference getPanelTrack_Panelsession();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.conferenceProgram.ResearchSession <em>Research Session</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Research Session</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.ResearchSession
+   * @generated
+   */
+  EClass getResearchSession();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.ResearchSession#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.ResearchSession#getName()
+   * @see #getResearchSession()
+   * @generated
+   */
+  EAttribute getResearchSession_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.ResearchSession#getResearchpaper <em>Researchpaper</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Researchpaper</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.Session#getResearchpaper()
-   * @see #getSession()
+   * @see org.xtext.example.mydsl.conferenceProgram.ResearchSession#getResearchpaper()
+   * @see #getResearchSession()
    * @generated
    */
-  EReference getSession_Researchpaper();
+  EReference getResearchSession_Researchpaper();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.Session#getIndustrypaper <em>Industrypaper</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Industrypaper</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.Session#getIndustrypaper()
-   * @see #getSession()
-   * @generated
-   */
-  EReference getSession_Industrypaper();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.Session#getDemoandposter <em>Demoandposter</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Demoandposter</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.Session#getDemoandposter()
-   * @see #getSession()
-   * @generated
-   */
-  EReference getSession_Demoandposter();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.Session#getPanel <em>Panel</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Panel</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.Session#getPanel()
-   * @see #getSession()
-   * @generated
-   */
-  EReference getSession_Panel();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.conferenceProgram.Session#getLocation <em>Location</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.conferenceProgram.ResearchSession#getLocation <em>Location</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Location</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.Session#getLocation()
-   * @see #getSession()
+   * @see org.xtext.example.mydsl.conferenceProgram.ResearchSession#getLocation()
+   * @see #getResearchSession()
    * @generated
    */
-  EReference getSession_Location();
+  EReference getResearchSession_Location();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.Session#getStartTime <em>Start Time</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.ResearchSession#getStartTime <em>Start Time</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Start Time</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.Session#getStartTime()
-   * @see #getSession()
+   * @see org.xtext.example.mydsl.conferenceProgram.ResearchSession#getStartTime()
+   * @see #getResearchSession()
    * @generated
    */
-  EAttribute getSession_StartTime();
+  EAttribute getResearchSession_StartTime();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.Session#getEndTime <em>End Time</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.ResearchSession#getEndTime <em>End Time</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>End Time</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.Session#getEndTime()
-   * @see #getSession()
+   * @see org.xtext.example.mydsl.conferenceProgram.ResearchSession#getEndTime()
+   * @see #getResearchSession()
    * @generated
    */
-  EAttribute getSession_EndTime();
+  EAttribute getResearchSession_EndTime();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.conferenceProgram.IndustrySession <em>Industry Session</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Industry Session</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.IndustrySession
+   * @generated
+   */
+  EClass getIndustrySession();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.IndustrySession#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.IndustrySession#getName()
+   * @see #getIndustrySession()
+   * @generated
+   */
+  EAttribute getIndustrySession_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.IndustrySession#getIndustrypaper <em>Industrypaper</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Industrypaper</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.IndustrySession#getIndustrypaper()
+   * @see #getIndustrySession()
+   * @generated
+   */
+  EReference getIndustrySession_Industrypaper();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.conferenceProgram.IndustrySession#getLocation <em>Location</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Location</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.IndustrySession#getLocation()
+   * @see #getIndustrySession()
+   * @generated
+   */
+  EReference getIndustrySession_Location();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.IndustrySession#getStartTime <em>Start Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Start Time</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.IndustrySession#getStartTime()
+   * @see #getIndustrySession()
+   * @generated
+   */
+  EAttribute getIndustrySession_StartTime();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.IndustrySession#getEndTime <em>End Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>End Time</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.IndustrySession#getEndTime()
+   * @see #getIndustrySession()
+   * @generated
+   */
+  EAttribute getIndustrySession_EndTime();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.conferenceProgram.DemoSession <em>Demo Session</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Demo Session</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.DemoSession
+   * @generated
+   */
+  EClass getDemoSession();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.DemoSession#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.DemoSession#getName()
+   * @see #getDemoSession()
+   * @generated
+   */
+  EAttribute getDemoSession_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.DemoSession#getDemoandposter <em>Demoandposter</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Demoandposter</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.DemoSession#getDemoandposter()
+   * @see #getDemoSession()
+   * @generated
+   */
+  EReference getDemoSession_Demoandposter();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.conferenceProgram.DemoSession#getLocation <em>Location</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Location</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.DemoSession#getLocation()
+   * @see #getDemoSession()
+   * @generated
+   */
+  EReference getDemoSession_Location();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.DemoSession#getStartTime <em>Start Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Start Time</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.DemoSession#getStartTime()
+   * @see #getDemoSession()
+   * @generated
+   */
+  EAttribute getDemoSession_StartTime();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.DemoSession#getEndTime <em>End Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>End Time</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.DemoSession#getEndTime()
+   * @see #getDemoSession()
+   * @generated
+   */
+  EAttribute getDemoSession_EndTime();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.conferenceProgram.PanelSession <em>Panel Session</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Panel Session</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.PanelSession
+   * @generated
+   */
+  EClass getPanelSession();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.PanelSession#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.PanelSession#getName()
+   * @see #getPanelSession()
+   * @generated
+   */
+  EAttribute getPanelSession_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.conferenceProgram.PanelSession#getPanel <em>Panel</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Panel</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.PanelSession#getPanel()
+   * @see #getPanelSession()
+   * @generated
+   */
+  EReference getPanelSession_Panel();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.conferenceProgram.PanelSession#getLocation <em>Location</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Location</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.PanelSession#getLocation()
+   * @see #getPanelSession()
+   * @generated
+   */
+  EReference getPanelSession_Location();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.PanelSession#getStartTime <em>Start Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Start Time</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.PanelSession#getStartTime()
+   * @see #getPanelSession()
+   * @generated
+   */
+  EAttribute getPanelSession_StartTime();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.PanelSession#getEndTime <em>End Time</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>End Time</em>'.
+   * @see org.xtext.example.mydsl.conferenceProgram.PanelSession#getEndTime()
+   * @see #getPanelSession()
+   * @generated
+   */
+  EAttribute getPanelSession_EndTime();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.conferenceProgram.ResearchPaper <em>Research Paper</em>}'.
@@ -1031,28 +1571,6 @@ public interface ConferenceProgramPackage extends EPackage
   EAttribute getKeynote_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.Keynote#getStartTime <em>Start Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Start Time</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.Keynote#getStartTime()
-   * @see #getKeynote()
-   * @generated
-   */
-  EAttribute getKeynote_StartTime();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.Keynote#getEndTime <em>End Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>End Time</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.Keynote#getEndTime()
-   * @see #getKeynote()
-   * @generated
-   */
-  EAttribute getKeynote_EndTime();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.conferenceProgram.CoffeBreak <em>Coffe Break</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1074,28 +1592,6 @@ public interface ConferenceProgramPackage extends EPackage
   EAttribute getCoffeBreak_Name();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.CoffeBreak#getStartTime <em>Start Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Start Time</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.CoffeBreak#getStartTime()
-   * @see #getCoffeBreak()
-   * @generated
-   */
-  EAttribute getCoffeBreak_StartTime();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.CoffeBreak#getEndTime <em>End Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>End Time</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.CoffeBreak#getEndTime()
-   * @see #getCoffeBreak()
-   * @generated
-   */
-  EAttribute getCoffeBreak_EndTime();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.conferenceProgram.Lunch <em>Lunch</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1115,28 +1611,6 @@ public interface ConferenceProgramPackage extends EPackage
    * @generated
    */
   EAttribute getLunch_Name();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.Lunch#getStartTime <em>Start Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Start Time</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.Lunch#getStartTime()
-   * @see #getLunch()
-   * @generated
-   */
-  EAttribute getLunch_StartTime();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.conferenceProgram.Lunch#getEndTime <em>End Time</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>End Time</em>'.
-   * @see org.xtext.example.mydsl.conferenceProgram.Lunch#getEndTime()
-   * @see #getLunch()
-   * @generated
-   */
-  EAttribute getLunch_EndTime();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.conferenceProgram.SocialEvent <em>Social Event</em>}'.
@@ -1274,12 +1748,36 @@ public interface ConferenceProgramPackage extends EPackage
     EAttribute CONFERENCE_PROGRAM__DATE = eINSTANCE.getConferenceProgram_Date();
 
     /**
-     * The meta object literal for the '<em><b>Tracks</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Researchtracks</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CONFERENCE_PROGRAM__TRACKS = eINSTANCE.getConferenceProgram_Tracks();
+    EReference CONFERENCE_PROGRAM__RESEARCHTRACKS = eINSTANCE.getConferenceProgram_Researchtracks();
+
+    /**
+     * The meta object literal for the '<em><b>Industrytracks</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONFERENCE_PROGRAM__INDUSTRYTRACKS = eINSTANCE.getConferenceProgram_Industrytracks();
+
+    /**
+     * The meta object literal for the '<em><b>Demosandposterstrack</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONFERENCE_PROGRAM__DEMOSANDPOSTERSTRACK = eINSTANCE.getConferenceProgram_Demosandposterstrack();
+
+    /**
+     * The meta object literal for the '<em><b>Panelstrack</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CONFERENCE_PROGRAM__PANELSTRACK = eINSTANCE.getConferenceProgram_Panelstrack();
 
     /**
      * The meta object literal for the '<em><b>Social Events</b></em>' containment reference list feature.
@@ -1314,14 +1812,14 @@ public interface ConferenceProgramPackage extends EPackage
     EReference CONFERENCE_PROGRAM__LUNCHES = eINSTANCE.getConferenceProgram_Lunches();
 
     /**
-     * The meta object literal for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.TrackImpl <em>Track</em>}' class.
+     * The meta object literal for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.ResearchTrackImpl <em>Research Track</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.example.mydsl.conferenceProgram.impl.TrackImpl
-     * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getTrack()
+     * @see org.xtext.example.mydsl.conferenceProgram.impl.ResearchTrackImpl
+     * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getResearchTrack()
      * @generated
      */
-    EClass TRACK = eINSTANCE.getTrack();
+    EClass RESEARCH_TRACK = eINSTANCE.getResearchTrack();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1329,25 +1827,25 @@ public interface ConferenceProgramPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute TRACK__NAME = eINSTANCE.getTrack_Name();
+    EAttribute RESEARCH_TRACK__NAME = eINSTANCE.getResearchTrack_Name();
 
     /**
-     * The meta object literal for the '<em><b>Session</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Researchsession</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TRACK__SESSION = eINSTANCE.getTrack_Session();
+    EReference RESEARCH_TRACK__RESEARCHSESSION = eINSTANCE.getResearchTrack_Researchsession();
 
     /**
-     * The meta object literal for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.SessionImpl <em>Session</em>}' class.
+     * The meta object literal for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.IndustryTrackImpl <em>Industry Track</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.example.mydsl.conferenceProgram.impl.SessionImpl
-     * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getSession()
+     * @see org.xtext.example.mydsl.conferenceProgram.impl.IndustryTrackImpl
+     * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getIndustryTrack()
      * @generated
      */
-    EClass SESSION = eINSTANCE.getSession();
+    EClass INDUSTRY_TRACK = eINSTANCE.getIndustryTrack();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1355,7 +1853,85 @@ public interface ConferenceProgramPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SESSION__NAME = eINSTANCE.getSession_Name();
+    EAttribute INDUSTRY_TRACK__NAME = eINSTANCE.getIndustryTrack_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Indutrysession</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INDUSTRY_TRACK__INDUTRYSESSION = eINSTANCE.getIndustryTrack_Indutrysession();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.DemosAndPosterTrackImpl <em>Demos And Poster Track</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.conferenceProgram.impl.DemosAndPosterTrackImpl
+     * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getDemosAndPosterTrack()
+     * @generated
+     */
+    EClass DEMOS_AND_POSTER_TRACK = eINSTANCE.getDemosAndPosterTrack();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DEMOS_AND_POSTER_TRACK__NAME = eINSTANCE.getDemosAndPosterTrack_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Demosession</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DEMOS_AND_POSTER_TRACK__DEMOSESSION = eINSTANCE.getDemosAndPosterTrack_Demosession();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.PanelTrackImpl <em>Panel Track</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.conferenceProgram.impl.PanelTrackImpl
+     * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getPanelTrack()
+     * @generated
+     */
+    EClass PANEL_TRACK = eINSTANCE.getPanelTrack();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PANEL_TRACK__NAME = eINSTANCE.getPanelTrack_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Panelsession</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PANEL_TRACK__PANELSESSION = eINSTANCE.getPanelTrack_Panelsession();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.ResearchSessionImpl <em>Research Session</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.conferenceProgram.impl.ResearchSessionImpl
+     * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getResearchSession()
+     * @generated
+     */
+    EClass RESEARCH_SESSION = eINSTANCE.getResearchSession();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute RESEARCH_SESSION__NAME = eINSTANCE.getResearchSession_Name();
 
     /**
      * The meta object literal for the '<em><b>Researchpaper</b></em>' containment reference list feature.
@@ -1363,31 +1939,7 @@ public interface ConferenceProgramPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SESSION__RESEARCHPAPER = eINSTANCE.getSession_Researchpaper();
-
-    /**
-     * The meta object literal for the '<em><b>Industrypaper</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SESSION__INDUSTRYPAPER = eINSTANCE.getSession_Industrypaper();
-
-    /**
-     * The meta object literal for the '<em><b>Demoandposter</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SESSION__DEMOANDPOSTER = eINSTANCE.getSession_Demoandposter();
-
-    /**
-     * The meta object literal for the '<em><b>Panel</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference SESSION__PANEL = eINSTANCE.getSession_Panel();
+    EReference RESEARCH_SESSION__RESEARCHPAPER = eINSTANCE.getResearchSession_Researchpaper();
 
     /**
      * The meta object literal for the '<em><b>Location</b></em>' containment reference feature.
@@ -1395,7 +1947,7 @@ public interface ConferenceProgramPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference SESSION__LOCATION = eINSTANCE.getSession_Location();
+    EReference RESEARCH_SESSION__LOCATION = eINSTANCE.getResearchSession_Location();
 
     /**
      * The meta object literal for the '<em><b>Start Time</b></em>' attribute feature.
@@ -1403,7 +1955,7 @@ public interface ConferenceProgramPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SESSION__START_TIME = eINSTANCE.getSession_StartTime();
+    EAttribute RESEARCH_SESSION__START_TIME = eINSTANCE.getResearchSession_StartTime();
 
     /**
      * The meta object literal for the '<em><b>End Time</b></em>' attribute feature.
@@ -1411,7 +1963,157 @@ public interface ConferenceProgramPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SESSION__END_TIME = eINSTANCE.getSession_EndTime();
+    EAttribute RESEARCH_SESSION__END_TIME = eINSTANCE.getResearchSession_EndTime();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.IndustrySessionImpl <em>Industry Session</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.conferenceProgram.impl.IndustrySessionImpl
+     * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getIndustrySession()
+     * @generated
+     */
+    EClass INDUSTRY_SESSION = eINSTANCE.getIndustrySession();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INDUSTRY_SESSION__NAME = eINSTANCE.getIndustrySession_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Industrypaper</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INDUSTRY_SESSION__INDUSTRYPAPER = eINSTANCE.getIndustrySession_Industrypaper();
+
+    /**
+     * The meta object literal for the '<em><b>Location</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INDUSTRY_SESSION__LOCATION = eINSTANCE.getIndustrySession_Location();
+
+    /**
+     * The meta object literal for the '<em><b>Start Time</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INDUSTRY_SESSION__START_TIME = eINSTANCE.getIndustrySession_StartTime();
+
+    /**
+     * The meta object literal for the '<em><b>End Time</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INDUSTRY_SESSION__END_TIME = eINSTANCE.getIndustrySession_EndTime();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.DemoSessionImpl <em>Demo Session</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.conferenceProgram.impl.DemoSessionImpl
+     * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getDemoSession()
+     * @generated
+     */
+    EClass DEMO_SESSION = eINSTANCE.getDemoSession();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DEMO_SESSION__NAME = eINSTANCE.getDemoSession_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Demoandposter</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DEMO_SESSION__DEMOANDPOSTER = eINSTANCE.getDemoSession_Demoandposter();
+
+    /**
+     * The meta object literal for the '<em><b>Location</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DEMO_SESSION__LOCATION = eINSTANCE.getDemoSession_Location();
+
+    /**
+     * The meta object literal for the '<em><b>Start Time</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DEMO_SESSION__START_TIME = eINSTANCE.getDemoSession_StartTime();
+
+    /**
+     * The meta object literal for the '<em><b>End Time</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DEMO_SESSION__END_TIME = eINSTANCE.getDemoSession_EndTime();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.PanelSessionImpl <em>Panel Session</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.conferenceProgram.impl.PanelSessionImpl
+     * @see org.xtext.example.mydsl.conferenceProgram.impl.ConferenceProgramPackageImpl#getPanelSession()
+     * @generated
+     */
+    EClass PANEL_SESSION = eINSTANCE.getPanelSession();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PANEL_SESSION__NAME = eINSTANCE.getPanelSession_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Panel</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PANEL_SESSION__PANEL = eINSTANCE.getPanelSession_Panel();
+
+    /**
+     * The meta object literal for the '<em><b>Location</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PANEL_SESSION__LOCATION = eINSTANCE.getPanelSession_Location();
+
+    /**
+     * The meta object literal for the '<em><b>Start Time</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PANEL_SESSION__START_TIME = eINSTANCE.getPanelSession_StartTime();
+
+    /**
+     * The meta object literal for the '<em><b>End Time</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PANEL_SESSION__END_TIME = eINSTANCE.getPanelSession_EndTime();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.ResearchPaperImpl <em>Research Paper</em>}' class.
@@ -1540,22 +2242,6 @@ public interface ConferenceProgramPackage extends EPackage
     EAttribute KEYNOTE__NAME = eINSTANCE.getKeynote_Name();
 
     /**
-     * The meta object literal for the '<em><b>Start Time</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute KEYNOTE__START_TIME = eINSTANCE.getKeynote_StartTime();
-
-    /**
-     * The meta object literal for the '<em><b>End Time</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute KEYNOTE__END_TIME = eINSTANCE.getKeynote_EndTime();
-
-    /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.CoffeBreakImpl <em>Coffe Break</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1574,22 +2260,6 @@ public interface ConferenceProgramPackage extends EPackage
     EAttribute COFFE_BREAK__NAME = eINSTANCE.getCoffeBreak_Name();
 
     /**
-     * The meta object literal for the '<em><b>Start Time</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute COFFE_BREAK__START_TIME = eINSTANCE.getCoffeBreak_StartTime();
-
-    /**
-     * The meta object literal for the '<em><b>End Time</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute COFFE_BREAK__END_TIME = eINSTANCE.getCoffeBreak_EndTime();
-
-    /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.LunchImpl <em>Lunch</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1606,22 +2276,6 @@ public interface ConferenceProgramPackage extends EPackage
      * @generated
      */
     EAttribute LUNCH__NAME = eINSTANCE.getLunch_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Start Time</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute LUNCH__START_TIME = eINSTANCE.getLunch_StartTime();
-
-    /**
-     * The meta object literal for the '<em><b>End Time</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute LUNCH__END_TIME = eINSTANCE.getLunch_EndTime();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.conferenceProgram.impl.SocialEventImpl <em>Social Event</em>}' class.

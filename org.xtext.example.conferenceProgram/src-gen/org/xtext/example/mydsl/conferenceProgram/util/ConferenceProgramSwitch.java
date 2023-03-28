@@ -80,17 +80,59 @@ public class ConferenceProgramSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ConferenceProgramPackage.TRACK:
+      case ConferenceProgramPackage.RESEARCH_TRACK:
       {
-        Track track = (Track)theEObject;
-        T result = caseTrack(track);
+        ResearchTrack researchTrack = (ResearchTrack)theEObject;
+        T result = caseResearchTrack(researchTrack);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case ConferenceProgramPackage.SESSION:
+      case ConferenceProgramPackage.INDUSTRY_TRACK:
       {
-        Session session = (Session)theEObject;
-        T result = caseSession(session);
+        IndustryTrack industryTrack = (IndustryTrack)theEObject;
+        T result = caseIndustryTrack(industryTrack);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ConferenceProgramPackage.DEMOS_AND_POSTER_TRACK:
+      {
+        DemosAndPosterTrack demosAndPosterTrack = (DemosAndPosterTrack)theEObject;
+        T result = caseDemosAndPosterTrack(demosAndPosterTrack);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ConferenceProgramPackage.PANEL_TRACK:
+      {
+        PanelTrack panelTrack = (PanelTrack)theEObject;
+        T result = casePanelTrack(panelTrack);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ConferenceProgramPackage.RESEARCH_SESSION:
+      {
+        ResearchSession researchSession = (ResearchSession)theEObject;
+        T result = caseResearchSession(researchSession);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ConferenceProgramPackage.INDUSTRY_SESSION:
+      {
+        IndustrySession industrySession = (IndustrySession)theEObject;
+        T result = caseIndustrySession(industrySession);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ConferenceProgramPackage.DEMO_SESSION:
+      {
+        DemoSession demoSession = (DemoSession)theEObject;
+        T result = caseDemoSession(demoSession);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case ConferenceProgramPackage.PANEL_SESSION:
+      {
+        PanelSession panelSession = (PanelSession)theEObject;
+        T result = casePanelSession(panelSession);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -192,33 +234,129 @@ public class ConferenceProgramSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Track</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Research Track</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Track</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Research Track</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseTrack(Track object)
+  public T caseResearchTrack(ResearchTrack object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Session</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Industry Track</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Session</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Industry Track</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSession(Session object)
+  public T caseIndustryTrack(IndustryTrack object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Demos And Poster Track</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Demos And Poster Track</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDemosAndPosterTrack(DemosAndPosterTrack object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Panel Track</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Panel Track</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePanelTrack(PanelTrack object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Research Session</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Research Session</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseResearchSession(ResearchSession object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Industry Session</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Industry Session</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIndustrySession(IndustrySession object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Demo Session</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Demo Session</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDemoSession(DemoSession object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Panel Session</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Panel Session</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePanelSession(PanelSession object)
   {
     return null;
   }

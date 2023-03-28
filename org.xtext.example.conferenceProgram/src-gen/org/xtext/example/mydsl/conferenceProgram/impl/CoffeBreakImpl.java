@@ -22,8 +22,6 @@ import org.xtext.example.mydsl.conferenceProgram.ConferenceProgramPackage;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.CoffeBreakImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.CoffeBreakImpl#getStartTime <em>Start Time</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.conferenceProgram.impl.CoffeBreakImpl#getEndTime <em>End Time</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,46 +47,6 @@ public class CoffeBreakImpl extends MinimalEObjectImpl.Container implements Coff
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getStartTime() <em>Start Time</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getStartTime()
-   * @generated
-   * @ordered
-   */
-  protected static final String START_TIME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getStartTime() <em>Start Time</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getStartTime()
-   * @generated
-   * @ordered
-   */
-  protected String startTime = START_TIME_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getEndTime() <em>End Time</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEndTime()
-   * @generated
-   * @ordered
-   */
-  protected static final String END_TIME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getEndTime() <em>End Time</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEndTime()
-   * @generated
-   * @ordered
-   */
-  protected String endTime = END_TIME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -142,66 +100,12 @@ public class CoffeBreakImpl extends MinimalEObjectImpl.Container implements Coff
    * @generated
    */
   @Override
-  public String getStartTime()
-  {
-    return startTime;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setStartTime(String newStartTime)
-  {
-    String oldStartTime = startTime;
-    startTime = newStartTime;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.COFFE_BREAK__START_TIME, oldStartTime, startTime));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getEndTime()
-  {
-    return endTime;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setEndTime(String newEndTime)
-  {
-    String oldEndTime = endTime;
-    endTime = newEndTime;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, ConferenceProgramPackage.COFFE_BREAK__END_TIME, oldEndTime, endTime));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
       case ConferenceProgramPackage.COFFE_BREAK__NAME:
         return getName();
-      case ConferenceProgramPackage.COFFE_BREAK__START_TIME:
-        return getStartTime();
-      case ConferenceProgramPackage.COFFE_BREAK__END_TIME:
-        return getEndTime();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -218,12 +122,6 @@ public class CoffeBreakImpl extends MinimalEObjectImpl.Container implements Coff
     {
       case ConferenceProgramPackage.COFFE_BREAK__NAME:
         setName((String)newValue);
-        return;
-      case ConferenceProgramPackage.COFFE_BREAK__START_TIME:
-        setStartTime((String)newValue);
-        return;
-      case ConferenceProgramPackage.COFFE_BREAK__END_TIME:
-        setEndTime((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -242,12 +140,6 @@ public class CoffeBreakImpl extends MinimalEObjectImpl.Container implements Coff
       case ConferenceProgramPackage.COFFE_BREAK__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case ConferenceProgramPackage.COFFE_BREAK__START_TIME:
-        setStartTime(START_TIME_EDEFAULT);
-        return;
-      case ConferenceProgramPackage.COFFE_BREAK__END_TIME:
-        setEndTime(END_TIME_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -264,10 +156,6 @@ public class CoffeBreakImpl extends MinimalEObjectImpl.Container implements Coff
     {
       case ConferenceProgramPackage.COFFE_BREAK__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case ConferenceProgramPackage.COFFE_BREAK__START_TIME:
-        return START_TIME_EDEFAULT == null ? startTime != null : !START_TIME_EDEFAULT.equals(startTime);
-      case ConferenceProgramPackage.COFFE_BREAK__END_TIME:
-        return END_TIME_EDEFAULT == null ? endTime != null : !END_TIME_EDEFAULT.equals(endTime);
     }
     return super.eIsSet(featureID);
   }
@@ -285,10 +173,6 @@ public class CoffeBreakImpl extends MinimalEObjectImpl.Container implements Coff
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", startTime: ");
-    result.append(startTime);
-    result.append(", endTime: ");
-    result.append(endTime);
     result.append(')');
     return result.toString();
   }

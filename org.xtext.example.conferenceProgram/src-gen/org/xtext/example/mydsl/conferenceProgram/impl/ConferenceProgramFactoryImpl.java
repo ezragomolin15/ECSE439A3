@@ -66,8 +66,14 @@ public class ConferenceProgramFactoryImpl extends EFactoryImpl implements Confer
     switch (eClass.getClassifierID())
     {
       case ConferenceProgramPackage.CONFERENCE_PROGRAM: return createConferenceProgram();
-      case ConferenceProgramPackage.TRACK: return createTrack();
-      case ConferenceProgramPackage.SESSION: return createSession();
+      case ConferenceProgramPackage.RESEARCH_TRACK: return createResearchTrack();
+      case ConferenceProgramPackage.INDUSTRY_TRACK: return createIndustryTrack();
+      case ConferenceProgramPackage.DEMOS_AND_POSTER_TRACK: return createDemosAndPosterTrack();
+      case ConferenceProgramPackage.PANEL_TRACK: return createPanelTrack();
+      case ConferenceProgramPackage.RESEARCH_SESSION: return createResearchSession();
+      case ConferenceProgramPackage.INDUSTRY_SESSION: return createIndustrySession();
+      case ConferenceProgramPackage.DEMO_SESSION: return createDemoSession();
+      case ConferenceProgramPackage.PANEL_SESSION: return createPanelSession();
       case ConferenceProgramPackage.RESEARCH_PAPER: return createResearchPaper();
       case ConferenceProgramPackage.INDUSTRY_PAPER: return createIndustryPaper();
       case ConferenceProgramPackage.DEMO_AND_POSTER: return createDemoAndPoster();
@@ -102,10 +108,10 @@ public class ConferenceProgramFactoryImpl extends EFactoryImpl implements Confer
    * @generated
    */
   @Override
-  public Track createTrack()
+  public ResearchTrack createResearchTrack()
   {
-    TrackImpl track = new TrackImpl();
-    return track;
+    ResearchTrackImpl researchTrack = new ResearchTrackImpl();
+    return researchTrack;
   }
 
   /**
@@ -114,10 +120,82 @@ public class ConferenceProgramFactoryImpl extends EFactoryImpl implements Confer
    * @generated
    */
   @Override
-  public Session createSession()
+  public IndustryTrack createIndustryTrack()
   {
-    SessionImpl session = new SessionImpl();
-    return session;
+    IndustryTrackImpl industryTrack = new IndustryTrackImpl();
+    return industryTrack;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DemosAndPosterTrack createDemosAndPosterTrack()
+  {
+    DemosAndPosterTrackImpl demosAndPosterTrack = new DemosAndPosterTrackImpl();
+    return demosAndPosterTrack;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PanelTrack createPanelTrack()
+  {
+    PanelTrackImpl panelTrack = new PanelTrackImpl();
+    return panelTrack;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ResearchSession createResearchSession()
+  {
+    ResearchSessionImpl researchSession = new ResearchSessionImpl();
+    return researchSession;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public IndustrySession createIndustrySession()
+  {
+    IndustrySessionImpl industrySession = new IndustrySessionImpl();
+    return industrySession;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DemoSession createDemoSession()
+  {
+    DemoSessionImpl demoSession = new DemoSessionImpl();
+    return demoSession;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public PanelSession createPanelSession()
+  {
+    PanelSessionImpl panelSession = new PanelSessionImpl();
+    return panelSession;
   }
 
   /**
